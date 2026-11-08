@@ -1,0 +1,30 @@
+name: Calcola schede dei comuni
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "scripts/calcola_schede.py"
+  workflow_run:
+    workflows: ["Scarica fonti ufficiali", "Librerie dalle mappe aperte"]
+    types: [completed]
+
+permissions:
+  contents: write
+
+jobs:
+  calcola:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - run: python3 scripts/calcola_schede.py
+      - run: |
+          git config user.name "territorio-legge-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/schede
+          git diff --cached --quiet || git commit -m "Schede comuni: ricalcolo"
+          git pull --rebase origin main
+          git push
