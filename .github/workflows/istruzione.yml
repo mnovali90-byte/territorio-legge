@@ -1,0 +1,25 @@
+name: Scarica istruzione per regione
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "scripts/scarica_istruzione.py"
+
+permissions:
+  contents: write
+
+jobs:
+  istruzione:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/scarica_istruzione.py
+      - run: |
+          git config user.name "territorio-legge-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/grezzi/eurostat_istruzione
+          git diff --cached --quiet || git commit -m "Istruzione per regione: scaricamento"
+          git pull --rebase origin main
+          git push
