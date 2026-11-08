@@ -31,6 +31,16 @@ REGIONI_MATRICI = ["Abruzzo", "Basilicata", "Calabria", "Campania", "Emilia", "F
                    "Trentino", "Umbria", "ValledAosta", "Veneto"]
 
 
+NOMI_REGIONE = {"Emilia Romagna": "Emilia-Romagna", "Friuli Venezia Giulia": "Friuli-Venezia Giulia",
+                "Valle d'Aosta": "Valle d'Aosta/Vallée d'Aoste", "Trentino Alto Adige(P.A.Bolzano)": "Trentino-Alto Adige/Südtirol",
+                "Trentino Alto Adige(P.A.Trento)": "Trentino-Alto Adige/Südtirol"}
+
+
+def regione_std(nome):
+    """Le fonti scrivono le regioni in modi diversi: usiamo sempre la forma dei confini ISTAT."""
+    return NOMI_REGIONE.get(nome, nome) if nome else nome
+
+
 def pc(x):
     return str(x).strip().zfill(6)
 
@@ -156,7 +166,7 @@ for p, c in sorted(comuni.items()):
     tl, dl = tempo(nl, best_lib)
     righe.append({
         "pro_com": p, "comune": c["comune"], "provincia": red.get("provincia") or prov,
-        "regione": regione_lib.get(p) or red.get("regione") or reg, "abitanti_2026": c["abitanti"],
+        "regione": regione_std(regione_lib.get(p) or red.get("regione") or reg), "abitanti_2026": c["abitanti"],
         "biblioteche_pubbliche": nb, "minuti_biblioteca": tb,
         "comune_biblioteca_piu_vicina": comuni.get(db, {}).get("comune") if db else None,
         "librerie_note": nl, "minuti_libreria": tl,
