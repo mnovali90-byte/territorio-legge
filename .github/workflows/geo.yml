@@ -1,0 +1,46 @@
+name: Confini leggeri per il sito
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/geo.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  geo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Scarica i confini ISTAT 2026 (generalizzati, CC BY 4.0)
+        run: |
+          curl -sSL -A "Mozilla/5.0 (territorio-legge)" -o /tmp/confini.zip \
+            https://www.istat.it/storage/cartografia/confini_amministrativi/generalizzati/2026/Limiti01012026_g.zip
+          unzip -q /tmp/confini.zip -d /tmp/confini
+          find /tmp/confini -name "*.shp"
+      - name: Semplifica e converte in TopoJSON
+        run: |
+          COM=$(find /tmp/confini -name "Com*.shp" | head -1)
+          REG=$(find /tmp/confini -name "Reg*.shp" | head -1)
+          mkdir -p data/geo
+          npx -y mapshaper@0.6 -i "$COM" "$REG" combine-files \
+            -proj wgs84 \
+            -simplify 6% keep-shapes \
+            -filter-fields PRO_COM_T,COMUNE,COD_REG target=1 \
+            -filter-fields COD_REG,DEN_REG target=2 \
+            -rename-layers comuni,regioni \
+            -o data/geo/italia.topojson format=topojson quantization=1e5 precision=0.0001 target=*
+          ls -la data/geo
+      - run: |
+          git config user.name "territorio-legge-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/geo
+          git diff --cached --quiet || git commit -m "Confini leggeri per il sito"
+          git pull --rebase origin main
+          git push
