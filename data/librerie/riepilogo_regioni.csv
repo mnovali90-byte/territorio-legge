@@ -1,22 +1,21 @@
-regione,osm_shop_books,overture_categoria_book,overture_categoria_book_affidabili,overture_solo_nome_libreria
-Abruzzo,61,462,329,66
-Basilicata,19,157,115,29
-Calabria,48,529,348,73
-Campania,147,1564,1118,226
-Emilia-Romagna,261,1505,1051,86
-Friuli-Venezia Giulia,82,393,294,23
-Lazio,250,2052,1385,147
-Liguria,123,560,394,27
-Lombardia,424,2975,2057,197
-Marche,82,534,381,67
-Molise,8,80,55,13
-Piemonte,241,1555,1151,111
-Puglia,128,1182,873,161
-Sardegna,82,519,356,53
-Sicilia,163,1444,1044,164
-Toscana,241,1414,1028,110
-Trentino-Alto Adige/Südtirol,76,277,193,8
-Umbria,57,310,227,44
-Valle d'Aosta/Vallée d'Aoste,17,48,36,4
-Veneto,232,1511,1101,160
-,2,,,
+regione,overture_categoria_book,overture_categoria_book_affidabili,overture_solo_nome_libreria
+Abruzzo,462,329,66
+Basilicata,157,115,29
+Calabria,529,348,73
+Campania,1564,1118,226
+Emilia-Romagna,1505,1051,86
+Friuli-Venezia Giulia,393,294,23
+Lazio,2052,1385,147
+Liguria,560,394,27
+Lombardia,2975,2057,197
+Marche,534,381,67
+Molise,80,55,13
+Piemonte,1555,1151,111
+Puglia,1182,873,161
+Sardegna,519,356,53
+Sicilia,1444,1044,164
+Toscana,1414,1028,110
+Trentino-Alto Adige/Südtirol,277,193,8
+Umbria,310,227,44
+Valle d'Aosta/Vallée d'Aoste,48,36,4
+Veneto,1511,1101,160
