@@ -1,0 +1,262 @@
+{
+  "pagine": {
+    "iccu_opendata": {
+      "url": "https://anagrafe.iccu.sbn.it/it/open-data/",
+      "ok": true,
+      "link_file": [
+        "https://opendata.anagrafe.iccu.sbn.it/biblioteche.zip",
+        "https://opendata.anagrafe.iccu.sbn.it/contatti.zip",
+        "https://opendata.anagrafe.iccu.sbn.it/fondi-speciali.zip",
+        "https://opendata.anagrafe.iccu.sbn.it/indirizzi.zip",
+        "https://opendata.anagrafe.iccu.sbn.it/opendata.zip",
+        "https://opendata.anagrafe.iccu.sbn.it/patrimonio.zip",
+        "https://opendata.anagrafe.iccu.sbn.it/territorio.zip",
+        "https://opendata.anagrafe.iccu.sbn.it/tipologie.zip"
+      ]
+    },
+    "iccu_opendata_vecchio": {
+      "url": "https://opendata.anagrafe.iccu.sbn.it/",
+      "ok": true,
+      "link_file": [
+        "https://opendata.anagrafe.iccu.sbn.it/biblioteche.zip",
+        "https://opendata.anagrafe.iccu.sbn.it/contatti.zip",
+        "https://opendata.anagrafe.iccu.sbn.it/fondi-speciali.zip",
+        "https://opendata.anagrafe.iccu.sbn.it/opendata.zip",
+        "https://opendata.anagrafe.iccu.sbn.it/patrimonio.zip",
+        "https://opendata.anagrafe.iccu.sbn.it/territorio.zip",
+        "https://opendata.anagrafe.iccu.sbn.it/tipologie.zip"
+      ]
+    },
+    "mef_dichiarazioni": {
+      "url": "https://www1.finanze.gov.it/finanze/pagina_dichiarazioni/public/dichiarazioni.php",
+      "ok": true,
+      "link_file": [
+        "https://www1.finanze.gov.it/finanze/analisi_stat/public/index.php?tree=2025#download_dataset"
+      ]
+    },
+    "mef_opendata": {
+      "url": "https://www1.finanze.gov.it/finanze/pagina_dichiarazioni/public/dichiarazioni.php?d=d&opendata=yes",
+      "ok": true,
+      "link_file": [
+        "https://www1.finanze.gov.it/finanze/analisi_stat/public/index.php?tree=2025#download_dataset"
+      ]
+    },
+    "istat_matrici": {
+      "url": "https://www.istat.it/notizia/matrici-di-contiguita-distanza-e-pendolarismo/",
+      "ok": true,
+      "link_file": [
+        "https://www.istat.it/storage/cartografia/matrici_distanze/Abruzzo.zip",
+        "https://www.istat.it/storage/cartografia/matrici_distanze/Basilicata.zip",
+        "https://www.istat.it/storage/cartografia/matrici_distanze/Calabria.zip",
+        "https://www.istat.it/storage/cartografia/matrici_distanze/Campania.zip",
+        "https://www.istat.it/storage/cartografia/matrici_distanze/Emilia.zip",
+        "https://www.istat.it/storage/cartografia/matrici_distanze/Friuli.zip",
+        "https://www.istat.it/storage/cartografia/matrici_distanze/Lazio.zip",
+        "https://www.istat.it/storage/cartografia/matrici_distanze/Liguria.zip",
+        "https://www.istat.it/storage/cartografia/matrici_distanze/Lombardia.zip",
+        "https://www.istat.it/storage/cartografia/matrici_distanze/Marche.zip",
+        "https://www.istat.it/storage/cartografia/matrici_distanze/Molise.zip",
+        "https://www.istat.it/storage/cartografia/matrici_distanze/Piemonte.zip",
+        "https://www.istat.it/storage/cartografia/matrici_distanze/Puglia.zip",
+        "https://www.istat.it/storage/cartografia/matrici_distanze/Sardegna.zip",
+        "https://www.istat.it/storage/cartografia/matrici_distanze/Sicilia.zip",
+        "https://www.istat.it/storage/cartografia/matrici_distanze/Toscana.zip",
+        "https://www.istat.it/storage/cartografia/matrici_distanze/Trentino.zip",
+        "https://www.istat.it/storage/cartografia/matrici_distanze/Umbria.zip",
+        "https://www.istat.it/storage/cartografia/matrici_distanze/ValledAosta.zip",
+        "https://www.istat.it/storage/cartografia/matrici_distanze/Veneto.zip",
+        "https://www.istat.it/storage/cartografia/matrici_pendolarismo/matrici-pendolarismo-sezione-censimento-2011.zip",
+        "https://www.istat.it/storage/cartografia/matrici_pendolarismo/matrici_pendolarismo_1991.zip",
+        "https://www.istat.it/storage/cartografia/matrici_pendolarismo/matrici_pendolarismo_2011.zip",
+        "https://www.istat.it/wp-content/uploads/2015/04/matrici_pendolarismo_2001.zip",
+        "https://www.istat.it/wp-content/uploads/2024/05/MatriciContiguita_Comuni_2011_2018.zip",
+        "https://www.istat.it/wp-content/uploads/2024/05/MatriciContiguita_Comuni_2018_2023.zip",
+        "https://www.istat.it/wp-content/uploads/2024/05/MatriciContiguita_Comuni_2019_2025.zip",
+        "https://www.istat.it/wp-content/uploads/2024/05/MatriciContiguita_Province_2011_2018.zip",
+        "https://www.istat.it/wp-content/uploads/2024/05/MatriciContiguita_Province_2019_2025.zip"
+      ]
+    },
+    "istat_demo": {
+      "url": "https://demo.istat.it/",
+      "ok": true,
+      "link_file": []
+    },
+    "istat_demo_posas": {
+      "url": "https://demo.istat.it/app/?i=POS&l=it",
+      "ok": true,
+      "link_file": [
+        "https://demo.istat.it/data/posas/POSAS_2026_it_001_Torino.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_002_Vercelli.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_003_Novara.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_004_Cuneo.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_005_Asti.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_006_Alessandria.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_007_Valle_dAosta-Vallee_dAoste.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_008_Imperia.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_009_Savona.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_010_Genova.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_011_La_Spezia.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_012_Varese.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_013_Como.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_014_Sondrio.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_015_Milano.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_016_Bergamo.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_017_Brescia.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_018_Pavia.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_019_Cremona.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_020_Mantova.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_021_Bolzano-Bozen.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_022_Trento.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_023_Verona.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_024_Vicenza.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_025_Belluno.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_026_Treviso.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_027_Venezia.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_028_Padova.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_029_Rovigo.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_030_Udine.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_031_Gorizia.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_032_Trieste.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_033_Piacenza.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_034_Parma.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_035_Reggio_nellEmilia.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_036_Modena.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_037_Bologna.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_038_Ferrara.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_039_Ravenna.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_040_Forli-Cesena.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_041_Pesaro_e_Urbino.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_042_Ancona.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_043_Macerata.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_044_Ascoli_Piceno.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_045_Massa-Carrara.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_046_Lucca.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_047_Pistoia.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_048_Firenze.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_049_Livorno.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_050_Pisa.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_051_Arezzo.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_052_Siena.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_053_Grosseto.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_054_Perugia.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_055_Terni.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_056_Viterbo.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_057_Rieti.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_058_Roma.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_059_Latina.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_060_Frosinone.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_061_Caserta.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_062_Benevento.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_063_Napoli.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_064_Avellino.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_065_Salerno.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_066_LAquila.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_067_Teramo.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_068_Pescara.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_069_Chieti.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_070_Campobasso.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_071_Foggia.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_072_Bari.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_073_Taranto.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_074_Brindisi.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_075_Lecce.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_076_Potenza.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_077_Matera.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_078_Cosenza.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_079_Catanzaro.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_080_Reggio_di_Calabria.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_081_Trapani.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_082_Palermo.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_083_Messina.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_084_Agrigento.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_085_Caltanissetta.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_086_Enna.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_087_Catania.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_088_Ragusa.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_089_Siracusa.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_090_Sassari.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_091_Nuoro.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_092_Cagliari.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_093_Pordenone.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_094_Isernia.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_095_Oristano.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_096_Biella.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_097_Lecco.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_098_Lodi.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_099_Rimini.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_100_Prato.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_101_Crotone.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_102_Vibo_Valentia.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_103_Verbano-Cusio-Ossola.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_108_Monza_e_della_Brianza.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_109_Fermo.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_110_Barletta-Andria-Trani.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_111_Sud_Sardegna.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_Comuni.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_Province.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_Regioni.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_Ripartizioni.zip",
+        "https://demo.istat.it/data/posas/POSAS_2026_it_Tutti_i_file.zip"
+      ]
+    },
+    "istat_codici_comuni": {
+      "url": "https://www.istat.it/classificazione/codici-dei-comuni-delle-province-e-delle-regioni/",
+      "ok": true,
+      "link_file": [
+        "https://www.istat.it/storage/codici-unita-amministrative/Elenco-comuni-italiani.xlsx",
+        "https://www.istat.it/storage/codici-unita-amministrative/Elenco_comuni_italiani_1°_gennaio_2015.xls",
+        "https://www.istat.it/storage/codici-unita-amministrative/Elenco_comuni_italiani_30_gennaio_2015.xls",
+        "https://www.istat.it/wp-content/uploads/2024/09/Bilancio-annuale-demografia-comunale_Anni-1991-2025.xlsx",
+        "https://www.istat.it/wp-content/uploads/2024/09/Codici-statistici-e-denominazioni-delle-unita-amministrative-della-Sardegna.zip",
+        "https://www.istat.it/wp-content/uploads/2024/09/Variazioni-amministrative-e-territoriali-dei-comuni-Anni-1991-2025.xlsx"
+      ]
+    }
+  },
+  "candidati": {
+    "https://opendata.anagrafe.iccu.sbn.it/territorio.zip": {
+      "stato": 200,
+      "tipo": "application/zip",
+      "byte": "998887",
+      "modificato": "Sat, 07 Nov 2026 13:00:11 GMT"
+    },
+    "https://opendata.anagrafe.iccu.sbn.it/biblioteche.zip": {
+      "stato": 200,
+      "tipo": "application/zip",
+      "byte": "2557997",
+      "modificato": "Sat, 07 Nov 2026 13:22:57 GMT"
+    },
+    "https://opendata.anagrafe.iccu.sbn.it/tipologie.zip": {
+      "stato": 200,
+      "tipo": "application/zip",
+      "byte": "345001",
+      "modificato": "Sat, 07 Nov 2026 13:19:51 GMT"
+    },
+    "https://opendata.anagrafe.iccu.sbn.it/tipologia-funzionale.zip": {
+      "errore": "HTTP Error 404: "
+    },
+    "https://www1.finanze.gov.it/finanze/analisi_stat/public/v_4_0_0/contenuti/Redditi_e_principali_variabili_IRPEF_su_base_comunale_CSV_2024.zip": {
+      "stato": 200,
+      "tipo": "application/zip",
+      "byte": "1028668",
+      "modificato": "Thu, 23 Apr 2026 14:52:16 GMT"
+    },
+    "https://demo.istat.it/data/posas/POSAS_2026_it_Comuni.zip": {
+      "stato": 200,
+      "tipo": "application/zip",
+      "byte": "4579670",
+      "modificato": "Mon, 30 Mar 2026 21:50:38 GMT"
+    },
+    "https://demo.istat.it/data/posas/POSAS_2025_it_Comuni.zip": {
+      "stato": 200,
+      "tipo": "application/zip",
+      "byte": "8522158",
+      "modificato": "Fri, 30 Jan 2026 20:47:28 GMT"
+    },
+    "https://www.istat.it/storage/codici-unita-amministrative/Elenco-comuni-italiani.csv": {
+      "stato": 200,
+      "tipo": "application/octet-stream",
+      "byte": "1126843",
+      "modificato": "Fri, 26 Jan 2024 10:33:36 GMT"
+    }
+  }
+}
