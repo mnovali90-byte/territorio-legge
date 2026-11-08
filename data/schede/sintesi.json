@@ -1,0 +1,89 @@
+{
+  "calcolato": "2026-11-08T12:20:26+00:00",
+  "comuni": 7896,
+  "abitanti": 58942828,
+  "biblioteche_pubbliche_attive": 6847,
+  "comuni_con_biblioteca": 5685,
+  "librerie_note": 8924,
+  "comuni_con_libreria": 2117,
+  "distanza_biblioteca": [
+    {
+      "fascia": "nel proprio comune",
+      "comuni": 5685,
+      "abitanti": 54809829
+    },
+    {
+      "fascia": "1-15 minuti",
+      "comuni": 1805,
+      "abitanti": 3434687
+    },
+    {
+      "fascia": "16-30 minuti",
+      "comuni": 371,
+      "abitanti": 664046
+    },
+    {
+      "fascia": "oltre 30 minuti",
+      "comuni": 32,
+      "abitanti": 24021
+    },
+    {
+      "fascia": "non calcolabile",
+      "comuni": 3,
+      "abitanti": 10245
+    }
+  ],
+  "distanza_libreria": [
+    {
+      "fascia": "nel proprio comune",
+      "comuni": 2117,
+      "abitanti": 44117778
+    },
+    {
+      "fascia": "1-15 minuti",
+      "comuni": 3748,
+      "abitanti": 11527419
+    },
+    {
+      "fascia": "16-30 minuti",
+      "comuni": 1762,
+      "abitanti": 2984777
+    },
+    {
+      "fascia": "oltre 30 minuti",
+      "comuni": 260,
+      "abitanti": 280124
+    },
+    {
+      "fascia": "non calcolabile",
+      "comuni": 9,
+      "abitanti": 32730
+    }
+  ],
+  "fonti": {
+    "biblioteche": {
+      "ente": "ICCU, Anagrafe delle biblioteche italiane",
+      "licenza": "CC0 1.0",
+      "estrazione": "2026-11-07T14:22:53"
+    },
+    "abitanti": {
+      "ente": "ISTAT, popolazione residente al 1° gennaio 2026 (stima)",
+      "licenza": "CC BY 4.0",
+      "ultima_modifica": "Mon, 30 Mar 2026 21:50:38 GMT"
+    },
+    "redditi": {
+      "ente": "MEF, Dipartimento delle Finanze, anno d'imposta 2024",
+      "licenza": "da verificare",
+      "ultima_modifica": "Thu, 23 Apr 2026 14:52:16 GMT"
+    },
+    "tempi": {
+      "ente": "ISTAT, matrici dei tempi di percorrenza tra comuni (confini 1/1/2021)",
+      "licenza": "CC BY 4.0",
+      "colonna": "TEP_TOT, minuti in auto con traffico"
+    },
+    "librerie": {
+      "ente": "Overture Maps + OpenStreetMap",
+      "licenza": "CDLA-Permissive-2.0 / Apache-2.0 / ODbL"
+    }
+  }
+}
