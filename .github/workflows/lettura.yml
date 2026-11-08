@@ -1,0 +1,25 @@
+name: Scarica dati sulla lettura
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "scripts/scarica_lettura.py"
+
+permissions:
+  contents: write
+
+jobs:
+  lettura:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/scarica_lettura.py
+      - run: |
+          git config user.name "territorio-legge-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/grezzi/istat_lettura
+          git diff --cached --quiet || git commit -m "Dati sulla lettura: scaricamento"
+          git pull --rebase origin main
+          git push
