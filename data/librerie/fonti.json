@@ -1,5 +1,5 @@
 {
-  "estrazione": "2026-11-08T10:37:46+00:00",
+  "estrazione": "2026-11-08T10:51:58+00:00",
   "fonti": {
     "istat_confini": {
       "anno": 2026,
@@ -15,7 +15,7 @@
     "openstreetmap": {
       "endpoint": "https://overpass-api.de/api/interpreter",
       "filtro": "shop=books",
-      "data_dati": "2026-11-08T10:46:59Z",
+      "data_dati": "2026-11-08T10:56:00Z",
       "licenza": "ODbL 1.0",
       "attribuzione": "© OpenStreetMap contributors"
     }
