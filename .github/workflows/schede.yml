@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - "scripts/calcola_schede.py"
+      - "scripts/confronti_regioni.py"
   workflow_run:
     workflows: ["Scarica fonti ufficiali", "Librerie dalle mappe aperte"]
     types: [completed]
@@ -21,10 +22,11 @@ jobs:
         with:
           ref: main
       - run: python3 scripts/calcola_schede.py
+      - run: pip install openpyxl==3.1.5 && python3 scripts/confronti_regioni.py
       - run: |
           git config user.name "territorio-legge-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/schede
+          git add data/schede data/analisi
           git diff --cached --quiet || git commit -m "Schede comuni: ricalcolo"
           git pull --rebase origin main
           git push

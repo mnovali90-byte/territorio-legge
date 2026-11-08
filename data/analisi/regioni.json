@@ -1,0 +1,261 @@
+{
+  "nota": "Correlazione per ranghi tra 20 regioni (da -1 a +1). Indicativa, non causale.",
+  "anno_laureati": "2024",
+  "anno_lettura": "2024",
+  "regioni": [
+    {
+      "regione": "Abruzzo",
+      "pct_abitanti_con_libreria_nel_comune": 71.4,
+      "pct_abitanti_con_biblioteca_nel_comune": 73.6,
+      "reddito_medio_dichiarato": 22694,
+      "pct_laureati_25_64": 23.8,
+      "pct_lettori": 48.8,
+      "ultimo_libro_da_biblioteca": 1.9,
+      "ultimo_libro_in_libreria": 18.1,
+      "ultimo_libro_in_centro_commerciale": 15.2
+    },
+    {
+      "regione": "Basilicata",
+      "pct_abitanti_con_libreria_nel_comune": 67.5,
+      "pct_abitanti_con_biblioteca_nel_comune": 88.8,
+      "reddito_medio_dichiarato": 20595,
+      "pct_laureati_25_64": 20.2,
+      "pct_lettori": 50.5,
+      "ultimo_libro_da_biblioteca": 3.6,
+      "ultimo_libro_in_libreria": 16.5,
+      "ultimo_libro_in_centro_commerciale": 10.6
+    },
+    {
+      "regione": "Calabria",
+      "pct_abitanti_con_libreria_nel_comune": 60.1,
+      "pct_abitanti_con_biblioteca_nel_comune": 78.8,
+      "reddito_medio_dichiarato": 19044,
+      "pct_laureati_25_64": 20.1,
+      "pct_lettori": 43,
+      "ultimo_libro_da_biblioteca": 1.7,
+      "ultimo_libro_in_libreria": 15.3,
+      "ultimo_libro_in_centro_commerciale": 17
+    },
+    {
+      "regione": "Campania",
+      "pct_abitanti_con_libreria_nel_comune": 79.6,
+      "pct_abitanti_con_biblioteca_nel_comune": 83.0,
+      "reddito_medio_dichiarato": 21346,
+      "pct_laureati_25_64": 18.7,
+      "pct_lettori": 47,
+      "ultimo_libro_da_biblioteca": 0.7,
+      "ultimo_libro_in_libreria": 14.3,
+      "ultimo_libro_in_centro_commerciale": 16.2
+    },
+    {
+      "regione": "Emilia-Romagna",
+      "pct_abitanti_con_libreria_nel_comune": 80.2,
+      "pct_abitanti_con_biblioteca_nel_comune": 98.4,
+      "reddito_medio_dichiarato": 28112,
+      "pct_laureati_25_64": 24.9,
+      "pct_lettori": 62.7,
+      "ultimo_libro_da_biblioteca": 9.1,
+      "ultimo_libro_in_libreria": 20.2,
+      "ultimo_libro_in_centro_commerciale": 11.2
+    },
+    {
+      "regione": "Friuli-Venezia Giulia",
+      "pct_abitanti_con_libreria_nel_comune": 68.1,
+      "pct_abitanti_con_biblioteca_nel_comune": 98.0,
+      "reddito_medio_dichiarato": 26810,
+      "pct_laureati_25_64": 24.1,
+      "pct_lettori": 67.6,
+      "ultimo_libro_da_biblioteca": 8.4,
+      "ultimo_libro_in_libreria": 19.6,
+      "ultimo_libro_in_centro_commerciale": 7
+    },
+    {
+      "regione": "Lazio",
+      "pct_abitanti_con_libreria_nel_comune": 89.0,
+      "pct_abitanti_con_biblioteca_nel_comune": 93.8,
+      "reddito_medio_dichiarato": 27673,
+      "pct_laureati_25_64": 28.3,
+      "pct_lettori": 62.4,
+      "ultimo_libro_da_biblioteca": 1.6,
+      "ultimo_libro_in_libreria": 27.6,
+      "ultimo_libro_in_centro_commerciale": 7.1
+    },
+    {
+      "regione": "Liguria",
+      "pct_abitanti_con_libreria_nel_comune": 82.6,
+      "pct_abitanti_con_biblioteca_nel_comune": 91.8,
+      "reddito_medio_dichiarato": 26684,
+      "pct_laureati_25_64": 23.8,
+      "pct_lettori": 65.1,
+      "ultimo_libro_da_biblioteca": 3.7,
+      "ultimo_libro_in_libreria": 23.6,
+      "ultimo_libro_in_centro_commerciale": 9.6
+    },
+    {
+      "regione": "Lombardia",
+      "pct_abitanti_con_libreria_nel_comune": 64.1,
+      "pct_abitanti_con_biblioteca_nel_comune": 97.4,
+      "reddito_medio_dichiarato": 30142,
+      "pct_laureati_25_64": 23.9,
+      "pct_lettori": 63,
+      "ultimo_libro_da_biblioteca": 10.3,
+      "ultimo_libro_in_libreria": 14.4,
+      "ultimo_libro_in_centro_commerciale": 9.6
+    },
+    {
+      "regione": "Marche",
+      "pct_abitanti_con_libreria_nel_comune": 74.4,
+      "pct_abitanti_con_biblioteca_nel_comune": 93.2,
+      "reddito_medio_dichiarato": 24592,
+      "pct_laureati_25_64": 24.2,
+      "pct_lettori": 57.6,
+      "ultimo_libro_da_biblioteca": 4.4,
+      "ultimo_libro_in_libreria": 20.9,
+      "ultimo_libro_in_centro_commerciale": 10.9
+    },
+    {
+      "regione": "Molise",
+      "pct_abitanti_con_libreria_nel_comune": 50.8,
+      "pct_abitanti_con_biblioteca_nel_comune": 68.9,
+      "reddito_medio_dichiarato": 20511,
+      "pct_laureati_25_64": 23.1,
+      "pct_lettori": 52.6,
+      "ultimo_libro_da_biblioteca": 2.7,
+      "ultimo_libro_in_libreria": 21.1,
+      "ultimo_libro_in_centro_commerciale": 10.8
+    },
+    {
+      "regione": "Piemonte",
+      "pct_abitanti_con_libreria_nel_comune": 66.8,
+      "pct_abitanti_con_biblioteca_nel_comune": 92.0,
+      "reddito_medio_dichiarato": 27345,
+      "pct_laureati_25_64": 21.2,
+      "pct_lettori": 60.1,
+      "ultimo_libro_da_biblioteca": 6.9,
+      "ultimo_libro_in_libreria": 20,
+      "ultimo_libro_in_centro_commerciale": 10
+    },
+    {
+      "regione": "Puglia",
+      "pct_abitanti_con_libreria_nel_comune": 85.3,
+      "pct_abitanti_con_biblioteca_nel_comune": 94.1,
+      "reddito_medio_dichiarato": 20473,
+      "pct_laureati_25_64": 18.0,
+      "pct_lettori": 46.8,
+      "ultimo_libro_da_biblioteca": 1.4,
+      "ultimo_libro_in_libreria": 18.5,
+      "ultimo_libro_in_centro_commerciale": 12.4
+    },
+    {
+      "regione": "Sardegna",
+      "pct_abitanti_con_libreria_nel_comune": 69.7,
+      "pct_abitanti_con_biblioteca_nel_comune": 98.4,
+      "reddito_medio_dichiarato": 21961,
+      "pct_laureati_25_64": 19.0,
+      "pct_lettori": 55.3,
+      "ultimo_libro_da_biblioteca": 3.3,
+      "ultimo_libro_in_libreria": 14.6,
+      "ultimo_libro_in_centro_commerciale": 14.1
+    },
+    {
+      "regione": "Sicilia",
+      "pct_abitanti_con_libreria_nel_comune": 83.2,
+      "pct_abitanti_con_biblioteca_nel_comune": 96.5,
+      "reddito_medio_dichiarato": 20599,
+      "pct_laureati_25_64": 17.8,
+      "pct_lettori": 44.6,
+      "ultimo_libro_da_biblioteca": 3.1,
+      "ultimo_libro_in_libreria": 20.1,
+      "ultimo_libro_in_centro_commerciale": 10.5
+    },
+    {
+      "regione": "Toscana",
+      "pct_abitanti_con_libreria_nel_comune": 84.2,
+      "pct_abitanti_con_biblioteca_nel_comune": 97.2,
+      "reddito_medio_dichiarato": 26381,
+      "pct_laureati_25_64": 23.3,
+      "pct_lettori": 59.7,
+      "ultimo_libro_da_biblioteca": 7.3,
+      "ultimo_libro_in_libreria": 22.5,
+      "ultimo_libro_in_centro_commerciale": 8.4
+    },
+    {
+      "regione": "Trentino-Alto Adige",
+      "pct_abitanti_con_libreria_nel_comune": 51.9,
+      "pct_abitanti_con_biblioteca_nel_comune": 94.3,
+      "reddito_medio_dichiarato": 28650,
+      "pct_laureati_25_64": 21.4,
+      "pct_lettori": 68.7,
+      "ultimo_libro_da_biblioteca": 15.7,
+      "ultimo_libro_in_libreria": 15,
+      "ultimo_libro_in_centro_commerciale": 7.7
+    },
+    {
+      "regione": "Umbria",
+      "pct_abitanti_con_libreria_nel_comune": 81.0,
+      "pct_abitanti_con_biblioteca_nel_comune": 92.5,
+      "reddito_medio_dichiarato": 24767,
+      "pct_laureati_25_64": 25.6,
+      "pct_lettori": 55.6,
+      "ultimo_libro_da_biblioteca": 3.8,
+      "ultimo_libro_in_libreria": 24.5,
+      "ultimo_libro_in_centro_commerciale": 8.2
+    },
+    {
+      "regione": "Valle d'Aosta",
+      "pct_abitanti_con_libreria_nel_comune": 43.0,
+      "pct_abitanti_con_biblioteca_nel_comune": 83.4,
+      "reddito_medio_dichiarato": 27792,
+      "pct_laureati_25_64": 21.4,
+      "pct_lettori": 66.9,
+      "ultimo_libro_da_biblioteca": 14,
+      "ultimo_libro_in_libreria": 17.4,
+      "ultimo_libro_in_centro_commerciale": 8.2
+    },
+    {
+      "regione": "Veneto",
+      "pct_abitanti_con_libreria_nel_comune": 67.9,
+      "pct_abitanti_con_biblioteca_nel_comune": 98.3,
+      "reddito_medio_dichiarato": 27025,
+      "pct_laureati_25_64": 21.7,
+      "pct_lettori": 61.8,
+      "ultimo_libro_da_biblioteca": 10.1,
+      "ultimo_libro_in_libreria": 18.8,
+      "ultimo_libro_in_centro_commerciale": 10.4
+    }
+  ],
+  "legami": [
+    {
+      "cosa": "reddito ~ lettori",
+      "valore": 0.89
+    },
+    {
+      "cosa": "laureati ~ lettori",
+      "valore": 0.55
+    },
+    {
+      "cosa": "libreria nel comune ~ lettori",
+      "valore": -0.22
+    },
+    {
+      "cosa": "libreria nel comune ~ lettori, a parità di reddito e laureati",
+      "valore": -0.28
+    },
+    {
+      "cosa": "ultimo libro da biblioteca ~ lettori",
+      "valore": 0.79
+    },
+    {
+      "cosa": "ultimo libro da biblioteca ~ lettori, a parità di laureati",
+      "valore": 0.77
+    },
+    {
+      "cosa": "ultimo libro da biblioteca ~ lettori, a parità di reddito",
+      "valore": 0.36
+    },
+    {
+      "cosa": "ultimo libro da biblioteca ~ lettori, a parità di reddito e laureati",
+      "valore": 0.4
+    }
+  ]
+}
