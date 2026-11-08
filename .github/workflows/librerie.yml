@@ -1,0 +1,33 @@
+name: Librerie dalle mappe aperte
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "scripts/librerie_mappe_aperte.py"
+      - ".github/workflows/librerie.yml"
+  schedule:
+    - cron: "17 4 3 * *"   # il 3 di ogni mese
+
+permissions:
+  contents: write
+
+jobs:
+  estrai:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install duckdb==1.2.2
+      - run: python scripts/librerie_mappe_aperte.py
+      - name: Salva i risultati nel repository
+        run: |
+          git config user.name "territorio-legge-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "Dati librerie: aggiornamento automatico"
+          git pull --rebase origin main
+          git push
