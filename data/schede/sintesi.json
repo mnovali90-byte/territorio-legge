@@ -1,31 +1,31 @@
 {
-  "calcolato": "2026-11-08T14:13:05+00:00",
+  "calcolato": "2026-11-08T14:31:17+00:00",
   "comuni": 7896,
   "abitanti": 58942828,
-  "biblioteche_pubbliche_attive": 6847,
-  "comuni_con_biblioteca": 5685,
+  "biblioteche_aperte": 7478,
+  "comuni_con_biblioteca": 5714,
   "librerie_note": 8924,
   "comuni_con_libreria": 2117,
   "distanza_biblioteca": [
     {
       "fascia": "nel proprio comune",
-      "comuni": 5685,
-      "abitanti": 54809829
+      "comuni": 5714,
+      "abitanti": 55103499
     },
     {
       "fascia": "1-15 minuti",
-      "comuni": 1805,
-      "abitanti": 3434687
+      "comuni": 1795,
+      "abitanti": 3254390
     },
     {
       "fascia": "16-30 minuti",
-      "comuni": 371,
-      "abitanti": 664046
+      "comuni": 354,
+      "abitanti": 558730
     },
     {
       "fascia": "oltre 30 minuti",
-      "comuni": 32,
-      "abitanti": 24021
+      "comuni": 30,
+      "abitanti": 15964
     },
     {
       "fascia": "non calcolabile",
