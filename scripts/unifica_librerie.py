@@ -9,6 +9,7 @@ I filtri (cosa conta come "libreria") si applicano dopo, sulla mappa.
 
 import csv
 import math
+import re
 from collections import Counter, defaultdict
 
 D = "data/librerie"
@@ -37,11 +38,32 @@ def primario(tassonomia):
     return tassonomia.split("'primary': ")[1].split(",")[0].strip()
 
 
+# Correzioni dal nome del negozio. Le mappe aperte classificano male alcuni punti: una biblioteca
+# o una cartoleria registrata come «bookstore», un Mondadori registrato come negozio generico.
+# Le regole sono poche, leggibili e uguali per tutta Italia; l'ordine conta (la prima che vale vince).
+CORREZIONI = [
+    (r"bibliotec", "biblioteca (non è una libreria)"),
+    (r"cartolibr|cartoler|cartol|cartoleria|cancelleria", "cartolibreria o cartoleria"),
+    (r"edicol|giornal", "edicola"),
+    (r"fumett|comix|comic|manga", "fumetteria"),
+    (r"giocattol|\bgioc|toys|games", "giocattoli e giochi"),
+    (r"registri|contabil|forniture per ufficio|modulistica", "forniture per ufficio"),
+    (r"\bfiera\b|mercatino", "fiera o mercatino"),
+]
+NOMI_DA_LIBRERIA = r"librer|mondadori|feltrinelli|giunti|ubik|libraccio|rizzoli|arion|bookstore|\blibri\b"
+
+
 def gruppo(r):
     p = primario(r["tassonomia"])
-    if r["motivo"] == "nome":
-        return "altro, con 'libreria' nel nome"
-    return GRUPPI.get(p, "altro")  # i tipi nuovi finiscono qui finché non li etichettiamo
+    nome = (r.get("nome") or "").lower()
+    base = "altro, con 'libreria' nel nome" if r["motivo"] == "nome" else GRUPPI.get(p, "altro")
+    if base in ("libreria", "libri, musica e video (generico)", "altro, con 'libreria' nel nome"):
+        for regola, nuovo in CORREZIONI:
+            if re.search(regola, nome):
+                return nuovo
+        if base != "libreria" and re.search(NOMI_DA_LIBRERIA, nome):
+            return "libreria"
+    return base
 
 
 def cartoleria(nome):
@@ -68,9 +90,9 @@ def vicino(lat, lon):
         for b in (-1, 0, 1):
             for i in griglia[(k[0] + a, k[1] + b)]:
                 r = ov[i]
-                if gruppo(r) not in ("libreria", "libreria dell'usato", "libreria universitaria",
-                                     "fumetteria", "libri, musica e video (generico)",
-                                     "altro, con 'libreria' nel nome"):
+                if gruppo(r) not in ("libreria", "libreria dell'usato", "libreria universitaria", "fumetteria",
+                                     "libri, musica e video (generico)", "altro, con 'libreria' nel nome",
+                                     "cartolibreria o cartoleria", "edicola", "giocattoli e giochi"):
                     continue
                 dy = (float(r["lat"]) - lat) * 111_000
                 dx = (float(r["lon"]) - lon) * 111_000 * math.cos(math.radians(lat))
@@ -105,7 +127,7 @@ for i, r in enumerate(ov):
 for r in solo_osm:
     righe.append({
         "id": f"osm:{r['id']}", "nome": r["nome"],
-        "gruppo": "libreria dell'usato" if r.get("usato") in ("only", "yes") else "libreria",
+        "gruppo": "libreria dell'usato" if r.get("usato") in ("only", "yes") else gruppo({"tassonomia": "'primary': bookstore,", "motivo": "categoria", "nome": r["nome"]}),
         "tipo_originale": "shop=books", "cartoleria_nel_nome": cartoleria(r["nome"]),
         "fonte": "OpenStreetMap", "anche_in_osm": "sì", "affidabilita": "",
         "stato": "non indicato", "pro_com": r["pro_com"], "comune": r["comune"],

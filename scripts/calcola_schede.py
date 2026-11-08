@@ -75,6 +75,11 @@ estrazione_iccu = bib["metadati"].get("data-estrazione")
 # e nazionale (es. la Biblioteca provinciale di Matera è registrata come «di conservazione»), purché
 # attiva e con accesso non riservato. Le specializzate, scolastiche e universitarie restano fuori.
 TIPI_APERTI = {"Pubblica", "Di conservazione", "Importante non specializzata", "Nazionale"}
+# Le non «pubbliche» contano solo se gestite da un ente pubblico territoriale o dallo Stato: così entra la
+# Provinciale di Matera, ma restano fuori biblioteche di diocesi, fondazioni private, ospedali e centri di ricerca.
+ENTI_PUBBLICI = {"Comune", "Provincia", "Città metropolitana", "Regione", "Ministero della Cultura",
+                 "Direzione generale Biblioteche e istituti culturali",
+                 "Consorzio e/o associazioni di regioni, province, comuni e comunità montane"}
 bib_per_comune = defaultdict(list)
 pubbliche_per_comune = defaultdict(int)
 luogo = {}
@@ -83,7 +88,9 @@ for b in bib["biblioteche"]:
     luogo.setdefault(pc(com["istat"]), (b["indirizzo"].get("provincia", {}).get("nome"),
                                         b["indirizzo"].get("regione", {}).get("nome") if isinstance(b["indirizzo"].get("regione"), dict) else b["indirizzo"].get("regione")))
     attiva = b.get("stato-registrazione") is None and not (b.get("accesso") or {}).get("riservato")
-    if attiva and b.get("tipologia-funzionale") in TIPI_APERTI:
+    tipo, ente = b.get("tipologia-funzionale"), b.get("tipologia-amministrativa")
+    aperta = tipo == "Pubblica" or (tipo in TIPI_APERTI and ente in ENTI_PUBBLICI)
+    if attiva and aperta:
         bib_per_comune[pc(com["istat"])].append(b["denominazioni"]["ufficiale"])
         if b.get("tipologia-funzionale") == "Pubblica":
             pubbliche_per_comune[pc(com["istat"])] += 1
