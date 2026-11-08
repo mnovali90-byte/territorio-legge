@@ -32,10 +32,10 @@ def tavola(file, foglio, colonne):
     return out
 
 
-lettura = tavola(f"{G}/istat_lettura/Tavole_lettura_libri_prelettura_biblioteche_2024_2025.xlsx", "tavola 2", [2])
+lettura = tavola(f"{G}/istat_lettura/Tavole_lettura_libri_prelettura_biblioteche_2024_2025.xlsx", "tavola 2", [2, 4, 5])
 acquisto = tavola(f"{G}/istat_lettura/Tavole_lettura_scrittura-libri_prelettura_podcast_2024.xlsx", "tavola 18", [4, 9, 8])
 
-reg = defaultdict(lambda: {"ab": 0, "ab_lib": 0, "ab_bib": 0, "red": 0, "ab_red": 0})
+reg = defaultdict(lambda: {"ab": 0, "ab_lib": 0, "ab_lib15": 0, "ab_bib": 0, "red": 0, "ab_red": 0})
 prov = defaultdict(int)
 for r in csv.DictReader(open("data/schede/comuni.csv", encoding="utf-8")):
     g, a = std(r["regione"]), int(r["abitanti_2026"])
@@ -43,6 +43,8 @@ for r in csv.DictReader(open("data/schede/comuni.csv", encoding="utf-8")):
     s["ab"] += a
     s["ab_lib"] += a if int(r["librerie_note"]) else 0
     s["ab_bib"] += a if int(r["biblioteche_aperte"]) else 0
+    # entro 15 minuti in auto: misura la vicinanza senza dipendere da quanto sono grandi i comuni
+    s["ab_lib15"] += a if (int(r["librerie_note"]) or (r["minuti_libreria"] and float(r["minuti_libreria"]) <= 15)) else 0
     if r["reddito_medio_dichiarato_2024"]:
         s["red"] += a * int(r["reddito_medio_dichiarato_2024"]); s["ab_red"] += a
     prov[r["provincia"]] += a
@@ -57,10 +59,14 @@ righe = []
 for g, s in sorted(reg.items()):
     righe.append({"regione": g,
                   "pct_abitanti_con_libreria_nel_comune": round(100 * s["ab_lib"] / s["ab"], 1),
+                  "pct_abitanti_libreria_entro_15_min": round(100 * s["ab_lib15"] / s["ab"], 1),
                   "pct_abitanti_con_biblioteca_nel_comune": round(100 * s["ab_bib"] / s["ab"], 1),
                   "reddito_medio_dichiarato": round(s["red"] / s["ab_red"]),
                   "pct_laureati_25_64": round(edu[g], 1),
-                  "pct_lettori": lettura[g][0],
+                  # lettori = chi ha letto almeno un libro nel tempo libero (solo o anche per lavoro/scuola):
+                  # è la definizione abituale di ISTAT. «legge libri» in senso largo resta a parte.
+                  "pct_lettori": round(lettura[g][1] + lettura[g][2], 1),
+                  "pct_legge_libri_qualsiasi_motivo": lettura[g][0],
                   "ultimo_libro_da_biblioteca": acquisto[g][0],
                   "ultimo_libro_in_libreria": acquisto[g][1],
                   "ultimo_libro_in_centro_commerciale": acquisto[g][2]})
@@ -112,6 +118,8 @@ legami = [
     {"cosa": "reddito ~ lettori", "valore": legame(R, L)},
     {"cosa": "laureati ~ lettori", "valore": legame(E, L)},
     {"cosa": "libreria nel comune ~ lettori", "valore": legame("pct_abitanti_con_libreria_nel_comune", L)},
+    {"cosa": "libreria entro 15 minuti ~ lettori", "valore": legame("pct_abitanti_libreria_entro_15_min", L)},
+    {"cosa": "libreria entro 15 minuti ~ lettori, a parità di reddito e laureati", "valore": legame("pct_abitanti_libreria_entro_15_min", L, [R, E])},
     {"cosa": "libreria nel comune ~ lettori, a parità di reddito e laureati", "valore": legame("pct_abitanti_con_libreria_nel_comune", L, [R, E])},
     {"cosa": "ultimo libro da biblioteca ~ lettori", "valore": legame("ultimo_libro_da_biblioteca", L)},
     {"cosa": "ultimo libro da biblioteca ~ lettori, a parità di laureati", "valore": legame("ultimo_libro_da_biblioteca", L, [E])},
@@ -119,7 +127,10 @@ legami = [
     {"cosa": "ultimo libro da biblioteca ~ lettori, a parità di reddito e laureati", "valore": legame("ultimo_libro_da_biblioteca", L, [R, E])},
 ]
 json.dump({"nota": "Correlazione per ranghi tra 20 regioni (da -1 a +1). Indicativa, non causale.",
-           "anno_laureati": anno_edu, "anno_lettura": "2024", "regioni": righe, "legami": legami},
+           "anno_laureati": anno_edu, "anno_lettura": "2024",
+           "italia": {"pct_lettori": round(lettura["Italia"][1] + lettura["Italia"][2], 1) if "Italia" in lettura else None,
+                      "pct_legge_libri_qualsiasi_motivo": lettura.get("Italia", [None])[0]},
+           "regioni": righe, "legami": legami},
           open(f"{OUT}/regioni.json", "w", encoding="utf-8"), indent=2, ensure_ascii=False)
 for x in legami:
     print(x)
