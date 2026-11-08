@@ -26,6 +26,27 @@ def num(x, tipo=int):
 
 
 righe = list(csv.DictReader(open("data/schede/comuni.csv", encoding="utf-8")))
+
+# La mappa usa i codici ISTAT dei confini 2026. In Sardegna le province sono cambiate e alcuni dati
+# arrivano ancora con i codici vecchi: li ricolleghiamo al codice nuovo tramite il nome del comune.
+geo = json.load(open("data/geo/italia.topojson", encoding="utf-8"))["objects"]["comuni"]["geometries"]
+codici_mappa = {g["properties"]["PRO_COM_T"] for g in geo}
+per_nome = {}
+for g in geo:
+    per_nome.setdefault(g["properties"]["COMUNE"].strip().lower(), []).append(g["properties"]["PRO_COM_T"])
+ricollegati, senza_mappa = 0, []
+for r in righe:
+    if r["pro_com"] in codici_mappa:
+        continue
+    usati = {x["pro_com"] for x in righe}
+    cand = [c for c in per_nome.get(r["comune"].strip().lower(), []) if c not in usati]
+    if len(cand) == 1:
+        r["pro_com"] = cand[0]
+        ricollegati += 1
+    else:
+        senza_mappa.append(r["comune"])
+print("Codici ricollegati per nome:", ricollegati, "· senza corrispondenza sulla mappa:", senza_mappa)
+
 comuni = {}
 for r in righe:
     comuni[r["pro_com"]] = [
