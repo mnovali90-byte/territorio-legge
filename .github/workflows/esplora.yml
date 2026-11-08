@@ -1,0 +1,25 @@
+name: Esplora fonti
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "scripts/esplora_fonti.py"
+
+permissions:
+  contents: write
+
+jobs:
+  esplora:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/esplora_fonti.py
+      - run: |
+          git config user.name "territorio-legge-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/esplorazione
+          git diff --cached --quiet || git commit -m "Esplorazione fonti"
+          git pull --rebase origin main
+          git push
