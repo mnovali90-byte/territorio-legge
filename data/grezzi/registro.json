@@ -1,0 +1,86 @@
+{
+  "scaricato": "2026-11-08T12:14:28+00:00",
+  "file": {
+    "iccu_biblioteche": {
+      "url": "https://opendata.anagrafe.iccu.sbn.it/biblioteche.zip",
+      "ente": "ICCU, Anagrafe delle biblioteche italiane",
+      "licenza": "CC0 1.0",
+      "ultima_modifica_alla_fonte": "Sat, 07 Nov 2026 13:22:57 GMT",
+      "byte": 2557997,
+      "contenuto": [
+        "biblioteche.json"
+      ]
+    },
+    "iccu_territorio": {
+      "url": "https://opendata.anagrafe.iccu.sbn.it/territorio.zip",
+      "ente": "ICCU, Anagrafe delle biblioteche italiane",
+      "licenza": "CC0 1.0",
+      "ultima_modifica_alla_fonte": "Sat, 07 Nov 2026 13:00:11 GMT",
+      "byte": 998887,
+      "contenuto": [
+        "territorio.csv"
+      ]
+    },
+    "iccu_tipologie": {
+      "url": "https://opendata.anagrafe.iccu.sbn.it/tipologie.zip",
+      "ente": "ICCU, Anagrafe delle biblioteche italiane",
+      "licenza": "CC0 1.0",
+      "ultima_modifica_alla_fonte": "Sat, 07 Nov 2026 13:19:51 GMT",
+      "byte": 345001,
+      "contenuto": [
+        "tipologie.csv"
+      ]
+    },
+    "mef_redditi_2024": {
+      "url": "https://www1.finanze.gov.it/finanze/analisi_stat/public/v_4_0_0/contenuti/Redditi_e_principali_variabili_IRPEF_su_base_comunale_CSV_2024.zip",
+      "ente": "MEF, Dipartimento delle Finanze",
+      "licenza": "da verificare",
+      "ultima_modifica_alla_fonte": "Thu, 23 Apr 2026 14:52:16 GMT",
+      "byte": 1028668,
+      "contenuto": [
+        "Redditi_e_principali_variabili_IRPEF_su_base_comunale_CSV_2024.csv"
+      ]
+    },
+    "istat_popolazione_2026": {
+      "url": "https://demo.istat.it/data/posas/POSAS_2026_it_Comuni.zip",
+      "ente": "ISTAT, demo.istat.it",
+      "licenza": "CC BY 4.0",
+      "ultima_modifica_alla_fonte": "Mon, 30 Mar 2026 21:50:38 GMT",
+      "byte": 4579670,
+      "contenuto": [
+        "POSAS_2026_it_Comuni.csv"
+      ]
+    },
+    "istat_elenco_comuni": {
+      "url": "https://www.istat.it/storage/codici-unita-amministrative/Elenco-comuni-italiani.csv",
+      "ente": "ISTAT",
+      "licenza": "CC BY 4.0",
+      "ultima_modifica_alla_fonte": "Fri, 26 Jan 2024 10:33:36 GMT",
+      "byte": 1126843,
+      "contenuto": [
+        "Elenco-comuni-italiani.csv"
+      ]
+    },
+    "istat_matrici_campione": {
+      "url": "https://www.istat.it/storage/cartografia/matrici_distanze/Lombardia.zip",
+      "ultima_modifica_alla_fonte": "Mon, 22 May 2023 15:09:51 GMT",
+      "byte_zip": 163704027,
+      "contenuto": [
+        "R03_BG.csv",
+        "R03_BS.csv",
+        "R03_CO.csv",
+        "R03_CR.csv",
+        "R03_LC.csv",
+        "R03_LO.csv",
+        "R03_MB.csv",
+        "R03_MI.csv",
+        "R03_MN.csv",
+        "R03_PV.csv",
+        "R03_SO.csv",
+        "R03_VA.csv",
+        "R04_BZ.csv",
+        "R04_TN.csv"
+      ]
+    }
+  }
+}
