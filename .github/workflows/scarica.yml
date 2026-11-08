@@ -1,0 +1,27 @@
+name: Scarica fonti ufficiali
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "scripts/scarica_fonti.py"
+  schedule:
+    - cron: "37 4 2 * *"   # il 2 di ogni mese
+
+permissions:
+  contents: write
+
+jobs:
+  scarica:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/scarica_fonti.py
+      - run: |
+          git config user.name "territorio-legge-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/grezzi
+          git diff --cached --quiet || git commit -m "Fonti ufficiali: scaricamento"
+          git pull --rebase origin main
+          git push
