@@ -50,6 +50,16 @@ CORREZIONI = [
     (r"registri|contabil|forniture per ufficio|modulistica", "forniture per ufficio"),
     (r"\bfiera\b|mercatino", "fiera o mercatino"),
 ]
+# Nomi che indicano un'attività che non è un negozio di libri aperto al pubblico. Valgono solo se
+# il nome non contiene «librer» (una «Libreria Editrice …» è un negozio vero).
+NON_NEGOZI = [
+    (r"editor|edizioni|editrice|agenzia|promozion|rappresentanz|distribuz|diffusione|giuffr|lefebvre"
+     r"|\bs\.?p\.?a\.?\b|tipografi", "editore, agenzia o distributore (non è una libreria)"),
+    (r"legatori", "legatoria"),
+    (r"articoli religiosi", "articoli religiosi"),
+    (r"dipartimento|\bufficio\b", "ente o ufficio (non è una libreria)"),
+    (r"^amazon(?!.*counter)", "altro"),
+]
 NOMI_DA_LIBRERIA = r"librer|mondadori|feltrinelli|giunti|ubik|libraccio|rizzoli|arion|bookstore|\blibri\b"
 
 
@@ -61,6 +71,10 @@ def gruppo(r):
         for regola, nuovo in CORREZIONI:
             if re.search(regola, nome):
                 return nuovo
+        if "librer" not in nome:
+            for regola, nuovo in NON_NEGOZI:
+                if re.search(regola, nome):
+                    return nuovo
         if base != "libreria" and re.search(NOMI_DA_LIBRERIA, nome):
             return "libreria"
     return base
@@ -134,6 +148,27 @@ for r in solo_osm:
         "regione": r["regione"], "lon": r["lon"], "lat": r["lat"], "licenza": "ODbL-1.0",
     })
 
+# Doppioni: stesso nome (senza maiuscole e punteggiatura) a meno di RAGGIO_M metri. Si tiene il primo,
+# gli altri restano nel file con stato «doppione» e non vengono contati.
+def chiave(nome):
+    return re.sub(r"[^a-z0-9]", "", (nome or "").lower())
+
+LIBRERIE = ("libreria", "libreria dell'usato", "libreria universitaria")
+visti = defaultdict(list)
+doppioni = 0
+for r in sorted(righe, key=lambda x: -float(x["affidabilita"] or 0)):
+    if r["gruppo"] not in LIBRERIE or not r["nome"]:
+        continue
+    lat, lon = float(r["lat"]), float(r["lon"])
+    k = chiave(r["nome"])
+    if any(math.hypot((lat - a) * 111_000, (lon - b) * 111_000 * math.cos(math.radians(lat))) < RAGGIO_M
+           for a, b in visti[k]):
+        r["stato"] = "doppione"
+        doppioni += 1
+    else:
+        visti[k].append((lat, lon))
+print("Doppioni segnati:", doppioni)
+
 righe.sort(key=lambda x: (x["regione"], x["comune"], x["gruppo"], x["nome"] or ""))
 with open(f"{D}/punti_vendita.csv", "w", newline="", encoding="utf-8") as f:
     w = csv.DictWriter(f, fieldnames=CAMPI)
@@ -145,7 +180,7 @@ gruppi = sorted({r["gruppo"] for r in righe})
 conti = defaultdict(Counter)
 info = {}
 for r in righe:
-    if r["stato"] == "permanently_closed":
+    if r["stato"] in ("permanently_closed", "doppione"):
         continue
     conti[r["pro_com"]][r["gruppo"]] += 1
     info[r["pro_com"]] = (r["comune"], r["regione"])

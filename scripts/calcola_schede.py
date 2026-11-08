@@ -106,7 +106,7 @@ for r in csv.DictReader(open("data/librerie/per_comune.csv", encoding="utf-8")):
         lib_per_comune[pc(r["pro_com"])] = n
 nomi_librerie = defaultdict(list)
 for r in csv.DictReader(open("data/librerie/punti_vendita.csv", encoding="utf-8")):
-    if r["gruppo"] in GRUPPI_LIBRERIA and r["stato"] != "permanently_closed" and r["nome"]:
+    if r["gruppo"] in GRUPPI_LIBRERIA and r["stato"] not in ("permanently_closed", "doppione") and r["nome"]:
         nomi_librerie[pc(r["pro_com"])].append(r["nome"])
 
 # I confini 2026 usano i codici delle nuove province sarde, il file degli abitanti ancora quelli vecchi:
