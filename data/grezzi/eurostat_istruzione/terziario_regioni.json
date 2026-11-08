@@ -1,0 +1,384 @@
+{
+  "fonte": "Eurostat edat_lfse_04, ISCED 5-8, 25-64 anni, %",
+  "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/edat_lfse_04?format=JSON&lang=EN&sex=T&age=Y25-64&isced11=ED5-8&unit=PC&lastTimePeriod=3",
+  "righe": [
+    {
+      "nuts2": "ITC1",
+      "nome": "Piemonte",
+      "anno": "2023",
+      "pct_terziario_25_64": 20.9
+    },
+    {
+      "nuts2": "ITC1",
+      "nome": "Piemonte",
+      "anno": "2024",
+      "pct_terziario_25_64": 21.2
+    },
+    {
+      "nuts2": "ITC1",
+      "nome": "Piemonte",
+      "anno": "2025",
+      "pct_terziario_25_64": 21.2
+    },
+    {
+      "nuts2": "ITC2",
+      "nome": "Valle d’Aosta/Vallée d’Aoste",
+      "anno": "2023",
+      "pct_terziario_25_64": 20.8
+    },
+    {
+      "nuts2": "ITC2",
+      "nome": "Valle d’Aosta/Vallée d’Aoste",
+      "anno": "2024",
+      "pct_terziario_25_64": 21.4
+    },
+    {
+      "nuts2": "ITC2",
+      "nome": "Valle d’Aosta/Vallée d’Aoste",
+      "anno": "2025",
+      "pct_terziario_25_64": 21.0
+    },
+    {
+      "nuts2": "ITC3",
+      "nome": "Liguria",
+      "anno": "2023",
+      "pct_terziario_25_64": 23.5
+    },
+    {
+      "nuts2": "ITC3",
+      "nome": "Liguria",
+      "anno": "2024",
+      "pct_terziario_25_64": 23.8
+    },
+    {
+      "nuts2": "ITC3",
+      "nome": "Liguria",
+      "anno": "2025",
+      "pct_terziario_25_64": 23.5
+    },
+    {
+      "nuts2": "ITC4",
+      "nome": "Lombardia",
+      "anno": "2023",
+      "pct_terziario_25_64": 23.5
+    },
+    {
+      "nuts2": "ITC4",
+      "nome": "Lombardia",
+      "anno": "2024",
+      "pct_terziario_25_64": 23.9
+    },
+    {
+      "nuts2": "ITC4",
+      "nome": "Lombardia",
+      "anno": "2025",
+      "pct_terziario_25_64": 23.6
+    },
+    {
+      "nuts2": "ITF1",
+      "nome": "Abruzzo",
+      "anno": "2023",
+      "pct_terziario_25_64": 22.2
+    },
+    {
+      "nuts2": "ITF1",
+      "nome": "Abruzzo",
+      "anno": "2024",
+      "pct_terziario_25_64": 23.8
+    },
+    {
+      "nuts2": "ITF1",
+      "nome": "Abruzzo",
+      "anno": "2025",
+      "pct_terziario_25_64": 24.6
+    },
+    {
+      "nuts2": "ITF2",
+      "nome": "Molise",
+      "anno": "2023",
+      "pct_terziario_25_64": 21.9
+    },
+    {
+      "nuts2": "ITF2",
+      "nome": "Molise",
+      "anno": "2024",
+      "pct_terziario_25_64": 23.1
+    },
+    {
+      "nuts2": "ITF2",
+      "nome": "Molise",
+      "anno": "2025",
+      "pct_terziario_25_64": 22.1
+    },
+    {
+      "nuts2": "ITF3",
+      "nome": "Campania",
+      "anno": "2023",
+      "pct_terziario_25_64": 17.8
+    },
+    {
+      "nuts2": "ITF3",
+      "nome": "Campania",
+      "anno": "2024",
+      "pct_terziario_25_64": 18.7
+    },
+    {
+      "nuts2": "ITF3",
+      "nome": "Campania",
+      "anno": "2025",
+      "pct_terziario_25_64": 18.7
+    },
+    {
+      "nuts2": "ITF4",
+      "nome": "Puglia",
+      "anno": "2023",
+      "pct_terziario_25_64": 17.5
+    },
+    {
+      "nuts2": "ITF4",
+      "nome": "Puglia",
+      "anno": "2024",
+      "pct_terziario_25_64": 18.0
+    },
+    {
+      "nuts2": "ITF4",
+      "nome": "Puglia",
+      "anno": "2025",
+      "pct_terziario_25_64": 18.5
+    },
+    {
+      "nuts2": "ITF5",
+      "nome": "Basilicata",
+      "anno": "2023",
+      "pct_terziario_25_64": 19.7
+    },
+    {
+      "nuts2": "ITF5",
+      "nome": "Basilicata",
+      "anno": "2024",
+      "pct_terziario_25_64": 20.2
+    },
+    {
+      "nuts2": "ITF5",
+      "nome": "Basilicata",
+      "anno": "2025",
+      "pct_terziario_25_64": 20.4
+    },
+    {
+      "nuts2": "ITF6",
+      "nome": "Calabria",
+      "anno": "2023",
+      "pct_terziario_25_64": 19.0
+    },
+    {
+      "nuts2": "ITF6",
+      "nome": "Calabria",
+      "anno": "2024",
+      "pct_terziario_25_64": 20.1
+    },
+    {
+      "nuts2": "ITF6",
+      "nome": "Calabria",
+      "anno": "2025",
+      "pct_terziario_25_64": 18.6
+    },
+    {
+      "nuts2": "ITG1",
+      "nome": "Sicilia",
+      "anno": "2023",
+      "pct_terziario_25_64": 16.8
+    },
+    {
+      "nuts2": "ITG1",
+      "nome": "Sicilia",
+      "anno": "2024",
+      "pct_terziario_25_64": 17.8
+    },
+    {
+      "nuts2": "ITG1",
+      "nome": "Sicilia",
+      "anno": "2025",
+      "pct_terziario_25_64": 16.9
+    },
+    {
+      "nuts2": "ITG2",
+      "nome": "Sardegna",
+      "anno": "2023",
+      "pct_terziario_25_64": 18.6
+    },
+    {
+      "nuts2": "ITG2",
+      "nome": "Sardegna",
+      "anno": "2024",
+      "pct_terziario_25_64": 19.0
+    },
+    {
+      "nuts2": "ITG2",
+      "nome": "Sardegna",
+      "anno": "2025",
+      "pct_terziario_25_64": 18.4
+    },
+    {
+      "nuts2": "ITH1",
+      "nome": "Provincia Autonoma di Bolzano/Bozen",
+      "anno": "2023",
+      "pct_terziario_25_64": 18.9
+    },
+    {
+      "nuts2": "ITH1",
+      "nome": "Provincia Autonoma di Bolzano/Bozen",
+      "anno": "2024",
+      "pct_terziario_25_64": 19.1
+    },
+    {
+      "nuts2": "ITH1",
+      "nome": "Provincia Autonoma di Bolzano/Bozen",
+      "anno": "2025",
+      "pct_terziario_25_64": 18.7
+    },
+    {
+      "nuts2": "ITH2",
+      "nome": "Provincia Autonoma di Trento",
+      "anno": "2023",
+      "pct_terziario_25_64": 23.5
+    },
+    {
+      "nuts2": "ITH2",
+      "nome": "Provincia Autonoma di Trento",
+      "anno": "2024",
+      "pct_terziario_25_64": 23.7
+    },
+    {
+      "nuts2": "ITH2",
+      "nome": "Provincia Autonoma di Trento",
+      "anno": "2025",
+      "pct_terziario_25_64": 23.9
+    },
+    {
+      "nuts2": "ITH3",
+      "nome": "Veneto",
+      "anno": "2023",
+      "pct_terziario_25_64": 20.5
+    },
+    {
+      "nuts2": "ITH3",
+      "nome": "Veneto",
+      "anno": "2024",
+      "pct_terziario_25_64": 21.7
+    },
+    {
+      "nuts2": "ITH3",
+      "nome": "Veneto",
+      "anno": "2025",
+      "pct_terziario_25_64": 21.8
+    },
+    {
+      "nuts2": "ITH4",
+      "nome": "Friuli-Venezia Giulia",
+      "anno": "2023",
+      "pct_terziario_25_64": 22.0
+    },
+    {
+      "nuts2": "ITH4",
+      "nome": "Friuli-Venezia Giulia",
+      "anno": "2024",
+      "pct_terziario_25_64": 24.1
+    },
+    {
+      "nuts2": "ITH4",
+      "nome": "Friuli-Venezia Giulia",
+      "anno": "2025",
+      "pct_terziario_25_64": 24.1
+    },
+    {
+      "nuts2": "ITH5",
+      "nome": "Emilia-Romagna",
+      "anno": "2023",
+      "pct_terziario_25_64": 23.7
+    },
+    {
+      "nuts2": "ITH5",
+      "nome": "Emilia-Romagna",
+      "anno": "2024",
+      "pct_terziario_25_64": 24.9
+    },
+    {
+      "nuts2": "ITH5",
+      "nome": "Emilia-Romagna",
+      "anno": "2025",
+      "pct_terziario_25_64": 25.3
+    },
+    {
+      "nuts2": "ITI1",
+      "nome": "Toscana",
+      "anno": "2023",
+      "pct_terziario_25_64": 22.4
+    },
+    {
+      "nuts2": "ITI1",
+      "nome": "Toscana",
+      "anno": "2024",
+      "pct_terziario_25_64": 23.3
+    },
+    {
+      "nuts2": "ITI1",
+      "nome": "Toscana",
+      "anno": "2025",
+      "pct_terziario_25_64": 23.8
+    },
+    {
+      "nuts2": "ITI2",
+      "nome": "Umbria",
+      "anno": "2023",
+      "pct_terziario_25_64": 23.8
+    },
+    {
+      "nuts2": "ITI2",
+      "nome": "Umbria",
+      "anno": "2024",
+      "pct_terziario_25_64": 25.6
+    },
+    {
+      "nuts2": "ITI2",
+      "nome": "Umbria",
+      "anno": "2025",
+      "pct_terziario_25_64": 25.0
+    },
+    {
+      "nuts2": "ITI3",
+      "nome": "Marche",
+      "anno": "2023",
+      "pct_terziario_25_64": 23.2
+    },
+    {
+      "nuts2": "ITI3",
+      "nome": "Marche",
+      "anno": "2024",
+      "pct_terziario_25_64": 24.2
+    },
+    {
+      "nuts2": "ITI3",
+      "nome": "Marche",
+      "anno": "2025",
+      "pct_terziario_25_64": 24.9
+    },
+    {
+      "nuts2": "ITI4",
+      "nome": "Lazio",
+      "anno": "2023",
+      "pct_terziario_25_64": 28.4
+    },
+    {
+      "nuts2": "ITI4",
+      "nome": "Lazio",
+      "anno": "2024",
+      "pct_terziario_25_64": 28.3
+    },
+    {
+      "nuts2": "ITI4",
+      "nome": "Lazio",
+      "anno": "2025",
+      "pct_terziario_25_64": 28.5
+    }
+  ]
+}
