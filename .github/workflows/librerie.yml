@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - "scripts/librerie_mappe_aperte.py"
+      - "scripts/unifica_librerie.py"
       - ".github/workflows/librerie.yml"
   schedule:
     - cron: "17 4 3 * *"   # il 3 di ogni mese
@@ -23,6 +24,7 @@ jobs:
           python-version: "3.12"
       - run: pip install duckdb==1.2.2
       - run: python scripts/librerie_mappe_aperte.py
+      - run: python scripts/unifica_librerie.py
       - name: Salva i risultati nel repository
         run: |
           git config user.name "territorio-legge-bot"
