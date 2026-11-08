@@ -55,23 +55,38 @@ def numero(s):
 
 # ---------------------------------------------------------------- comuni e abitanti (ISTAT 2026)
 comuni = {}
+eta = defaultdict(lambda: [0, 0])  # [0-14 anni, 65 anni e più]
 for r in csv.reader(open(f"{G}/istat_popolazione_2026/POSAS_2026_it_Comuni.csv", encoding="utf-8-sig"), delimiter=";"):
-    if len(r) == 6 and r[2] == "999":
+    if len(r) != 6:
+        continue
+    if r[2] == "999":
         comuni[pc(r[0])] = {"pro_com": pc(r[0]), "comune": r[1], "abitanti": int(r[5])}
+    elif r[2].isdigit():
+        if int(r[2]) <= 14:
+            eta[pc(r[0])][0] += int(r[5])
+        elif int(r[2]) >= 65:
+            eta[pc(r[0])][1] += int(r[5])
 
 # provincia e regione dall'anagrafe ICCU dove c'è, poi dalle librerie
 # ---------------------------------------------------------------- biblioteche (ICCU)
 bib = json.load(open(f"{G}/iccu_biblioteche/biblioteche.json", encoding="utf-8"))
 estrazione_iccu = bib["metadati"].get("data-estrazione")
+# Biblioteca aperta a tutti: di pubblica lettura, ma anche di conservazione, «importante non specializzata»
+# e nazionale (es. la Biblioteca provinciale di Matera è registrata come «di conservazione»), purché
+# attiva e con accesso non riservato. Le specializzate, scolastiche e universitarie restano fuori.
+TIPI_APERTI = {"Pubblica", "Di conservazione", "Importante non specializzata", "Nazionale"}
 bib_per_comune = defaultdict(list)
+pubbliche_per_comune = defaultdict(int)
 luogo = {}
 for b in bib["biblioteche"]:
     com = b["indirizzo"]["comune"]
     luogo.setdefault(pc(com["istat"]), (b["indirizzo"].get("provincia", {}).get("nome"),
                                         b["indirizzo"].get("regione", {}).get("nome") if isinstance(b["indirizzo"].get("regione"), dict) else b["indirizzo"].get("regione")))
-    if (b.get("tipologia-funzionale") == "Pubblica" and b.get("stato-registrazione") is None
-            and not (b.get("accesso") or {}).get("riservato")):
+    attiva = b.get("stato-registrazione") is None and not (b.get("accesso") or {}).get("riservato")
+    if attiva and b.get("tipologia-funzionale") in TIPI_APERTI:
         bib_per_comune[pc(com["istat"])].append(b["denominazioni"]["ufficiale"])
+        if b.get("tipologia-funzionale") == "Pubblica":
+            pubbliche_per_comune[pc(com["istat"])] += 1
 
 # ---------------------------------------------------------------- librerie (mappe aperte)
 GRUPPI_LIBRERIA = ["libreria", "libreria dell'usato", "libreria universitaria"]
@@ -167,11 +182,13 @@ for p, c in sorted(comuni.items()):
     righe.append({
         "pro_com": p, "comune": c["comune"], "provincia": red.get("provincia") or prov,
         "regione": regione_std(regione_lib.get(p) or red.get("regione") or reg), "abitanti_2026": c["abitanti"],
-        "biblioteche_pubbliche": nb, "minuti_biblioteca": tb,
+        "biblioteche_aperte": nb, "di_cui_pubblica_lettura": pubbliche_per_comune.get(p, 0), "minuti_biblioteca": tb,
         "comune_biblioteca_piu_vicina": comuni.get(db, {}).get("comune") if db else None,
         "librerie_note": nl, "minuti_libreria": tl,
         "comune_libreria_piu_vicina": comuni.get(dl, {}).get("comune") if dl else None,
         "reddito_medio_dichiarato_2024": red.get("reddito_medio"),
+        "pct_0_14": round(100 * eta[p][0] / c["abitanti"], 1) if c["abitanti"] else None,
+        "pct_65_piu": round(100 * eta[p][1] / c["abitanti"], 1) if c["abitanti"] else None,
         "biblioteche_nomi": " | ".join(sorted(bib_per_comune.get(p, []))),
         "librerie_nomi": " | ".join(sorted(set(nomi_librerie.get(p, [])))),
     })
@@ -200,8 +217,8 @@ registro = json.load(open(f"{G}/registro.json", encoding="utf-8"))
 sintesi = {
     "calcolato": datetime.now(timezone.utc).isoformat(timespec="seconds"),
     "comuni": len(righe), "abitanti": sum(r["abitanti_2026"] for r in righe),
-    "biblioteche_pubbliche_attive": sum(r["biblioteche_pubbliche"] for r in righe),
-    "comuni_con_biblioteca": sum(1 for r in righe if r["biblioteche_pubbliche"]),
+    "biblioteche_aperte": sum(r["biblioteche_aperte"] for r in righe),
+    "comuni_con_biblioteca": sum(1 for r in righe if r["biblioteche_aperte"]),
     "librerie_note": sum(r["librerie_note"] for r in righe),
     "comuni_con_libreria": sum(1 for r in righe if r["librerie_note"]),
     "distanza_biblioteca": classi("minuti_biblioteca"),
@@ -218,4 +235,49 @@ sintesi = {
     },
 }
 json.dump(sintesi, open(f"{OUT}/sintesi.json", "w", encoding="utf-8"), indent=2, ensure_ascii=False)
+
+
+# ---------------------------------------------------------------- confronti a parità di grandezza
+# I comuni senza libri sono quasi tutti piccoli: confrontarli con le città mescola l'effetto «libro»
+# con l'effetto «grandezza». Qui ogni profilo è confrontato solo con comuni della stessa fascia,
+# e la media nazionale «standardizzata» ripesa ogni profilo con la stessa distribuzione per fascia.
+def profilo(r):
+    b, l = r["biblioteche_aperte"] > 0, r["librerie_note"] > 0
+    return "Libreria e biblioteca" if b and l else "Solo biblioteca" if b else "Solo libreria" if l else "Nessuna delle due"
+
+
+FASCE = [("meno di 1.000", 0, 1000), ("1.000-2.999", 1000, 3000), ("3.000-9.999", 3000, 10000),
+         ("10.000-49.999", 10000, 50000), ("50.000 e più", 50000, 10**9)]
+fascia = lambda a: next(n for n, lo, hi in FASCE if lo <= a < hi)
+celle = defaultdict(lambda: {"comuni": 0, "abitanti": 0, "red_x_ab": 0, "ab_red": 0, "giovani": 0, "anziani": 0})
+for r in righe:
+    k = (fascia(r["abitanti_2026"]), profilo(r))
+    c, a = celle[k], r["abitanti_2026"]
+    c["comuni"] += 1; c["abitanti"] += a
+    c["giovani"] += eta[r["pro_com"]][0]; c["anziani"] += eta[r["pro_com"]][1]
+    if r["reddito_medio_dichiarato_2024"]:
+        c["red_x_ab"] += r["reddito_medio_dichiarato_2024"] * a; c["ab_red"] += a
+tabella = []
+for (f, p), c in celle.items():
+    tabella.append({"fascia": f, "profilo": p, "comuni": c["comuni"], "abitanti": c["abitanti"],
+                    "reddito_medio": round(c["red_x_ab"] / c["ab_red"]) if c["ab_red"] else None,
+                    "pct_0_14": round(100 * c["giovani"] / c["abitanti"], 1) if c["abitanti"] else None,
+                    "pct_65_piu": round(100 * c["anziani"] / c["abitanti"], 1) if c["abitanti"] else None,
+                    "affidabile": c["comuni"] >= 30})
+peso = defaultdict(int)
+for r in righe:
+    peso[fascia(r["abitanti_2026"])] += r["abitanti_2026"]
+tot = sum(peso.values())
+standard = {}
+for p in ["Libreria e biblioteca", "Solo biblioteca", "Solo libreria", "Nessuna delle due"]:
+    num = den = 0
+    for f, _, _ in FASCE:
+        c = celle.get((f, p))
+        if c and c["ab_red"] and c["comuni"] >= 30:
+            num += peso[f] * c["red_x_ab"] / c["ab_red"]; den += peso[f]
+    standard[p] = round(num / den) if den else None
+json.dump({"nota": "Celle con meno di 30 comuni marcate come non affidabili e escluse dalla media standardizzata.",
+           "fasce": [n for n, _, _ in FASCE], "tabella": tabella,
+           "reddito_standardizzato_per_grandezza": standard},
+          open(f"{OUT}/confronti.json", "w", encoding="utf-8"), indent=2, ensure_ascii=False)
 print(json.dumps(sintesi, indent=2, ensure_ascii=False))
