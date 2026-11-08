@@ -1,0 +1,26 @@
+{
+ "abitanti_totali": 58942828,
+ "librerie_totali": 7467,
+ "comuni_con_libreria": 1746,
+ "lontani_libreria_30": 438718,
+ "lontani_biblioteca_30": 24021,
+ "pct_entro_15_libreria": 91.8,
+ "comuni_senza_tempi": 9,
+ "abitanti_senza_tempi": 32730,
+ "comuni_senza_nulla": 2052,
+ "abitanti_senza_nulla": 2879007,
+ "italia_lettori_tempo_libero": 40.5,
+ "italia_legge_qualsiasi_motivo": 57.1,
+ "legami": {
+  "reddito ~ lettori": 0.9,
+  "laureati ~ lettori": 0.59,
+  "libreria nel comune ~ lettori": -0.07,
+  "libreria entro 15 minuti ~ lettori": 0.32,
+  "libreria entro 15 minuti ~ lettori, a parità di reddito e laureati": 0.04,
+  "libreria nel comune ~ lettori, a parità di reddito e laureati": -0.1,
+  "ultimo libro da biblioteca ~ lettori": 0.74,
+  "ultimo libro da biblioteca ~ lettori, a parità di laureati": 0.72,
+  "ultimo libro da biblioteca ~ lettori, a parità di reddito": 0.18,
+  "ultimo libro da biblioteca ~ lettori, a parità di reddito e laureati": 0.24
+ }
+}
