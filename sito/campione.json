@@ -1,0 +1,21 @@
+{
+ "data": "2026-11-09",
+ "metodo": "30 comuni estratti a caso (seme 20261109: 10 sotto i 3.000 abitanti, 10 tra 3.000 e 20.000, 10 sopra i 20.000) più i comuni nominati nella pagina. Per ognuno abbiamo cercato a mano le librerie e le biblioteche su fonti esterne e le abbiamo confrontate con i nostri dati. Qui conserviamo solo il nostro giudizio, non i dati delle fonti esterne.",
+ "domanda": "Il comune ha almeno una vera libreria (negozio la cui attività principale è vendere libri)? I nostri dati dicono lo stesso?",
+ "casuali": {
+  "controllati": 30,
+  "giusti": 27,
+  "sbagliati": 2,
+  "incerti": 1,
+  "dettaglio_sbagliati": [
+   "un comune piccolo con un negozio di regali e souvenir registrato come libreria sulle mappe",
+   "un comune medio con una libreria vera che sulle mappe aperte non è classificata come libreria"
+  ],
+  "dettaglio_incerti": [
+   "un comune molto piccolo con un'attività di libri che potrebbe essere un distributore e non un negozio"
+  ]
+ },
+ "conteggi": "Nei comuni controllati, circa due nomi su tre sono librerie vere; gli altri sono lo stesso negozio scritto in due modi, negozi segnati nel comune sbagliato, un negozio di regali o casi incerti. Per questo usiamo il dato soprattutto per dire se nel comune c'è almeno una libreria e quanto è lontana la più vicina, non per contare i negozi.",
+ "biblioteche": "Nei comuni del campione le biblioteche dei nostri dati corrispondono a quelle trovate. Fa eccezione Terracina: la biblioteca comunale nell'anagrafe nazionale risulta temporaneamente chiusa e per questo non la contiamo.",
+ "definizione": "Libreria = punto classificato come libreria sulle mappe aperte il cui nome dice che si vendono libri, oppure segnato come libreria anche su OpenStreetMap."
+}

@@ -141,6 +141,7 @@ json.dump(bambini, open(f"{OUT}/bambini.json", "w", encoding="utf-8"), ensure_as
 # =====================================================================================
 import openpyxl
 import re
+from datetime import datetime
 
 T, FONTE = {}, {}
 
@@ -218,18 +219,17 @@ n_nord_sopra_lazio = sum(1 for x in A["regioni"] if x["regione"] in NORD and x["
 metti("nord_sopra_lazio", {5: "cinque", 6: "sei", 4: "quattro", 3: "tre", 7: "sette", 8: "otto"}.get(n_nord_sopra_lazio, str(n_nord_sopra_lazio)), "regioni.json")
 
 # --- capitolo 3: lettura nel tempo libero per titolo di studio (25+, maschi e femmine, migliaia)
-t4 = righe_tav(F25, "tavola 4 segue")
+t4 = righe_tav(F25, "tavola 4")
 inizio = next(i for i, r in enumerate(t4) if r and str(r[0]).strip().upper().startswith("MASCHI E FEMMINE"))
 tot = next(i for i in range(inizio, len(t4)) if t4[i] and str(t4[i][0]).strip() == "TOTALE")
 studio = {}
 for r in [x for x in t4[tot:tot + 10] if x][:5]:
     titolo = r[1] if str(r[0]).strip() == "TOTALE" else r[0]
     v = r[2:] if str(r[0]).strip() == "TOTALE" else r[1:]
-    no, si, solo_lib, sia = v[0], v[1], v[2], v[3]
-    studio[str(titolo).strip()] = 100 * (solo_lib + sia) / (no + si)
+    studio[str(titolo).strip()] = v[2] + v[3]   # solo nel tempo libero + anche nel tempo libero
 G3 = [("Laurea", studio["Laurea"]), ("Diploma", studio["Diploma superiore"]),
       ("Licenza media", studio["Licenza media"]), ("Licenza elementare", studio["Licenza elementare"])]
-metti("g3_dati", json.dumps([{"l": l, "v": round(v, 1)} for l, v in G3], ensure_ascii=False), "ISTAT tavola 4 segue (2024)")
+metti("g3_dati", json.dumps([{"l": l, "v": round(v, 1)} for l, v in G3], ensure_ascii=False), "ISTAT tavola 4 (2024), lettori nel tempo libero, 25 anni e più")
 metti("laureati_leggono", {7: "sette su dieci", 6: "due su tre", 8: "otto su dieci"}.get(round(studio["Laurea"] / 10), su_dieci(studio["Laurea"] / 100)), "ISTAT tavola 4 segue")
 if 63 <= studio["Laurea"] <= 70:
     T["laureati_leggono"] = "due laureati su tre"
@@ -255,7 +255,13 @@ LB = pv[pv.gruppo.isin(["libreria", "libreria dell'usato", "libreria universitar
 conf = LB[(pd.to_numeric(LB.affidabilita, errors="coerce") >= 0.9) | (LB.anche_in_osm == "sì")]
 metti("librerie_totali", it_int(numeri["librerie_totali"]), "per_comune.csv")
 metti("comuni_con_libreria", it_int(numeri["comuni_con_libreria"]), "per_comune.csv")
-metti("librerie_confermate_circa", it_int(round(len(conf), -2)), "punti_vendita.csv, affidabilità ≥ 0,9 o presenti anche in OSM")
+CAMP = json.load(open("sito/campione.json", encoding="utf-8"))
+cs = CAMP["casuali"]
+assert cs["giusti"] + cs["sbagliati"] + cs["incerti"] == cs["controllati"]
+d_c = datetime.fromisoformat(CAMP["data"])
+for k in ("controllati", "giusti", "sbagliati", "incerti"):
+    metti(f"campione_{k}", str(cs[k]), "sito/campione.json, controllo a mano")
+metti("campione_data", f"{d_c.day}/{d_c.month}/{d_c.year}", "sito/campione.json")
 metti("comuni_senza_tempi", str(numeri["comuni_senza_tempi"]), "comuni.csv")
 metti("abitanti_senza_tempi", it_int(numeri["abitanti_senza_tempi"]), "comuni.csv")
 for k, v in numeri["legami"].items():
@@ -298,6 +304,51 @@ metti("motivo_librerie_parole", "meno di 1 su 100", "ISTAT tavola 34 (2024), «N
 q_b = bambini["oltre15_biblioteca"] / bambini["totale"] * 100
 metti("bambini_bib15_parole", a_parole(q_b, "un bambino"), "comuni.csv, quota 0-14 ISTAT 2026")
 metti("bambini_lib15_parole", a_parole(bambini["oltre15_libreria"] / bambini["totale"] * 100, "un bambino"), "comuni.csv")
+
+# --- correzioni dal controllo frase per frase
+piu = lambda q, cosa: f"più di {int(q * 10)} {cosa} su 10"
+metti("deserti_bib15", piu(q_bib, "abitanti"), "comuni.csv")
+metti("deserti_lib15", piu(q_lib, "abitanti"), "comuni.csv")
+oltre15_tot = sum(int(r["abitanti_2026"]) for r in righe if r["minuti_libreria"] != "" and float(r["minuti_libreria"]) > 15)
+metti("lontani15_italia_mln", it_dec(oltre15_tot / 1e6), "comuni.csv")
+sotto10 = sum(int(r["abitanti_2026"]) for r in deserti if int(r["abitanti_2026"]) < 10000) / ab_d
+metti("deserti_sotto10k", f"{round(sotto10 * 10)} su 10", "comuni.csv")
+import statistics
+def mediana_arr(v, passo):
+    return it_int(round(statistics.median(v), -2 if passo == 100 else -3))
+tutto = [int(r["abitanti_2026"]) for r in righe if int(r["librerie_note"] or 0) and int(r["biblioteche_aperte"] or 0)]
+metti("mediana_deserti", mediana_arr([int(r["abitanti_2026"]) for r in deserti], 100), "comuni.csv, mediana")
+metti("mediana_con_tutto", mediana_arr(tutto, 1000), "comuni.csv, mediana")
+for nome, k in (("Lombardia", "lom"), ("Emilia-Romagna", "emr")):
+    metti(f"{k}_lau", it_dec(RJ[nome]["pct_laureati_25_64"]), "Eurostat edat_lfse_04")
+top_red = {x["regione"] for x in sorted(A["regioni"], key=lambda x: -x["reddito_medio_dichiarato"])[:10]}
+top_let = {x["regione"] for x in sorted(A["regioni"], key=lambda x: -x["pct_lettori"])[:10]}
+com = len(top_red & top_let)
+metti("ricche_leggono", "Le dieci regioni con il reddito più alto sono anche le dieci che leggono di più." if com == 10
+      else f"Delle dieci regioni con il reddito più alto, {com} sono anche tra le dieci che leggono di più.", "regioni.json")
+metti("vda_ub_parole", a_parole(RJ["Valle d'Aosta"]["ultimo_libro_da_biblioteca"], "un lettore").replace("circa ", ""), "ISTAT tavola 18 (2024)")
+metti("taa_ub_parole", a_parole(RJ["Trentino-Alto Adige"]["ultimo_libro_da_biblioteca"], "uno").replace("circa ", ""), "ISTAT tavola 18 (2024)")
+t2 = righe_tav(F25, "tavola 2")
+for testo, k in (("Fino a 2.000 abitanti", "let_fino2000"), ("Comune centro dell'area metropolitana", "let_centri")):
+    r = riga_che_inizia(t2, testo)
+    metti(k, it_dec(r[3] + r[4]), "ISTAT tavola 2 (2024), lettori nel tempo libero per tipo di comune")
+def red_aff(f, p):
+    t = next(t for t in Cj["tabella"] if t["fascia"] == f and t["profilo"] == p)
+    assert t["affidabile"], f"{f} {p} sotto la soglia di 30 comuni"
+    return t["reddito_medio"]
+metti("red_1_3_diff", it_int(round(red_aff("1.000-2.999", "Libreria e biblioteca") - red_aff("1.000-2.999", "Nessuna delle due"), -2)), "confronti.json")
+metti("red_3_10_diff", it_int(round(red_aff("3.000-9.999", "Libreria e biblioteca") - red_aff("3.000-9.999", "Nessuna delle due"), -2)), "confronti.json")
+
+# --- percentuali con l'articolo giusto davanti («il 72%», «l'82%», «l'1,6%», «lo 0,7%»)
+def con_articolo(testo):
+    t = testo.replace(".", "")
+    if t.startswith("0"):
+        return "lo " + testo + "%"
+    if t.startswith("8") or t.startswith("11") or (t.startswith("1") and (len(t.split(",")[0]) == 1)):
+        return "l'" + testo + "%"
+    return "il " + testo + "%"
+for k in ("pug_l15", "taa_l15", "ub_2_10mila", "ub_centri", "laz_ub", "taa_ub", "cam_ub"):
+    metti(k + "_art", con_articolo(T[k]), FONTE[k])
 
 # --- date delle fonti (dai registri scritti dagli script di scaricamento)
 from email.utils import parsedate_to_datetime

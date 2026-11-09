@@ -1,5 +1,5 @@
 {
- "data": "2026-11-09 18:58 UTC",
+ "data": "2026-11-09 18:59 UTC",
  "esiti": [
   {
    "esito": "OK",
@@ -54,7 +54,7 @@
   {
    "esito": "OK",
    "controllo": "Numeri della pagina tutti dai dati",
-   "dettaglio": "Verifica pagina: 0 errori, 52 segnaposto."
+   "dettaglio": "Verifica pagina: 0 errori, 69 segnaposto."
   }
  ]
 }
