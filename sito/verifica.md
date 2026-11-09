@@ -1,4 +1,4 @@
-# Verifica dei dati · 2026-11-09 19:00 UTC
+# Verifica dei dati · 2026-11-09 19:05 UTC
 
 - **OK** · Comuni della mappa con dati: 7896 sulla mappa, 7896 con dati; senza dati: []; senza mappa: []
 - **OK** · Abitanti totali uguali a ISTAT: schede 58.942.828 · ISTAT POSAS 58.942.828
