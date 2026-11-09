@@ -43,7 +43,8 @@ def primario(tassonomia):
 # Le regole sono poche, leggibili e uguali per tutta Italia; l'ordine conta (la prima che vale vince).
 CORREZIONI = [
     (r"bibliotec", "biblioteca (non è una libreria)"),
-    (r"cartolibr|cartoler|cartol|cartoleria|cancelleria", "cartolibreria o cartoleria"),
+    (r"cartolibr|cartoler|cartol|cartoleria|cancelleria|paper|papier|karta|stationery|buffetti", "cartolibreria o cartoleria"),
+    (r"\bstampa\b|tipografi|collezionis|souvenir", "altro"),
     (r"edicol|giornal", "edicola"),
     (r"fumett|comix|comic|manga", "fumetteria"),
     (r"giocattol|\bgioc|toys|games", "giocattoli e giochi"),
@@ -161,12 +162,18 @@ for r in sorted(righe, key=lambda x: -float(x["affidabilita"] or 0)):
         continue
     lat, lon = float(r["lat"]), float(r["lon"])
     k = chiave(r["nome"])
-    if any(math.hypot((lat - a) * 111_000, (lon - b) * 111_000 * math.cos(math.radians(lat))) < RAGGIO_M
-           for a, b in visti[k]):
+    dist = lambda a, b: math.hypot((lat - a) * 111_000, (lon - b) * 111_000 * math.cos(math.radians(lat)))
+    stesso = any(dist(a, b) < RAGGIO_M for a, b, _ in visti[k])
+    # nome quasi uguale (uno inizia con l'altro, es. «Mondadori Point» e «Mondadori Point Ostuni»)
+    # nello stesso comune e a meno di 300 metri: è lo stesso negozio segnato due volte
+    simile = not stesso and len(k) >= 8 and any(
+        (k.startswith(k2) or k2.startswith(k)) and c2 == r["pro_com"] and dist(a, b) < 300
+        for k2, lista in visti.items() if len(k2) >= 8 for a, b, c2 in lista)
+    if stesso or simile:
         r["stato"] = "doppione"
         doppioni += 1
     else:
-        visti[k].append((lat, lon))
+        visti[k].append((lat, lon, r["pro_com"]))
 print("Doppioni segnati:", doppioni)
 
 righe.sort(key=lambda x: (x["regione"], x["comune"], x["gruppo"], x["nome"] or ""))

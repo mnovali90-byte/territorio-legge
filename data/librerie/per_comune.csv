@@ -5,7 +5,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 001013,Avigliana,Piemonte,0,0,0,1,1,0,0,0,0,0,0,1,0,0,2,0,0,0,0,0
 001020,Banchette,Piemonte,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
 001022,Bardonecchia,Piemonte,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
-001024,Beinasco,Piemonte,0,0,0,0,1,0,5,0,0,0,0,1,0,0,2,0,0,0,0,3
+001024,Beinasco,Piemonte,0,0,0,0,1,0,5,0,0,0,0,1,0,0,1,0,0,0,0,3
 001028,Borgaro Torinese,Piemonte,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
 001030,Borgofranco d'Ivrea,Piemonte,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
 001032,Borgone Susa,Piemonte,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -73,8 +73,8 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 001202,Prali,Piemonte,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 001213,Rivalba,Piemonte,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0
 001214,Rivalta di Torino,Piemonte,0,0,0,1,0,0,2,0,0,0,0,1,0,0,0,0,0,0,0,0
-001217,Rivarolo Canavese,Piemonte,0,0,0,2,1,0,0,0,0,0,0,1,0,0,5,0,0,0,0,2
-001219,Rivoli,Piemonte,0,0,0,1,0,0,7,0,0,0,0,1,0,0,6,0,0,0,2,2
+001217,Rivarolo Canavese,Piemonte,0,0,0,2,1,0,0,0,0,0,0,1,0,0,4,0,0,0,0,2
+001219,Rivoli,Piemonte,0,0,0,1,0,0,7,0,0,0,0,1,0,0,4,0,0,0,2,2
 001223,Romano Canavese,Piemonte,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 001227,Roure,Piemonte,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 001236,San Benigno Canavese,Piemonte,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
@@ -91,7 +91,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 001266,Settimo Vittone,Piemonte,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 001269,Strambino,Piemonte,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0
 001270,Susa,Piemonte,0,0,0,0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0
-001272,Torino,Piemonte,0,0,0,38,21,4,124,12,0,1,0,32,2,12,214,1,0,3,40,21
+001272,Torino,Piemonte,0,0,0,39,21,4,124,12,0,1,0,32,2,12,212,1,0,3,40,21
 001273,Torrazza Piemonte,Piemonte,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 001275,Torre Pellice,Piemonte,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 001280,Trofarello,Piemonte,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1
@@ -110,7 +110,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 002016,Borgosesia,Piemonte,0,0,0,1,0,0,1,0,0,0,0,0,0,0,3,0,0,0,0,0
 002030,Caresana,Piemonte,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
 002031,Caresanablot,Piemonte,0,0,0,0,0,0,2,0,0,0,0,0,0,1,0,0,0,0,0,1
-002042,Cigliano,Piemonte,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+002042,Cigliano,Piemonte,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 002049,Crescentino,Piemonte,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,0,0,0,0,1
 002061,Gattinara,Piemonte,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
 002062,Ghislarengo,Piemonte,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -221,13 +221,13 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 006059,Cerrina Monferrato,Piemonte,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 006113,Murisengo Monferrato,Piemonte,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 006114,Novi Ligure,Piemonte,0,0,0,1,2,0,3,0,0,0,0,1,0,1,4,0,0,0,1,0
-006121,Ovada,Piemonte,0,0,0,2,1,0,2,0,0,0,0,0,0,0,2,0,0,0,0,0
+006121,Ovada,Piemonte,1,0,0,2,1,0,1,0,0,0,0,0,0,0,2,0,0,0,0,0
 006122,Oviglio,Piemonte,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 006132,Pontecurone,Piemonte,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 006133,Pontestura,Piemonte,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 006160,Serravalle Scrivia,Piemonte,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
 006167,Stazzano,Piemonte,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-006174,Tortona,Piemonte,0,0,0,1,0,0,1,0,0,0,0,0,0,0,7,0,0,0,1,1
+006174,Tortona,Piemonte,0,0,0,1,0,0,1,0,0,0,0,0,0,0,6,0,0,0,1,1
 006177,Valenza,Piemonte,0,0,0,2,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 006180,Vignole Borbera,Piemonte,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 006181,Viguzzolo,Piemonte,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -238,8 +238,8 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 007007,Ayas,Valle d'Aosta/Vallée d'Aoste,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
 007009,Bard,Valle d'Aosta/Vallée d'Aoste,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 007012,Brusson,Valle d'Aosta/Vallée d'Aoste,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-007021,Cogne,Valle d'Aosta/Vallée d'Aoste,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0
-007022,Courmayeur,Valle d'Aosta/Vallée d'Aoste,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0
+007021,Cogne,Valle d'Aosta/Vallée d'Aoste,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+007022,Courmayeur,Valle d'Aosta/Vallée d'Aoste,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 007023,Donnas,Valle d'Aosta/Vallée d'Aoste,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
 007037,Issogne,Valle d'Aosta/Vallée d'Aoste,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 007044,Morgex,Valle d'Aosta/Vallée d'Aoste,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -293,7 +293,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 009065,Varazze,Liguria,0,0,0,0,0,0,1,0,0,0,0,0,1,0,5,0,0,0,1,0
 009067,Vezzi Portio,Liguria,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
 009068,Villanova d'Albenga,Liguria,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
-010001,Arenzano,Liguria,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,1
+010001,Arenzano,Liguria,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1
 010002,Avegno,Liguria,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
 010004,Bogliasco,Liguria,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 010006,Busalla,Liguria,0,0,0,1,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,2
@@ -358,7 +358,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 012064,Daverio,Lombardia,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0
 012067,Fagnano Olona,Lombardia,0,0,0,0,0,2,0,0,0,0,0,0,0,0,1,0,0,0,0,2
 012068,Ferno,Lombardia,0,0,0,1,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0
-012070,Gallarate,Lombardia,0,0,0,1,1,1,3,0,0,0,0,2,0,1,12,0,0,0,1,1
+012070,Gallarate,Lombardia,0,0,0,1,1,1,3,0,0,0,0,2,0,1,11,0,0,0,1,1
 012072,Gavirate,Lombardia,0,0,0,1,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,1
 012073,Gazzada Schianno,Lombardia,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0
 012075,Gerenzano,Lombardia,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -380,13 +380,13 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 012119,Saronno,Lombardia,0,0,0,1,2,0,1,0,0,0,0,2,0,0,3,0,0,1,0,5
 012120,Sesto Calende,Lombardia,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1
 012122,Solbiate Olona,Lombardia,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
-012123,Somma Lombardo,Lombardia,0,0,0,1,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0
+012123,Somma Lombardo,Lombardia,0,0,0,1,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0
 012124,Sumirago,Lombardia,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 012126,Ternate,Lombardia,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 012127,Tradate,Lombardia,0,0,0,1,1,0,0,0,0,0,0,1,0,0,5,0,0,0,1,0
 012128,Travedona-Monate,Lombardia,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
 012130,Uboldo,Lombardia,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-012133,Varese,Lombardia,0,0,0,1,6,0,6,0,0,0,0,3,0,2,18,0,0,0,4,2
+012133,Varese,Lombardia,0,0,0,1,6,0,6,0,0,0,0,3,0,2,17,0,0,0,4,2
 012134,Vedano Olona,Lombardia,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
 012137,Venegono Superiore,Lombardia,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 012138,Vergiate,Lombardia,0,0,0,0,1,0,1,0,0,0,0,0,0,0,2,0,0,0,0,0
@@ -408,7 +408,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 013055,Cassina Rizzardi,Lombardia,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 013064,Cermenate,Lombardia,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
 013065,Cernobbio,Lombardia,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
-013075,Como,Lombardia,0,0,0,3,4,1,5,0,0,1,0,2,0,0,24,0,0,0,6,5
+013075,Como,Lombardia,0,0,0,3,4,1,5,0,0,1,0,2,0,0,23,0,0,0,6,5
 013090,Dongo,Lombardia,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 013095,Erba,Lombardia,0,0,0,2,0,0,0,0,0,0,0,0,0,0,5,0,0,0,1,1
 013097,Eupilio,Lombardia,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
@@ -472,7 +472,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 015009,Arese,Lombardia,0,0,0,0,0,0,1,0,0,0,0,2,0,0,2,0,0,0,2,0
 015010,Arluno,Lombardia,0,0,0,0,0,0,4,0,0,0,0,0,0,1,0,0,0,0,0,0
 015011,Assago,Lombardia,0,0,0,0,0,0,2,0,0,0,0,0,0,0,3,0,0,0,0,4
-015012,Bareggio,Lombardia,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,1,1
+015012,Bareggio,Lombardia,1,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,1,1
 015014,Basiano,Lombardia,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
 015016,Bellinzago Lombardo,Lombardia,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 015024,Binasco,Lombardia,0,0,0,1,0,0,2,0,0,0,0,0,0,0,1,0,0,0,0,0
@@ -511,7 +511,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 015114,Inzago,Lombardia,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
 015115,Lacchiarella,Lombardia,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,1
 015116,Lainate,Lombardia,0,0,0,1,0,0,2,0,0,0,0,1,0,1,0,0,0,0,0,1
-015118,Legnano,Lombardia,0,0,0,0,3,0,4,0,0,0,0,3,0,0,6,0,0,0,4,2
+015118,Legnano,Lombardia,0,0,0,0,3,0,4,0,0,0,0,3,0,0,5,0,0,0,4,2
 015125,Locate di Triulzi,Lombardia,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 015130,Magenta,Lombardia,0,0,0,0,1,0,3,0,0,0,0,0,0,1,4,0,0,0,2,2
 015131,Magnago,Lombardia,0,0,0,0,1,0,2,0,0,0,0,0,0,0,0,0,0,0,1,1
@@ -519,12 +519,12 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 015139,Mediglia,Lombardia,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
 015140,Melegnano,Lombardia,0,0,0,2,1,0,1,0,0,0,0,0,0,0,5,0,0,0,0,0
 015142,Melzo,Lombardia,0,0,0,1,0,0,2,0,0,0,0,1,0,1,2,0,0,0,0,0
-015146,Milano,Lombardia,1,0,1,25,30,9,188,14,0,1,0,28,1,25,293,3,2,1,66,30
+015146,Milano,Lombardia,1,0,1,27,30,9,188,13,0,1,0,28,1,25,286,3,2,1,66,30
 015151,Motta Visconti,Lombardia,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 015154,Nerviano,Lombardia,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,1
 015157,Novate Milanese,Lombardia,0,0,0,1,1,1,2,0,0,0,0,1,0,2,1,0,0,0,0,0
 015159,Opera,Lombardia,0,0,0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,1,1
-015166,Paderno Dugnano,Lombardia,0,0,0,0,1,0,2,0,0,0,0,1,0,0,6,0,0,1,0,4
+015166,Paderno Dugnano,Lombardia,0,0,0,0,1,0,2,0,0,0,0,1,0,0,5,0,0,1,0,4
 015167,Pantigliate,Lombardia,0,0,0,0,0,0,2,0,0,0,0,0,0,0,1,0,0,0,0,0
 015168,Parabiago,Lombardia,0,0,0,1,0,0,1,0,0,0,0,1,0,0,2,0,0,0,1,0
 015169,Paullo,Lombardia,0,0,0,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -540,7 +540,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 015182,Rho,Lombardia,0,0,0,2,3,1,2,0,0,0,0,1,0,1,6,0,0,0,3,2
 015183,Robecchetto con Induno,Lombardia,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 015188,Rosate,Lombardia,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
-015189,Rozzano,Lombardia,0,0,0,0,0,0,1,0,0,0,0,1,0,1,3,0,0,0,0,1
+015189,Rozzano,Lombardia,0,0,0,0,0,0,1,0,0,0,0,1,0,1,2,0,0,0,0,1
 015191,San Colombano al Lambro,Lombardia,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 015192,San Donato Milanese,Lombardia,0,0,0,2,1,0,2,0,0,0,0,0,0,0,2,0,0,0,1,0
 015195,San Giuliano Milanese,Lombardia,0,0,0,0,0,0,3,0,0,0,0,1,0,1,7,0,0,0,0,2
@@ -560,7 +560,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 015229,Vanzago,Lombardia,0,0,0,2,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0
 015230,Vaprio d'Adda,Lombardia,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
 015237,Vignate,Lombardia,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,3
-015242,Vimodrone,Lombardia,0,0,0,0,0,0,3,0,0,0,0,0,0,0,3,0,0,0,1,1
+015242,Vimodrone,Lombardia,0,0,0,0,0,0,3,0,0,0,0,0,0,0,2,0,0,0,1,1
 015243,Vittuone,Lombardia,0,0,0,0,0,0,1,0,0,0,0,0,0,0,3,0,0,0,0,2
 015244,Vizzolo Predabissi,Lombardia,0,0,0,0,0,0,1,0,0,0,0,0,0,1,1,0,0,0,0,0
 015247,Zibido San Giacomo,Lombardia,0,0,0,1,0,0,1,0,0,0,0,1,0,1,1,0,0,0,0,0
@@ -589,7 +589,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 016046,Calusco d'Adda,Lombardia,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 016049,Canonica d'Adda,Lombardia,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 016051,Capriate San Gervasio,Lombardia,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
-016053,Caravaggio,Lombardia,0,0,0,2,0,0,1,0,0,0,0,0,0,0,2,0,0,0,0,0
+016053,Caravaggio,Lombardia,0,0,0,2,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
 016058,Casazza,Lombardia,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 016059,Casirate d'Adda,Lombardia,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 016062,Castelli Calepio,Lombardia,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -813,7 +813,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 019021,Casalmaggiore,Lombardia,0,0,0,0,0,0,1,0,0,0,0,0,0,1,1,0,0,0,0,1
 019025,Castelleone,Lombardia,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 019029,Chieve,Lombardia,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
-019035,Crema,Lombardia,0,0,0,1,2,0,4,0,0,0,0,2,0,1,8,0,0,0,2,2
+019035,Crema,Lombardia,0,0,0,1,2,0,4,0,0,0,0,2,0,1,7,0,0,0,2,2
 019036,Cremona,Lombardia,0,0,0,3,0,0,8,2,0,0,0,2,0,2,18,0,0,1,6,3
 019037,Cremosano,Lombardia,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 019041,Dovera,Lombardia,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
@@ -867,9 +867,9 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 020071,Borgo Virgilio,Lombardia,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0
 021004,Appiano sulla strada del vino/Eppan an der Weinstraße,Trentino-Alto Adige/Südtirol,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 021008,Bolzano/Bozen,Trentino-Alto Adige/Südtirol,0,0,0,1,6,0,11,0,0,0,0,3,0,6,16,0,0,2,2,6
-021011,Bressanone/Brixen,Trentino-Alto Adige/Südtirol,0,0,0,0,1,0,1,0,0,0,0,0,0,0,4,0,0,0,0,0
+021011,Bressanone/Brixen,Trentino-Alto Adige/Südtirol,0,0,0,1,1,0,1,0,0,0,0,0,0,0,3,0,0,0,0,0
 021013,Brunico/Bruneck,Trentino-Alto Adige/Südtirol,0,0,0,0,1,0,2,0,0,0,0,0,0,0,2,0,0,0,2,0
-021015,Caldaro sulla strada del vino/Kaltern an der Weinstraße,Trentino-Alto Adige/Südtirol,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0
+021015,Caldaro sulla strada del vino/Kaltern an der Weinstraße,Trentino-Alto Adige/Südtirol,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 021017,Campo Tures/Sand in Taufers,Trentino-Alto Adige/Südtirol,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 021019,Castelrotto/Kastelruth,Trentino-Alto Adige/Südtirol,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 021030,Falzes/Pfalzen,Trentino-Alto Adige/Südtirol,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -881,12 +881,12 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 021051,Merano/Meran,Trentino-Alto Adige/Südtirol,0,0,0,0,3,0,6,0,0,0,0,0,0,2,8,0,0,1,3,0
 021056,Naturno/Naturns,Trentino-Alto Adige/Südtirol,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 021059,Nova Ponente/Deutschnofen,Trentino-Alto Adige/Südtirol,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
-021060,Ora/Auer,Trentino-Alto Adige/Südtirol,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
-021061,Ortisei/St. Ulrich,Trentino-Alto Adige/Südtirol,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,1,0,0
+021060,Ora/Auer,Trentino-Alto Adige/Südtirol,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+021061,Ortisei/St. Ulrich,Trentino-Alto Adige/Südtirol,0,0,0,1,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
 021076,Salorno sulla strada del vino/Salurn an der Weinstraße,Trentino-Alto Adige/Südtirol,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
-021077,San Candido/Innichen,Trentino-Alto Adige/Südtirol,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+021077,San Candido/Innichen,Trentino-Alto Adige/Südtirol,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 021079,San Genesio Atesino/Jenesien,Trentino-Alto Adige/Südtirol,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
-021080,San Leonardo in Passiria/St. Leonhard in Passeier,Trentino-Alto Adige/Südtirol,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+021080,San Leonardo in Passiria/St. Leonhard in Passeier,Trentino-Alto Adige/Südtirol,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 021081,San Lorenzo di Sebato/St. Lorenzen,Trentino-Alto Adige/Südtirol,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
 021093,Silandro/Schlanders,Trentino-Alto Adige/Südtirol,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 021097,Terlano/Terlan,Trentino-Alto Adige/Südtirol,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -938,7 +938,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 022246,Sella Giudicarie,Trentino-Alto Adige/Südtirol,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0
 022247,Tre Ville,Trentino-Alto Adige/Südtirol,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 022254,Ville di Fiemme,Trentino-Alto Adige/Südtirol,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
-023001,Affi,Veneto,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,1
+023001,Affi,Veneto,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1
 023002,Albaredo d'Adige,Veneto,0,0,0,2,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0
 023004,Arcole,Veneto,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0
 023006,Bardolino,Veneto,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -1092,7 +1092,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 026009,Casale sul Sile,Veneto,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 026010,Casier,Veneto,0,0,0,1,0,0,2,0,0,0,0,0,0,2,0,0,0,0,0,0
 026011,Castelcucco,Veneto,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-026012,Castelfranco Veneto,Veneto,0,0,0,1,1,0,8,0,0,0,0,1,0,2,6,0,0,0,1,2
+026012,Castelfranco Veneto,Veneto,0,0,0,1,1,0,8,0,0,0,0,1,0,2,4,0,0,0,1,2
 026013,Castello di Godego,Veneto,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 026014,Cavaso del Tomba,Veneto,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 026015,Cessalto,Veneto,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -1100,7 +1100,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 026017,Cimadolmo,Veneto,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 026019,Codognè,Veneto,0,0,0,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 026020,Colle Umberto,Veneto,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
-026021,Conegliano,Veneto,0,0,0,1,2,0,0,0,0,0,0,0,1,1,9,0,0,0,1,3
+026021,Conegliano,Veneto,0,0,0,1,2,0,0,0,0,0,0,0,1,1,8,0,0,0,1,3
 026022,Cordignano,Veneto,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 026023,Cornuda,Veneto,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 026026,Farra di Soligo,Veneto,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0
@@ -1194,7 +1194,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 028011,Battaglia Terme,Veneto,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 028015,Brugine,Veneto,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 028016,Cadoneghe,Veneto,0,0,0,1,1,0,3,0,0,0,0,0,0,0,0,0,0,0,0,1
-028017,Campodarsego,Veneto,0,0,0,1,2,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0
+028017,Campodarsego,Veneto,0,0,0,2,2,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
 028019,Camposampiero,Veneto,0,0,0,0,1,0,2,0,0,0,0,1,0,1,2,0,0,1,0,0
 028020,Campo San Martino,Veneto,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 028023,Carmignano di Brenta,Veneto,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -1218,7 +1218,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 028057,Montegrotto Terme,Veneto,0,0,0,0,0,0,1,0,0,0,0,0,0,0,3,0,0,0,0,0
 028058,Noventa Padovana,Veneto,0,0,0,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 028059,Ospedaletto Euganeo,Veneto,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
-028060,Padova,Veneto,0,0,0,9,12,0,25,1,0,0,0,4,1,3,58,2,1,1,12,5
+028060,Padova,Veneto,0,0,0,9,12,0,25,1,0,0,0,4,1,3,56,2,1,1,12,5
 028061,Pernumia,Veneto,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 028062,Piacenza d'Adige,Veneto,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 028063,Piazzola sul Brenta,Veneto,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -1256,7 +1256,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 029037,Polesella,Veneto,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 029039,Porto Tolle,Veneto,0,0,0,1,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
 029040,Rosolina,Veneto,0,0,0,2,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
-029041,Rovigo,Veneto,0,0,0,5,0,1,2,0,0,0,0,3,0,1,11,0,0,1,2,1
+029041,Rovigo,Veneto,1,0,0,5,0,1,2,0,0,0,0,3,0,1,10,0,0,1,2,1
 029044,San Martino di Venezze,Veneto,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
 029045,Stienta,Veneto,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 029046,Taglio di Po,Veneto,0,0,0,1,1,0,1,0,0,0,0,0,0,1,1,0,0,0,0,1
@@ -1278,7 +1278,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 030043,Gemona del Friuli,Friuli-Venezia Giulia,0,0,0,1,0,1,3,0,0,0,0,0,0,0,2,0,0,0,0,1
 030044,Gonars,Friuli-Venezia Giulia,0,0,0,2,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 030046,Latisana,Friuli-Venezia Giulia,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0
-030049,Lignano Sabbiadoro,Friuli-Venezia Giulia,0,0,0,0,3,1,2,0,0,0,0,0,0,0,3,0,0,0,0,0
+030049,Lignano Sabbiadoro,Friuli-Venezia Giulia,0,0,0,0,3,1,2,0,0,0,0,0,0,0,2,0,0,0,0,0
 030053,Majano,Friuli-Venezia Giulia,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 030055,Manzano,Friuli-Venezia Giulia,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 030057,Martignacco,Friuli-Venezia Giulia,0,0,0,0,0,0,1,0,0,0,0,1,0,0,2,0,0,0,0,3
@@ -1330,7 +1330,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 032001,Duino Aurisina-Devin Nabrežina,Friuli-Venezia Giulia,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 032003,Muggia,Friuli-Venezia Giulia,0,0,0,0,0,0,1,0,0,0,0,0,0,0,2,0,0,0,0,2
 032004,San Dorligo della Valle-Dolina,Friuli-Venezia Giulia,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
-032006,Trieste,Friuli-Venezia Giulia,0,0,0,3,5,2,8,1,0,0,0,2,0,2,28,1,1,0,10,3
+032006,Trieste,Friuli-Venezia Giulia,1,0,0,3,5,2,8,1,0,0,0,2,0,2,27,1,1,0,10,3
 033001,Agazzano,Emilia-Romagna,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 033002,Alseno,Emilia-Romagna,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 033004,Bettola,Emilia-Romagna,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -1338,10 +1338,10 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 033013,Castel San Giovanni,Emilia-Romagna,0,0,0,0,0,0,2,0,0,0,0,2,0,0,3,0,0,0,0,0
 033014,Castelvetro Piacentino,Emilia-Romagna,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 033018,Cortemaggiore,Emilia-Romagna,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
-033021,Fiorenzuola d'Arda,Emilia-Romagna,0,0,0,0,1,0,3,0,0,0,0,0,0,0,2,0,0,0,1,1
+033021,Fiorenzuola d'Arda,Emilia-Romagna,0,0,0,0,1,0,3,0,0,0,0,0,0,0,1,0,0,0,1,1
 033023,Gossolengo,Emilia-Romagna,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 033024,Gragnano Trebbiense,Emilia-Romagna,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,1,0,0
-033032,Piacenza,Emilia-Romagna,0,0,0,6,2,1,9,0,0,0,0,6,0,3,22,0,0,0,5,4
+033032,Piacenza,Emilia-Romagna,0,0,0,6,2,1,9,0,0,0,0,6,0,3,21,0,0,0,5,4
 033033,Pianello Val Tidone,Emilia-Romagna,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 033036,Ponte dell'Olio,Emilia-Romagna,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 033038,Rivergaro,Emilia-Romagna,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -1403,7 +1403,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 036003,Campogalliano,Emilia-Romagna,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 036005,Carpi,Emilia-Romagna,0,0,0,4,3,1,5,0,0,0,0,2,0,1,4,0,0,1,3,3
 036006,Castelfranco Emilia,Emilia-Romagna,0,0,0,0,0,0,1,1,0,0,0,1,0,2,1,0,0,0,0,0
-036007,Castelnuovo Rangone,Emilia-Romagna,0,0,0,1,0,1,1,0,0,0,0,0,0,0,2,0,0,0,0,0
+036007,Castelnuovo Rangone,Emilia-Romagna,0,0,0,1,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0
 036008,Castelvetro di Modena,Emilia-Romagna,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 036009,Cavezzo,Emilia-Romagna,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0
 036010,Concordia sulla Secchia,Emilia-Romagna,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -1433,11 +1433,11 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 037001,Anzola dell'Emilia,Emilia-Romagna,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,1,1
 037002,Argelato,Emilia-Romagna,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 037005,Bentivoglio,Emilia-Romagna,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
-037006,Bologna,Emilia-Romagna,0,0,0,7,11,3,33,3,0,0,0,16,0,6,108,1,0,1,22,11
+037006,Bologna,Emilia-Romagna,0,0,0,7,11,3,33,3,0,0,0,16,0,6,105,1,0,1,22,11
 037007,Borgo Tossignano,Emilia-Romagna,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 037008,Budrio,Emilia-Romagna,0,0,0,1,0,0,1,0,0,0,0,0,0,0,2,0,0,0,0,1
 037009,Calderara di Reno,Emilia-Romagna,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
-037011,Casalecchio di Reno,Emilia-Romagna,0,0,0,0,0,0,3,0,0,0,0,2,1,1,6,0,0,0,0,1
+037011,Casalecchio di Reno,Emilia-Romagna,0,0,0,0,0,0,3,0,0,0,0,2,1,1,5,0,0,0,0,1
 037012,Casalfiumanese,Emilia-Romagna,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 037013,Castel d'Aiano,Emilia-Romagna,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 037014,Castel del Rio,Emilia-Romagna,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -1484,7 +1484,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 038005,Codigoro,Emilia-Romagna,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
 038006,Comacchio,Emilia-Romagna,0,0,0,1,1,0,1,0,0,0,0,0,0,0,5,0,0,0,0,3
 038007,Copparo,Emilia-Romagna,0,0,0,0,0,0,2,0,0,0,0,1,0,0,0,0,0,0,0,0
-038008,Ferrara,Emilia-Romagna,0,0,0,5,3,1,8,0,0,0,0,4,0,1,23,0,2,0,6,4
+038008,Ferrara,Emilia-Romagna,0,0,0,5,3,1,8,0,0,0,0,4,0,1,23,0,1,0,6,4
 038014,Mesola,Emilia-Romagna,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,2,0
 038017,Ostellato,Emilia-Romagna,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,1
 038018,Poggio Renatico,Emilia-Romagna,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -1498,14 +1498,14 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 039001,Alfonsine,Emilia-Romagna,0,0,0,2,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,1
 039002,Bagnacavallo,Emilia-Romagna,0,0,0,0,0,0,1,0,0,0,0,0,0,0,2,0,0,0,0,0
 039006,Castel Bolognese,Emilia-Romagna,0,0,0,0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0
-039007,Cervia,Emilia-Romagna,0,0,0,1,0,0,3,0,0,0,0,0,0,0,11,0,0,0,0,0
+039007,Cervia,Emilia-Romagna,0,0,0,1,0,0,3,0,0,0,0,0,0,0,10,0,0,0,0,0
 039008,Conselice,Emilia-Romagna,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,1
 039009,Cotignola,Emilia-Romagna,0,0,0,1,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
 039010,Faenza,Emilia-Romagna,0,0,0,3,0,1,9,0,0,0,0,2,0,1,12,0,0,1,3,3
 039011,Fusignano,Emilia-Romagna,0,0,0,1,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,1
 039012,Lugo,Emilia-Romagna,0,0,0,2,2,0,1,0,0,0,1,1,0,0,3,0,0,0,1,1
 039013,Massa Lombarda,Emilia-Romagna,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
-039014,Ravenna,Emilia-Romagna,0,0,0,7,4,2,12,0,0,0,0,2,0,2,26,0,0,1,3,2
+039014,Ravenna,Emilia-Romagna,0,0,0,7,4,2,12,0,0,0,0,2,0,2,25,0,0,1,3,2
 039015,Riolo Terme,Emilia-Romagna,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 039016,Russi,Emilia-Romagna,0,0,0,1,0,0,2,0,0,0,0,0,0,0,1,0,0,0,0,0
 040001,Bagno di Romagna,Emilia-Romagna,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -1532,7 +1532,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 041007,Cagli,Marche,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
 041008,Cantiano,Marche,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 041010,Cartoceto,Marche,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
-041013,Fano,Marche,0,0,0,4,1,0,3,0,0,0,0,1,0,0,14,0,0,1,1,1
+041013,Fano,Marche,0,0,0,4,1,0,3,0,0,0,0,1,0,0,13,0,0,1,1,1
 041014,Fermignano,Marche,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0
 041015,Fossombrone,Marche,0,0,0,2,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0
 041019,Gabicce Mare,Marche,0,0,0,0,0,0,2,0,0,0,0,1,0,0,0,0,0,0,0,0
@@ -1542,7 +1542,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 041035,Monte Grimano Terme,Marche,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 041036,Montelabbate,Marche,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 041043,Pergola,Marche,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
-041044,Pesaro,Marche,0,0,0,2,3,0,5,0,0,0,0,2,0,1,17,1,0,0,4,5
+041044,Pesaro,Marche,1,0,0,2,3,0,5,0,0,0,0,2,0,1,16,1,0,0,4,5
 041051,San Costanzo,Marche,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 041054,San Lorenzo in Campo,Marche,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 041066,Urbania,Marche,0,0,0,1,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
@@ -1552,7 +1552,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 041070,Terre Roveresche,Marche,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0
 041071,Sassocorvaro Auditore,Marche,0,0,0,1,0,0,2,0,0,0,0,0,0,0,1,0,0,0,0,0
 042001,Agugliano,Marche,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
-042002,Ancona,Marche,0,0,0,1,4,2,3,1,0,0,0,2,0,2,20,0,1,0,4,5
+042002,Ancona,Marche,0,0,0,2,4,2,3,1,0,0,0,2,0,2,19,0,1,0,4,5
 042006,Camerano,Marche,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0
 042007,Camerata Picena,Marche,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
 042010,Castelfidardo,Marche,0,0,0,0,1,0,1,0,0,0,0,0,0,0,1,0,0,0,4,0
@@ -1562,7 +1562,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 042016,Cupramontana,Marche,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 042017,Fabriano,Marche,0,0,0,3,0,0,5,0,0,0,0,1,0,0,3,1,0,0,0,1
 042018,Falconara Marittima,Marche,0,0,0,0,0,0,0,0,0,0,0,1,0,1,3,0,0,0,1,0
-042019,Filottrano,Marche,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+042019,Filottrano,Marche,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 042021,Jesi,Marche,0,0,0,1,1,0,5,0,0,0,0,2,0,0,11,0,0,0,2,2
 042022,Loreto,Marche,0,0,0,1,0,0,2,0,0,0,0,1,0,0,6,0,0,0,0,0
 042023,Maiolati Spontini,Marche,0,0,0,1,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0
@@ -1581,15 +1581,15 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 042050,Trecastelli,Marche,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 043003,Appignano,Marche,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 043006,Caldarola,Marche,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-043007,Camerino,Marche,0,0,0,1,0,0,1,0,0,0,0,0,0,0,4,0,0,0,0,0
+043007,Camerino,Marche,0,0,0,2,0,0,1,0,0,0,0,0,0,0,3,0,0,0,0,0
 043009,Castelraimondo,Marche,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
 043012,Cingoli,Marche,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
-043013,Civitanova Marche,Marche,0,0,0,3,1,0,4,0,0,0,0,2,0,0,11,0,0,0,0,5
+043013,Civitanova Marche,Marche,0,0,0,4,1,0,4,0,0,0,0,2,0,0,10,0,0,0,0,5
 043014,Colmurano,Marche,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-043015,Corridonia,Marche,0,0,0,1,1,0,1,0,0,0,0,1,0,0,5,0,0,0,0,0
+043015,Corridonia,Marche,0,0,0,1,1,0,1,0,0,0,0,1,0,0,4,0,0,0,0,0
 043022,Loro Piceno,Marche,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
-043023,Macerata,Marche,0,0,0,1,6,0,9,2,0,0,0,1,0,0,15,0,0,0,4,5
-043024,Matelica,Marche,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,0,0,0,0
+043023,Macerata,Marche,0,0,0,1,6,0,9,2,0,0,0,1,0,0,14,0,0,0,4,5
+043024,Matelica,Marche,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0
 043029,Montefano,Marche,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 043030,Montelupone,Marche,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 043031,Monte San Giusto,Marche,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -1608,7 +1608,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 043054,Treia,Marche,0,0,0,2,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
 043057,Visso,Marche,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 044002,Acquaviva Picena,Marche,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
-044007,Ascoli Piceno,Marche,0,0,0,3,0,0,6,0,0,0,0,1,0,1,10,0,0,0,0,2
+044007,Ascoli Piceno,Marche,0,0,0,3,0,0,6,0,0,0,0,1,0,1,8,0,0,0,0,2
 044010,Carassai,Marche,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 044011,Castel di Lama,Marche,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 044014,Colli del Tronto,Marche,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -1641,7 +1641,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 046011,Coreglia Antelminelli,Toscana,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0
 046013,Forte dei Marmi,Toscana,0,0,0,2,0,0,1,0,0,0,0,0,0,0,2,0,0,0,0,0
 046015,Gallicano,Toscana,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-046017,Lucca,Toscana,0,0,0,2,5,0,12,0,0,0,0,8,0,3,21,0,0,0,5,4
+046017,Lucca,Toscana,0,0,0,2,5,0,12,0,0,0,0,8,0,3,20,0,0,0,5,4
 046018,Massarosa,Toscana,0,0,0,1,0,0,3,0,0,0,0,0,0,0,2,0,0,0,0,0
 046021,Montecarlo,Toscana,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 046023,Piazza al Serchio,Toscana,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -1659,7 +1659,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 047011,Montecatini-Terme,Toscana,0,0,0,1,0,0,2,0,0,0,0,0,0,0,3,0,0,0,2,2
 047012,Pescia,Toscana,0,0,0,3,0,0,1,0,0,0,0,1,0,0,2,0,0,0,0,1
 047013,Pieve a Nievole,Toscana,0,0,0,1,2,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1
-047014,Pistoia,Toscana,0,0,0,6,3,0,10,0,0,0,0,4,0,0,19,0,0,0,1,4
+047014,Pistoia,Toscana,1,0,0,6,3,0,10,0,0,0,0,4,0,0,18,0,0,0,1,4
 047016,Ponte Buggianese,Toscana,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
 047017,Quarrata,Toscana,0,0,0,1,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0
 047020,Serravalle Pistoiese,Toscana,0,0,0,0,0,1,2,0,0,0,0,0,0,0,1,0,0,0,0,0
@@ -1676,7 +1676,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 048012,Certaldo,Toscana,0,0,0,0,0,0,3,0,0,0,0,1,0,0,0,0,0,0,0,1
 048014,Empoli,Toscana,0,0,0,1,3,1,7,0,0,0,0,4,0,0,8,0,0,0,0,3
 048015,Fiesole,Toscana,0,0,0,1,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0
-048017,Firenze,Toscana,0,0,0,12,11,6,30,5,0,0,0,15,0,7,134,2,0,1,19,5
+048017,Firenze,Toscana,0,0,0,13,11,6,30,5,0,0,0,15,0,7,132,2,0,1,19,5
 048018,Firenzuola,Toscana,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 048019,Fucecchio,Toscana,0,0,0,0,1,0,1,0,0,0,0,1,0,0,1,0,0,0,0,0
 048021,Greve in Chianti,Toscana,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
@@ -1702,9 +1702,9 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 049002,Campiglia Marittima,Toscana,0,0,0,0,0,0,8,0,0,0,0,0,0,0,2,0,0,0,0,0
 049003,Campo nell'Elba,Toscana,0,0,0,0,0,0,1,0,0,0,0,0,0,0,2,0,0,1,0,0
 049006,Castagneto Carducci,Toscana,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0
-049007,Cecina,Toscana,0,0,0,0,1,1,1,0,0,0,0,2,0,0,5,0,0,0,1,2
+049007,Cecina,Toscana,0,0,0,0,1,1,1,0,0,0,0,2,0,0,4,0,0,0,1,2
 049008,Collesalvetti,Toscana,0,0,0,0,0,0,1,0,0,0,0,0,0,0,2,0,0,0,0,0
-049009,Livorno,Toscana,0,0,0,4,3,2,29,0,0,0,0,4,0,0,21,2,0,0,6,5
+049009,Livorno,Toscana,1,0,0,4,3,2,29,0,0,0,0,4,0,0,20,2,0,0,6,5
 049010,Marciana,Toscana,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 049011,Marciana Marina,Toscana,0,0,0,0,1,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
 049012,Piombino,Toscana,0,0,0,1,1,0,4,0,0,0,0,1,0,0,6,0,0,0,0,0
@@ -1724,7 +1724,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 050019,Montecatini Val di Cecina,Toscana,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
 050022,Montopoli in Val d'Arno,Toscana,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 050025,Peccioli,Toscana,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-050026,Pisa,Toscana,0,0,0,1,1,1,7,2,0,0,0,4,0,2,28,0,0,2,4,1
+050026,Pisa,Toscana,1,0,0,1,1,1,7,1,0,0,0,4,0,2,27,0,0,2,4,1
 050027,Pomarance,Toscana,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0
 050028,Ponsacco,Toscana,0,0,0,1,1,0,3,0,0,0,0,0,0,0,3,0,0,0,0,1
 050029,Pontedera,Toscana,0,0,0,1,0,1,4,0,0,0,0,1,0,1,8,0,0,0,1,2
@@ -1793,7 +1793,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 053019,Pitigliano,Toscana,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 053024,Scarlino,Toscana,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 053026,Sorano,Toscana,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
-054001,Assisi,Umbria,0,0,0,1,0,1,4,0,0,0,0,0,0,0,11,0,0,0,0,0
+054001,Assisi,Umbria,1,0,0,1,0,1,4,0,0,0,0,0,0,0,9,0,0,0,0,0
 054002,Bastia Umbra,Umbria,0,0,0,0,0,0,4,0,0,0,0,2,0,0,1,0,0,0,0,0
 054004,Bevagna,Umbria,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
 054005,Campello sul Clitunno,Umbria,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -1852,7 +1852,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 056005,Bassano Romano,Lazio,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 056007,Blera,Lazio,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
 056008,Bolsena,Lazio,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
-056010,Calcata,Lazio,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+056010,Calcata,Lazio,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 056012,Canino,Lazio,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 056013,Capodimonte,Lazio,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 056014,Capranica,Lazio,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
@@ -1863,7 +1863,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 056024,Fabrica di Roma,Lazio,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1
 056026,Farnese,Lazio,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 056027,Gallese,Lazio,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
-056030,Grotte di Castro,Lazio,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+056030,Grotte di Castro,Lazio,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 056035,Montalto di Castro,Lazio,0,0,0,1,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 056036,Montefiascone,Lazio,0,0,0,1,0,0,0,0,0,0,0,1,0,0,2,0,0,0,0,0
 056039,Nepi,Lazio,0,0,0,2,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,1
@@ -1876,7 +1876,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 056055,Vasanello,Lazio,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 056057,Vetralla,Lazio,0,0,0,2,0,0,2,1,0,0,0,0,0,0,3,0,0,0,0,0
 056058,Vignanello,Lazio,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
-056059,Viterbo,Lazio,0,0,0,3,1,1,8,0,0,0,0,2,0,1,16,0,0,0,2,7
+056059,Viterbo,Lazio,0,0,0,4,1,1,8,0,0,0,0,2,0,1,15,0,0,0,2,7
 056060,Vitorchiano,Lazio,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 057002,Amatrice,Lazio,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 057010,Cantalupo in Sabina,Lazio,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -1891,7 +1891,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 057044,Montopoli di Sabina,Lazio,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 057053,Poggio Mirteto,Lazio,0,0,0,0,0,0,2,0,0,0,0,1,0,0,1,0,0,0,0,0
 057054,Poggio Moiano,Lazio,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
-057059,Rieti,Lazio,0,0,0,4,0,0,5,3,0,0,0,0,0,1,5,0,0,1,0,3
+057059,Rieti,Lazio,1,0,0,4,0,0,5,2,0,0,0,0,0,1,5,0,0,1,0,3
 057064,Scandriglia,Lazio,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 057070,Torri in Sabina,Lazio,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 058003,Albano Laziale,Lazio,0,0,0,2,1,0,1,1,0,0,0,1,0,2,12,0,0,0,1,4
@@ -1935,10 +1935,10 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 058073,Olevano Romano,Lazio,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 058074,Palestrina,Lazio,0,0,0,2,0,0,2,0,0,0,0,0,0,0,8,0,0,0,0,1
 058079,Pomezia,Lazio,0,0,0,3,3,0,3,0,0,0,0,2,0,3,9,0,0,0,0,4
-058082,Rignano Flaminio,Lazio,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+058082,Rignano Flaminio,Lazio,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 058086,Rocca di Papa,Lazio,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 058088,Rocca Priora,Lazio,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0
-058091,Roma,Lazio,0,0,2,53,35,18,241,14,5,2,0,64,0,36,557,12,1,4,74,79
+058091,Roma,Lazio,2,0,2,55,35,18,241,14,4,2,0,64,0,36,548,12,1,4,74,79
 058097,Santa Marinella,Lazio,0,0,0,1,0,0,1,0,0,0,0,0,0,0,3,0,0,0,0,0
 058099,Sant'Oreste,Lazio,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
 058102,Segni,Lazio,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -1949,7 +1949,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 058110,Valmontone,Lazio,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 058111,Velletri,Lazio,0,0,0,0,0,0,4,0,0,0,0,2,0,0,9,0,0,0,1,3
 058114,Zagarolo,Lazio,0,0,0,0,0,1,0,0,0,0,0,0,0,0,3,0,0,0,0,0
-058115,Lariano,Lazio,0,0,0,0,0,0,2,0,0,0,0,0,0,0,2,0,0,0,0,0
+058115,Lariano,Lazio,0,0,0,0,0,0,2,0,0,0,0,0,0,0,1,0,0,0,0,0
 058116,Ladispoli,Lazio,0,0,0,0,0,1,0,0,0,0,0,1,0,0,4,0,0,0,0,1
 058117,Ardea,Lazio,0,0,0,1,0,0,6,0,0,0,0,1,0,0,1,0,0,0,0,0
 058118,Ciampino,Lazio,0,0,0,1,1,1,5,0,0,0,0,1,0,0,4,0,0,0,0,1
@@ -1961,13 +1961,13 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 059004,Castelforte,Lazio,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 059005,Cisterna di Latina,Lazio,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,1
 059006,Cori,Lazio,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-059007,Fondi,Lazio,0,0,0,3,0,0,2,0,0,0,0,1,0,0,8,0,0,1,0,3
+059007,Fondi,Lazio,0,0,0,3,0,0,2,0,0,0,0,1,0,0,6,0,0,1,0,3
 059008,Formia,Lazio,0,0,0,1,0,0,1,0,0,0,0,0,0,0,11,0,0,0,0,2
 059009,Gaeta,Lazio,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0
 059010,Itri,Lazio,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 059011,Latina,Lazio,0,0,0,7,5,3,10,0,0,0,0,4,0,3,24,0,0,1,1,6
 059012,Lenola,Lazio,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
-059014,Minturno,Lazio,0,0,0,1,0,0,1,0,0,0,0,0,0,0,4,0,0,0,0,0
+059014,Minturno,Lazio,0,0,0,1,0,0,1,0,0,0,0,0,0,0,3,0,0,0,0,0
 059015,Monte San Biagio,Lazio,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0
 059016,Norma,Lazio,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 059017,Pontinia,Lazio,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -1979,7 +1979,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 059028,Sezze,Lazio,0,0,0,1,0,1,3,0,0,0,0,0,0,0,1,0,0,0,0,0
 059029,Sonnino,Lazio,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 059030,Sperlonga,Lazio,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
-059032,Terracina,Lazio,0,0,0,4,0,0,2,0,0,0,0,2,0,0,4,0,0,0,1,1
+059032,Terracina,Lazio,0,0,0,5,0,0,2,0,0,0,0,2,0,0,3,0,0,0,1,1
 059033,Ventotene,Lazio,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 060003,Alatri,Lazio,0,0,0,0,0,1,2,0,0,0,0,0,0,0,1,0,0,0,3,0
 060006,Anagni,Lazio,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,1
@@ -2016,7 +2016,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 060068,Sant'Elia Fiumerapido,Lazio,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 060069,Santopadre,Lazio,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 060070,San Vittore del Lazio,Lazio,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
-060074,Sora,Lazio,0,0,0,3,1,1,2,0,0,0,0,0,0,0,6,0,0,0,1,1
+060074,Sora,Lazio,0,0,0,3,1,1,2,0,0,0,0,0,0,0,5,0,0,0,1,1
 060075,Strangolagalli,Lazio,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 060085,Veroli,Lazio,0,0,0,0,1,0,3,0,0,0,0,0,0,0,1,0,0,0,1,0
 060087,Vico nel Lazio,Lazio,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -2037,7 +2037,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 061018,Casagiove,Campania,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0
 061019,Casal di Principe,Campania,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 061020,Casaluce,Campania,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-061021,Casapulla,Campania,0,0,0,0,0,0,1,0,0,0,0,0,0,0,2,0,0,0,0,0
+061021,Casapulla,Campania,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
 061022,Caserta,Campania,0,0,0,4,1,0,2,0,0,0,0,1,0,0,14,0,0,0,3,5
 061027,Castel Volturno,Campania,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 061036,Francolise,Campania,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -2048,7 +2048,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 061047,Macerata Campania,Campania,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 061048,Maddaloni,Campania,0,0,0,2,0,0,1,0,0,0,0,0,1,0,2,0,0,0,0,1
 061049,Marcianise,Campania,0,0,0,3,0,0,1,0,0,0,0,1,0,0,2,0,0,0,0,4
-061050,Marzano Appio,Campania,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0
+061050,Marzano Appio,Campania,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0
 061051,Mignano Monte Lungo,Campania,0,0,0,1,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
 061052,Mondragone,Campania,0,0,0,5,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,2
 061053,Orta di Atella,Campania,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,1
@@ -2069,7 +2069,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 061078,San Nicola la Strada,Campania,0,0,0,1,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,1
 061081,San Prisco,Campania,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 061082,Santa Maria a Vico,Campania,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-061083,Santa Maria Capua Vetere,Campania,0,0,0,2,0,1,2,0,0,0,0,1,0,0,13,0,0,0,1,2
+061083,Santa Maria Capua Vetere,Campania,0,0,0,2,0,1,2,0,0,0,0,1,0,0,12,0,0,0,1,2
 061086,Sant'Angelo d'Alife,Campania,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 061087,Sant'Arpino,Campania,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 061088,Sessa Aurunca,Campania,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
@@ -2088,7 +2088,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 062003,Apice,Campania,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 062004,Apollosa,Campania,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
 062007,Baselice,Campania,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
-062008,Benevento,Campania,0,0,1,1,1,0,2,1,0,0,0,2,0,0,18,0,0,0,3,6
+062008,Benevento,Campania,0,0,1,1,1,0,2,1,0,0,0,2,0,0,17,0,0,0,3,6
 062013,Campolattaro,Campania,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 062015,Casalduni,Campania,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 062021,Cautano,Campania,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -2099,7 +2099,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 062026,Cusano Mutri,Campania,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 062030,Foglianise,Campania,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 062037,Guardia Sanframondi,Campania,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
-062043,Montesarchio,Campania,0,0,0,2,0,1,0,0,0,0,0,0,0,0,5,0,0,0,0,1
+062043,Montesarchio,Campania,0,0,0,2,0,1,0,0,0,0,0,0,0,0,4,0,0,0,0,1
 062044,Morcone,Campania,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
 062046,Pago Veiano,Campania,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 062047,Pannarano,Campania,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
@@ -2113,7 +2113,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 062064,San Marco dei Cavoti,Campania,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 062070,Sant'Agata de' Goti,Campania,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 062073,Solopaca,Campania,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-062074,Telese Terme,Campania,0,0,0,1,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,1
+062074,Telese Terme,Campania,0,0,0,2,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,1
 062076,Torrecuso,Campania,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 062077,Vitulano,Campania,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 063001,Acerra,Campania,0,0,0,6,0,0,1,0,0,0,0,2,0,0,4,0,0,0,0,0
@@ -2150,16 +2150,16 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 063041,Marano di Napoli,Campania,0,0,0,2,0,0,5,0,0,0,0,1,0,0,8,0,0,0,0,2
 063042,Mariglianella,Campania,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 063043,Marigliano,Campania,0,0,0,1,0,0,2,1,0,0,0,0,0,0,2,0,0,0,0,0
-063044,Massa Lubrense,Campania,0,0,0,0,0,0,1,0,0,0,0,0,0,0,3,0,0,0,0,0
+063044,Massa Lubrense,Campania,0,0,0,2,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
 063045,Melito di Napoli,Campania,0,0,0,5,0,0,2,0,0,0,0,0,0,0,3,0,0,0,0,2
 063046,Meta,Campania,0,0,0,0,0,0,0,0,0,0,0,2,0,0,1,0,0,0,0,0
 063047,Monte di Procida,Campania,0,0,0,0,0,0,2,0,0,0,0,0,0,0,2,0,0,0,0,0
 063048,Mugnano di Napoli,Campania,0,0,0,1,0,0,4,0,0,0,0,0,0,1,5,0,0,0,0,0
-063049,Napoli,Campania,0,1,0,28,5,3,63,9,0,0,0,17,0,7,135,1,1,0,14,29
-063050,Nola,Campania,0,0,0,4,0,0,3,0,0,0,0,1,0,1,7,0,0,0,2,2
+063049,Napoli,Campania,0,1,0,29,5,3,63,9,0,0,0,17,0,7,132,1,1,0,14,29
+063050,Nola,Campania,0,0,0,4,0,0,3,0,0,0,0,1,0,1,6,0,0,0,2,2
 063051,Ottaviano,Campania,0,0,0,4,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,1
 063052,Palma Campania,Campania,0,0,0,0,0,0,2,0,0,0,0,0,0,0,2,0,0,0,0,0
-063053,Piano di Sorrento,Campania,0,0,0,0,0,0,1,0,0,0,0,0,0,0,4,0,0,0,1,1
+063053,Piano di Sorrento,Campania,0,0,0,0,0,0,1,0,0,0,0,0,0,0,3,0,0,0,1,1
 063055,Poggiomarino,Campania,0,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 063056,Pollena Trocchia,Campania,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 063057,Pomigliano d'Arco,Campania,0,1,0,6,0,1,0,2,0,0,0,1,0,0,8,1,0,0,0,0
@@ -2190,7 +2190,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 063087,Villaricca,Campania,0,0,0,1,0,0,4,0,0,0,0,0,0,0,1,0,0,0,1,1
 063088,Visciano,Campania,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 063089,Volla,Campania,0,0,0,5,0,0,3,0,0,0,0,0,0,0,1,0,0,0,1,0
-063090,Santa Maria la Carità,Campania,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+063090,Santa Maria la Carità,Campania,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 063091,Trecase,Campania,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 064002,Altavilla Irpina,Campania,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 064003,Andretta,Campania,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -2237,7 +2237,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 064116,Venticano,Campania,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 064121,Montoro,Campania,0,0,0,1,0,0,5,0,0,0,0,0,0,0,2,0,0,0,0,1
 065001,Acerno,Campania,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,1,0,0
-065002,Agropoli,Campania,0,0,0,1,0,0,0,0,0,1,0,0,0,0,6,0,0,0,1,3
+065002,Agropoli,Campania,0,0,0,2,0,0,0,0,0,1,0,0,0,0,5,0,0,0,1,3
 065003,Albanella,Campania,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 065004,Alfano,Campania,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 065005,Altavilla Silentina,Campania,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
@@ -2246,14 +2246,14 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 065009,Ascea,Campania,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 065010,Atena Lucana,Campania,0,0,0,0,0,0,0,0,0,0,0,1,0,0,4,0,0,0,0,1
 065013,Baronissi,Campania,0,0,0,2,0,0,1,0,0,2,0,0,0,0,3,0,0,0,0,0
-065014,Battipaglia,Campania,0,0,0,10,1,1,2,0,0,0,0,4,0,0,8,0,0,0,2,2
+065014,Battipaglia,Campania,0,0,0,10,1,1,2,0,0,0,0,4,0,0,7,0,0,0,2,2
 065015,Bellosguardo,Campania,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
 065018,Buonabitacolo,Campania,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 065019,Caggiano,Campania,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
 065021,Camerota,Campania,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,1
 065022,Campagna,Campania,0,0,0,1,1,0,0,0,0,0,0,0,0,0,2,0,0,0,0,1
 065025,Capaccio Paestum,Campania,0,0,0,4,1,0,2,0,0,0,0,1,0,0,3,0,0,0,0,0
-065028,Casal Velino,Campania,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+065028,Casal Velino,Campania,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 065029,Caselle in Pittari,Campania,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 065031,Castellabate,Campania,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0
 065032,Castelnuovo Cilento,Campania,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -2282,11 +2282,11 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 065083,Oliveto Citra,Campania,0,0,0,1,0,0,1,0,0,0,0,0,0,0,2,0,0,0,0,0
 065084,Omignano,Campania,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 065087,Padula,Campania,0,0,0,0,0,0,1,0,0,0,0,1,0,0,1,0,0,0,0,0
-065088,Pagani,Campania,0,0,0,2,0,0,3,0,0,0,0,0,0,0,6,0,0,0,1,2
+065088,Pagani,Campania,0,0,0,3,0,0,3,0,0,0,0,0,0,0,5,0,0,0,1,2
 065089,Palomonte,Campania,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 065096,Pisciotta,Campania,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 065097,Polla,Campania,0,0,0,1,0,0,1,0,0,0,0,0,0,0,2,0,0,0,0,0
-065099,Pontecagnano Faiano,Campania,0,0,0,4,0,0,0,0,0,0,0,0,0,0,6,0,0,0,2,4
+065099,Pontecagnano Faiano,Campania,0,0,0,4,0,0,0,0,0,0,0,0,0,0,4,0,0,0,2,4
 065103,Prignano Cilento,Campania,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 065106,Roccadaspide,Campania,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 065108,Roccapiemonte,Campania,0,0,0,1,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,1
@@ -2308,7 +2308,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 065146,Teggiano,Campania,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 065147,Torchiara,Campania,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 065151,Tramonti,Campania,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-065154,Vallo della Lucania,Campania,0,0,0,1,0,0,0,1,0,0,0,0,0,0,3,0,0,0,0,1
+065154,Vallo della Lucania,Campania,1,0,0,1,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,1
 065157,Vietri sul Mare,Campania,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 065158,Bellizzi,Campania,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0
 066006,Avezzano,Abruzzo,0,1,0,2,0,0,9,0,0,0,0,1,0,2,12,0,0,0,2,3
@@ -2355,7 +2355,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 067037,Roseto degli Abruzzi,Abruzzo,0,0,0,5,2,0,4,0,0,0,0,0,0,0,7,0,0,0,1,0
 067038,Sant'Egidio alla Vibrata,Abruzzo,0,0,0,2,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 067039,Sant'Omero,Abruzzo,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
-067040,Silvi,Abruzzo,0,0,0,0,1,0,2,0,0,1,0,0,0,0,4,0,0,0,1,0
+067040,Silvi,Abruzzo,0,0,0,0,1,0,2,0,0,1,0,0,0,0,3,0,0,0,1,0
 067041,Teramo,Abruzzo,0,0,0,7,0,1,3,2,0,0,0,3,0,1,12,0,0,0,1,3
 067044,Tortoreto,Abruzzo,0,0,0,1,0,0,2,0,0,0,0,0,0,0,3,0,0,0,1,0
 067047,Martinsicuro,Abruzzo,0,0,0,2,0,0,1,0,0,0,0,1,0,0,3,0,0,0,1,0
@@ -2370,7 +2370,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 068024,Montesilvano,Abruzzo,0,0,0,6,0,3,1,0,0,0,0,2,0,0,4,0,0,0,1,1
 068025,Moscufo,Abruzzo,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 068026,Nocciano,Abruzzo,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
-068027,Penne,Abruzzo,0,0,0,1,1,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0
+068027,Penne,Abruzzo,0,0,0,2,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
 068028,Pescara,Abruzzo,0,0,0,17,3,1,6,1,0,1,0,7,0,3,27,0,1,0,13,2
 068033,Popoli Terme,Abruzzo,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 068039,Scafa,Abruzzo,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -2392,7 +2392,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 069046,Lanciano,Abruzzo,0,0,0,6,1,0,1,1,0,0,0,0,0,0,7,0,0,0,2,2
 069050,Miglianico,Abruzzo,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 069057,Orsogna,Abruzzo,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
-069058,Ortona,Abruzzo,0,0,0,1,0,0,1,0,0,0,0,0,0,0,5,0,0,0,0,0
+069058,Ortona,Abruzzo,0,0,0,1,0,0,1,0,0,0,0,0,0,0,4,0,0,0,0,0
 069065,Perano,Abruzzo,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 069069,Pretoro,Abruzzo,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 069081,San Giovanni Teatino,Abruzzo,0,0,0,1,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0
@@ -2426,12 +2426,12 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 071010,Carapelle,Puglia,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 071012,Carpino,Puglia,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 071013,Casalnuovo Monterotaro,Puglia,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
-071014,Casalvecchio di Puglia,Puglia,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+071014,Casalvecchio di Puglia,Puglia,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 071016,Castelluccio Valmaggiore,Puglia,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 071018,Celenza Valfortore,Puglia,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 071020,Cerignola,Puglia,0,0,0,5,1,1,0,0,0,0,0,1,0,0,3,0,0,0,1,2
 071022,Deliceto,Puglia,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
-071024,Foggia,Puglia,0,0,0,8,0,0,4,3,0,0,0,4,0,0,28,0,0,1,3,4
+071024,Foggia,Puglia,0,0,0,8,0,0,4,3,0,0,0,4,0,0,25,0,0,1,3,4
 071025,Ischitella,Puglia,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 071027,Lesina,Puglia,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 071028,Lucera,Puglia,0,0,0,5,0,0,3,0,0,0,0,0,0,0,7,0,0,1,1,2
@@ -2450,15 +2450,15 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 071055,Stornarella,Puglia,0,0,0,1,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
 071056,Torremaggiore,Puglia,0,0,0,5,0,1,0,0,0,0,0,0,0,0,2,0,0,0,0,0
 071058,Troia,Puglia,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-071059,Vico del Gargano,Puglia,0,0,0,0,0,0,1,0,0,0,0,0,0,0,2,0,0,0,0,0
+071059,Vico del Gargano,Puglia,0,0,0,1,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
 071060,Vieste,Puglia,0,0,0,2,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0
 072001,Acquaviva delle Fonti,Puglia,0,0,0,0,0,0,1,2,0,0,0,0,1,0,3,0,0,0,0,1
 072002,Adelfia,Puglia,0,0,0,2,0,0,2,0,0,0,0,0,0,0,3,0,0,0,1,0
 072003,Alberobello,Puglia,0,0,0,1,0,0,2,0,0,0,0,1,0,0,1,0,0,0,0,0
-072004,Altamura,Puglia,0,0,0,2,1,0,4,0,0,0,0,2,0,0,8,0,0,0,0,0
-072006,Bari,Puglia,0,0,0,13,5,1,26,3,0,1,0,10,1,5,50,0,0,0,6,10
+072004,Altamura,Puglia,0,0,0,4,1,0,4,0,0,0,0,2,0,0,6,0,0,0,0,0
+072006,Bari,Puglia,1,0,0,13,5,1,26,3,0,1,0,10,1,5,48,0,0,0,6,10
 072010,Bitetto,Puglia,0,0,0,0,0,0,4,1,0,0,0,0,0,1,1,0,0,0,0,2
-072011,Bitonto,Puglia,0,0,0,2,0,2,0,0,0,0,0,1,0,0,7,0,0,0,0,0
+072011,Bitonto,Puglia,0,0,0,3,0,2,0,0,0,0,0,1,0,0,6,0,0,0,0,0
 072012,Bitritto,Puglia,0,0,0,0,0,0,1,0,0,0,0,1,0,0,1,0,0,0,0,0
 072014,Capurso,Puglia,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0
 072015,Casamassima,Puglia,0,0,0,3,0,0,1,0,0,0,0,0,0,0,3,0,0,0,0,2
@@ -2474,12 +2474,12 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 072027,Modugno,Puglia,0,0,0,3,0,2,1,0,0,0,0,1,0,0,7,0,0,0,0,1
 072028,Mola di Bari,Puglia,0,0,0,2,0,0,2,0,0,0,0,0,0,0,3,0,0,0,0,0
 072029,Molfetta,Puglia,0,0,0,8,0,2,8,0,0,0,0,1,0,0,8,0,0,0,1,3
-072030,Monopoli,Puglia,0,0,0,3,0,0,0,0,0,0,0,2,0,0,5,0,0,0,2,2
+072030,Monopoli,Puglia,0,0,0,3,0,0,0,0,0,0,0,2,0,0,4,0,0,0,2,2
 072031,Noci,Puglia,0,0,0,1,0,0,1,0,0,0,0,0,0,0,2,0,0,0,0,0
 072032,Noicattaro,Puglia,0,0,0,3,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,2
 072033,Palo del Colle,Puglia,0,0,0,1,0,0,2,0,0,0,0,0,0,2,4,0,0,0,0,0
 072035,Polignano a Mare,Puglia,0,0,0,1,0,1,2,0,0,0,0,0,0,0,2,0,0,0,0,0
-072036,Putignano,Puglia,0,0,0,3,1,0,1,0,0,0,0,0,0,0,2,0,0,0,0,1
+072036,Putignano,Puglia,0,0,0,4,1,0,1,0,0,0,0,0,0,0,1,0,0,0,0,1
 072037,Rutigliano,Puglia,0,0,0,3,0,0,0,0,0,0,0,0,1,0,4,0,0,0,1,0
 072038,Ruvo di Puglia,Puglia,0,0,0,3,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1
 072040,Sannicandro di Bari,Puglia,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -2510,7 +2510,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 073023,Roccaforzata,Puglia,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 073024,San Giorgio Ionico,Puglia,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 073026,Sava,Puglia,0,0,0,2,0,0,1,0,0,0,0,0,0,0,3,0,0,0,0,0
-073027,Taranto,Puglia,0,2,0,9,2,0,11,2,0,0,0,5,0,1,19,0,0,1,6,8
+073027,Taranto,Puglia,0,2,0,9,2,0,11,2,0,0,0,5,0,1,18,0,0,1,6,8
 073029,Statte,Puglia,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 074001,Brindisi,Puglia,0,0,1,4,2,0,0,1,0,0,0,1,0,0,16,0,0,0,1,4
 074002,Carovigno,Puglia,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
@@ -2523,7 +2523,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 074009,Latiano,Puglia,0,0,0,2,0,0,2,0,0,0,0,0,0,0,3,0,0,0,0,0
 074010,Mesagne,Puglia,0,0,0,3,0,0,2,0,0,0,0,0,0,1,7,0,0,0,1,2
 074011,Oria,Puglia,0,0,0,0,1,0,1,0,0,0,0,1,0,0,2,0,0,0,0,0
-074012,Ostuni,Puglia,0,0,0,2,0,0,0,0,0,0,0,0,0,0,5,0,0,1,1,0
+074012,Ostuni,Puglia,0,0,0,3,0,0,0,0,0,0,0,0,0,0,3,0,0,1,1,0
 074013,San Donaci,Puglia,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 074014,San Michele Salentino,Puglia,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 074015,San Pancrazio Salentino,Puglia,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0
@@ -2558,7 +2558,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 075036,Lequile,Puglia,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 075037,Leverano,Puglia,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0
 075038,Lizzanello,Puglia,0,0,0,0,0,0,2,0,0,0,0,0,0,0,1,0,0,0,0,0
-075039,Maglie,Puglia,0,0,0,1,0,0,0,0,0,0,0,1,0,1,8,0,0,0,0,1
+075039,Maglie,Puglia,0,0,0,2,0,0,0,0,0,0,0,1,0,1,7,0,0,0,0,1
 075040,Martano,Puglia,0,0,0,0,0,0,1,0,0,0,0,0,0,0,3,0,0,0,0,0
 075042,Matino,Puglia,0,0,0,1,0,0,2,0,0,0,0,0,0,0,1,0,0,0,0,0
 075043,Melendugno,Puglia,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
@@ -2679,7 +2679,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 078062,Lago,Calabria,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 078070,Luzzi,Calabria,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
 078075,Mangone,Calabria,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
-078081,Montalto Uffugo,Calabria,0,0,0,1,0,0,1,0,0,0,0,0,0,0,7,0,0,0,0,0
+078081,Montalto Uffugo,Calabria,0,0,0,1,0,0,1,0,0,0,0,0,0,0,6,0,0,0,0,0
 078083,Morano Calabro,Calabria,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 078084,Mormanno,Calabria,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 078091,Paola,Calabria,0,0,0,2,0,0,3,0,0,0,0,0,0,0,2,0,0,0,1,1
@@ -2702,7 +2702,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 078149,Tortora,Calabria,0,0,0,2,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1
 078150,Trebisacce,Calabria,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 078154,Villapiana,Calabria,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
-078157,Corigliano-Rossano,Calabria,0,0,0,4,0,1,3,1,1,0,0,1,0,1,15,0,0,0,0,2
+078157,Corigliano-Rossano,Calabria,1,0,0,4,0,1,3,0,1,0,0,1,0,1,15,0,0,0,0,2
 079008,Badolato,Calabria,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 079011,Borgia,Calabria,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 079012,Botricello,Calabria,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -2753,7 +2753,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 080056,Palizzi,Calabria,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 080057,Palmi,Calabria,0,0,0,2,0,1,3,0,0,0,0,0,0,0,0,0,0,0,0,0
 080061,Polistena,Calabria,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,1,0,0
-080063,Reggio di Calabria,Calabria,0,0,0,9,0,2,11,4,0,0,0,7,0,0,28,0,0,0,9,5
+080063,Reggio di Calabria,Calabria,0,0,0,9,0,2,11,4,0,0,0,7,0,0,27,0,0,0,9,5
 080065,Rizziconi,Calabria,0,0,0,0,0,0,1,0,0,0,0,0,0,0,3,0,0,0,0,2
 080067,Roccella Ionica,Calabria,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 080068,Roghudi,Calabria,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -2773,7 +2773,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 081007,Custonaci,Sicilia,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 081008,Erice,Sicilia,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 081009,Favignana,Sicilia,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
-081011,Marsala,Sicilia,0,0,0,4,0,0,2,0,0,0,0,2,0,0,11,0,0,0,0,4
+081011,Marsala,Sicilia,0,0,0,4,0,0,2,0,0,0,0,2,0,0,10,0,0,0,0,4
 081012,Mazara del Vallo,Sicilia,0,0,0,5,0,0,3,0,0,0,0,0,0,0,6,0,0,0,2,2
 081014,Pantelleria,Sicilia,0,0,0,1,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0
 081015,Partanna,Sicilia,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2
@@ -2787,7 +2787,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 082001,Alia,Sicilia,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 082004,Altavilla Milicia,Sicilia,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 082005,Altofonte,Sicilia,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
-082006,Bagheria,Sicilia,0,0,0,2,0,0,5,0,0,0,0,1,0,0,5,0,0,0,0,2
+082006,Bagheria,Sicilia,0,0,0,2,0,0,5,0,0,0,0,1,0,0,4,0,0,0,0,2
 082007,Balestrate,Sicilia,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0
 082008,Baucina,Sicilia,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 082009,Belmonte Mezzagno,Sicilia,0,0,0,1,0,0,1,0,0,0,0,2,0,0,1,0,0,0,0,1
@@ -2817,7 +2817,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 082049,Monreale,Sicilia,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
 082050,Montelepre,Sicilia,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 082051,Montemaggiore Belsito,Sicilia,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
-082053,Palermo,Sicilia,0,0,1,31,4,6,24,5,0,0,0,13,2,4,99,1,0,0,7,22
+082053,Palermo,Sicilia,0,0,1,33,4,6,24,5,0,0,0,13,1,4,95,1,0,0,7,22
 082054,Partinico,Sicilia,0,0,0,2,0,0,1,0,0,0,0,0,0,0,3,0,0,0,0,0
 082057,Piana degli Albanesi,Sicilia,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
 082060,Prizzi,Sicilia,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
@@ -2896,7 +2896,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 084027,Palma di Montechiaro,Sicilia,0,0,0,4,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0
 084028,Porto Empedocle,Sicilia,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 084029,Racalmuto,Sicilia,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-084030,Raffadali,Sicilia,0,0,0,1,1,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+084030,Raffadali,Sicilia,1,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
 084031,Ravanusa,Sicilia,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 084032,Realmonte,Sicilia,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
 084033,Ribera,Sicilia,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -2909,7 +2909,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 084043,Villafranca Sicula,Sicilia,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 085003,Butera,Sicilia,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 085004,Caltanissetta,Sicilia,0,0,0,1,0,1,9,1,0,0,0,1,0,1,8,0,0,0,0,2
-085007,Gela,Sicilia,0,0,0,6,0,0,6,0,0,0,0,0,0,0,6,0,0,0,1,2
+085007,Gela,Sicilia,0,0,0,6,0,0,6,0,0,0,0,0,0,0,5,0,0,0,1,2
 085009,Mazzarino,Sicilia,0,0,0,0,0,0,2,0,0,0,0,0,0,0,1,0,0,0,0,0
 085010,Milena,Sicilia,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 085012,Mussomeli,Sicilia,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0
@@ -2925,7 +2925,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 086006,Catenanuova,Sicilia,0,0,0,1,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
 086009,Enna,Sicilia,0,0,0,3,0,0,6,0,0,0,0,1,0,0,4,0,0,0,0,0
 086010,Gagliano Castelferrato,Sicilia,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
-086011,Leonforte,Sicilia,0,0,0,0,0,0,2,0,0,0,0,0,0,0,4,0,0,1,1,0
+086011,Leonforte,Sicilia,0,0,0,1,0,0,2,0,0,0,0,0,0,0,2,0,0,1,1,0
 086012,Nicosia,Sicilia,0,0,0,0,0,0,1,0,0,0,0,0,0,0,2,0,0,0,0,0
 086014,Piazza Armerina,Sicilia,0,0,0,2,0,0,2,0,0,0,0,0,0,0,2,0,0,0,0,1
 086015,Pietraperzia,Sicilia,0,0,0,1,0,0,2,0,0,0,0,0,0,0,1,0,0,0,0,0
@@ -2945,11 +2945,11 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 087011,Caltagirone,Sicilia,0,0,0,4,0,0,5,0,0,0,0,1,0,0,7,1,0,0,0,0
 087012,Camporotondo Etneo,Sicilia,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 087014,Castiglione di Sicilia,Sicilia,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
-087015,Catania,Sicilia,0,0,0,3,4,2,23,0,1,0,0,14,0,10,55,1,0,0,9,11
+087015,Catania,Sicilia,0,0,0,4,4,2,23,0,1,0,0,14,0,10,53,1,0,0,9,11
 087016,Fiumefreddo di Sicilia,Sicilia,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0
 087017,Giarre,Sicilia,0,0,0,2,1,0,6,0,0,0,0,1,0,0,2,0,0,0,0,1
 087018,Grammichele,Sicilia,0,0,0,0,0,0,2,0,0,2,0,0,0,0,1,0,0,0,0,0
-087019,Gravina di Catania,Sicilia,0,0,0,0,0,1,0,0,0,0,0,2,0,0,5,0,0,0,0,2
+087019,Gravina di Catania,Sicilia,0,0,0,0,0,1,0,0,0,0,0,2,0,0,4,0,0,0,0,2
 087021,Linguaglossa,Sicilia,0,0,0,1,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,1
 087022,Maletto,Sicilia,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 087024,Mascalucia,Sicilia,0,0,0,3,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
@@ -2970,7 +2970,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 087044,San Pietro Clarenza,Sicilia,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 087048,Santa Venerina,Sicilia,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 087049,Scordia,Sicilia,0,0,0,0,0,0,3,0,0,0,0,0,0,0,3,0,0,0,0,0
-087051,Tremestieri Etneo,Sicilia,0,0,0,0,0,0,0,0,0,1,0,0,0,0,5,0,0,0,0,1
+087051,Tremestieri Etneo,Sicilia,0,0,0,0,0,0,0,0,0,1,0,0,0,0,4,0,0,0,0,1
 087052,Valverde,Sicilia,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0
 087053,Viagrande,Sicilia,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,1,0
 087054,Vizzini,Sicilia,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -2983,12 +2983,12 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 088005,Ispica,Sicilia,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 088006,Modica,Sicilia,0,0,0,4,2,0,7,0,0,0,0,2,0,0,12,0,0,0,0,1
 088008,Pozzallo,Sicilia,0,0,0,2,1,0,1,0,0,0,0,0,0,0,2,0,0,0,0,0
-088009,Ragusa,Sicilia,0,1,0,2,0,0,10,0,0,2,0,4,0,0,20,0,0,0,0,2
+088009,Ragusa,Sicilia,0,1,0,2,0,0,10,0,0,2,0,4,0,0,19,0,0,0,0,2
 088010,Santa Croce Camerina,Sicilia,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 088011,Scicli,Sicilia,0,0,0,2,0,0,2,0,0,0,0,0,0,0,2,0,0,0,0,0
 088012,Vittoria,Sicilia,0,0,0,7,0,0,6,0,0,0,0,0,0,2,8,0,0,0,0,1
-089001,Augusta,Sicilia,0,0,0,3,0,0,5,0,0,0,0,0,0,0,5,0,0,0,0,1
-089002,Avola,Sicilia,0,0,0,1,0,0,3,0,0,0,0,0,0,0,5,0,0,0,0,1
+089001,Augusta,Sicilia,0,0,0,3,0,0,5,0,0,0,0,0,0,0,4,0,0,0,0,1
+089002,Avola,Sicilia,0,0,0,1,0,0,3,0,0,0,0,0,0,0,4,0,0,0,0,1
 089003,Buccheri,Sicilia,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 089005,Canicattini Bagni,Sicilia,0,0,0,1,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
 089006,Carlentini,Sicilia,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0
@@ -2997,7 +2997,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 089011,Lentini,Sicilia,0,0,0,1,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0
 089012,Melilli,Sicilia,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,1
 089013,Noto,Sicilia,0,0,0,2,0,0,2,0,0,0,0,1,0,0,3,0,0,0,0,0
-089014,Pachino,Sicilia,0,0,0,1,0,0,2,0,0,0,0,0,0,0,3,0,0,0,0,0
+089014,Pachino,Sicilia,0,0,0,2,0,0,2,0,0,0,0,0,0,0,2,0,0,0,0,0
 089015,Palazzolo Acreide,Sicilia,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 089016,Rosolini,Sicilia,0,0,0,5,0,1,3,0,0,0,0,1,0,0,2,0,0,0,0,0
 089017,Siracusa,Sicilia,0,0,0,9,0,0,8,2,0,0,0,3,0,0,24,0,0,0,3,2
@@ -3021,7 +3021,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 093029,Pasiano di Pordenone,Friuli-Venezia Giulia,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 093031,Polcenigo,Friuli-Venezia Giulia,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 093032,Porcia,Friuli-Venezia Giulia,0,0,0,0,0,0,3,0,0,0,0,0,0,0,2,0,0,0,0,0
-093033,Pordenone,Friuli-Venezia Giulia,0,0,0,3,3,0,5,0,0,0,0,4,0,1,10,0,0,0,2,0
+093033,Pordenone,Friuli-Venezia Giulia,0,0,0,4,3,0,5,0,0,0,0,4,0,1,8,0,0,0,2,0
 093034,Prata di Pordenone,Friuli-Venezia Giulia,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
 093036,Roveredo in Piano,Friuli-Venezia Giulia,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
 093037,Sacile,Friuli-Venezia Giulia,0,0,0,1,0,0,5,0,0,0,0,0,0,0,5,0,0,0,1,0
@@ -3031,7 +3031,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 093044,Spilimbergo,Friuli-Venezia Giulia,0,0,0,0,1,0,3,0,0,0,0,0,0,0,2,0,0,0,1,0
 093052,Vajont,Friuli-Venezia Giulia,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 094002,Agnone,Molise,0,0,0,1,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
-094010,Castelpetroso,Molise,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+094010,Castelpetroso,Molise,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 094017,Colli a Volturno,Molise,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 094022,Frosolone,Molise,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 094023,Isernia,Molise,0,0,0,0,0,0,3,0,0,0,0,0,0,0,8,0,0,0,0,0
@@ -3110,9 +3110,9 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 099002,Cattolica,Emilia-Romagna,0,0,0,3,1,0,2,0,0,0,0,2,0,0,6,0,0,0,1,0
 099003,Coriano,Emilia-Romagna,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,2
 099005,Misano Adriatico,Emilia-Romagna,0,0,0,2,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
-099011,Morciano di Romagna,Emilia-Romagna,0,0,0,0,0,0,0,0,0,0,0,0,0,1,3,0,0,0,0,0
-099013,Riccione,Emilia-Romagna,0,0,0,0,0,0,4,0,0,0,0,1,0,0,7,0,0,0,1,0
-099014,Rimini,Emilia-Romagna,0,0,1,5,2,1,5,0,0,0,0,3,0,1,30,0,0,0,6,6
+099011,Morciano di Romagna,Emilia-Romagna,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,0,0,0,0,0
+099013,Riccione,Emilia-Romagna,0,0,0,0,0,0,4,0,0,0,0,1,0,0,6,0,0,0,1,0
+099014,Rimini,Emilia-Romagna,0,0,1,5,2,1,5,0,0,0,0,3,0,1,29,0,0,0,6,6
 099015,Saludecio,Emilia-Romagna,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 099016,San Clemente,Emilia-Romagna,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,1
 099017,San Giovanni in Marignano,Emilia-Romagna,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0
@@ -3123,7 +3123,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 100002,Carmignano,Toscana,0,0,0,1,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,1
 100003,Montemurlo,Toscana,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0
 100004,Poggio a Caiano,Toscana,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1
-100005,Prato,Toscana,0,0,0,11,2,1,8,0,0,1,0,5,0,0,27,0,0,0,3,4
+100005,Prato,Toscana,0,0,0,11,2,1,8,0,0,1,0,5,0,0,26,0,0,0,3,4
 100007,Vernio,Toscana,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
 101004,Casabona,Calabria,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 101006,Cerenzia,Calabria,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
@@ -3183,7 +3183,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 108009,Biassono,Lombardia,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0
 108010,Bovisio-Masciago,Lombardia,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,1,0
 108011,Briosco,Lombardia,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
-108012,Brugherio,Lombardia,0,0,0,2,0,0,3,0,0,0,0,0,0,1,5,0,0,0,0,0
+108012,Brugherio,Lombardia,0,0,0,2,0,0,3,0,0,0,0,0,0,1,4,0,0,0,0,0
 108013,Burago di Molgora,Lombardia,0,0,0,1,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
 108015,Carate Brianza,Lombardia,0,0,0,0,0,0,2,0,0,0,0,0,0,0,1,0,0,0,1,0
 108016,Carnate,Lombardia,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0
@@ -3237,7 +3237,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 110006,Minervino Murge,Puglia,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 110007,San Ferdinando di Puglia,Puglia,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0
 110008,Spinazzola,Puglia,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
-110009,Trani,Puglia,0,0,0,4,2,0,3,2,0,0,0,3,0,0,9,0,0,0,0,4
+110009,Trani,Puglia,0,0,0,4,2,0,3,2,0,0,0,3,0,0,8,0,0,0,0,4
 110010,Trinitapoli,Puglia,0,0,0,2,1,0,0,0,0,0,0,1,0,0,2,0,0,0,0,0
 112001,Alghero,Sardegna,0,0,0,4,0,0,7,0,0,0,0,2,1,0,9,0,0,0,1,1
 112016,Castelsardo,Sardegna,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
@@ -3245,7 +3245,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 112025,Illorai,Sardegna,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 112027,Ittiri,Sardegna,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 112032,Mores,Sardegna,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
-112033,Muros,Sardegna,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+112033,Muros,Sardegna,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 112036,Nulvi,Sardegna,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 112037,Olmedo,Sardegna,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 112039,Ossi,Sardegna,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -3333,7 +3333,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 117019,Serrenti,Sardegna,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 117025,Villacidro,Sardegna,0,0,0,1,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
 118002,Assemini,Sardegna,0,0,0,1,0,0,0,0,0,0,0,1,0,0,2,0,0,0,0,0
-118006,Cagliari,Sardegna,0,0,0,4,3,1,14,4,0,0,0,5,0,1,48,0,0,1,9,6
+118006,Cagliari,Sardegna,0,0,0,4,3,1,14,4,0,0,0,5,0,1,45,0,0,1,9,6
 118007,Capoterra,Sardegna,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 118008,Castiadas,Sardegna,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 118009,Decimomannu,Sardegna,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -3355,7 +3355,7 @@ pro_com,comune,regione,altro,articoli religiosi,biblioteca (non è una libreria)
 118044,San Sperate,Sardegna,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0
 118045,San Vito,Sardegna,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 118047,Sarroch,Sardegna,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-118048,Selargius,Sardegna,0,0,0,0,0,0,1,0,0,0,0,0,1,0,2,0,0,0,0,1
+118048,Selargius,Sardegna,0,0,0,0,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,1
 118050,Senorbì,Sardegna,0,0,0,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 118052,Serri,Sardegna,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 118053,Sestu,Sardegna,0,0,0,0,0,0,2,0,0,0,0,0,0,0,3,0,0,0,0,3
