@@ -6,6 +6,11 @@ on:
     paths:
       - "scripts/calcola_schede.py"
       - "scripts/confronti_regioni.py"
+      - "scripts/prepara_sito.py"
+      - "scripts/verifica_dati.py"
+      - "scripts/verifica_pagina.py"
+      - "sito/modello.html"
+      - "sito/citazioni.json"
   workflow_run:
     workflows: ["Scarica fonti ufficiali", "Librerie dalle mappe aperte"]
     types: [completed]
@@ -22,11 +27,14 @@ jobs:
         with:
           ref: main
       - run: python3 scripts/calcola_schede.py
-      - run: pip install openpyxl==3.1.5 && python3 scripts/confronti_regioni.py
+      - run: pip install openpyxl==3.1.5 pandas && python3 scripts/confronti_regioni.py
+      # pagina e verifica: se un controllo dà ERRORE il job si ferma e non si pubblica nulla
+      - run: python3 scripts/prepara_sito.py
+      - run: python3 scripts/verifica_dati.py
       - run: |
           git config user.name "territorio-legge-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/schede data/analisi
+          git add data/schede data/analisi sito
           git diff --cached --quiet || git commit -m "Schede comuni: ricalcolo"
           git pull --rebase origin main
           git push

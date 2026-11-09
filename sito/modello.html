@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quanto devi spostarti per incontrare un libro?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Instrument+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Stesso sistema di Public Domain Radar */
+  --ink:#0C0C10; --carta:#F7F7F4; --vermiglio:#FF4326; --vermiglio-testo:#C2301A;
+  --muto:#5C5C66; --muto-chiaro:#B9B9C6; --riquadro:#E4E2DA; --iniziali:#D2CFC4;
+  --notte:#1C1C24; --bordo-notte:#2E2E3A; --verde:#0E3B2E; --crema:#E9E6DD;
+  --display:'Big Shoulders Display',Impact,'Arial Narrow',sans-serif;
+  --testo-f:'Instrument Sans',system-ui,sans-serif;
+  --mono:'DM Mono',ui-monospace,Menlo,monospace;
+  --lato:clamp(20px,4vw,48px);
+  /* nomi usati dai grafici */
+  --luce:var(--vermiglio); --c1:var(--verde); --c2:var(--muto-chiaro); --tenue:var(--muto); --testo:var(--ink);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--carta);color:var(--ink);font-family:var(--testo-f);font-size:17px;line-height:1.55;-webkit-text-size-adjust:100%}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--vermiglio);outline-offset:3px}
+.contenitore{max-width:1280px;margin:0 auto;padding-left:var(--lato);padding-right:var(--lato)}
+.colonna{max-width:780px}
+.occhiello{font-family:var(--mono);font-weight:500;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--vermiglio-testo);margin:0 0 14px}
+h1,h2,h3{margin:0;text-wrap:balance}
+.titolo{font-family:var(--display);font-weight:800;text-transform:uppercase;line-height:.92;font-size:clamp(40px,8vw,88px);margin:0}
+.lead{font-size:clamp(17px,2.2vw,21px);line-height:1.5;max-width:40rem;margin:18px 0 0}
+
+/* testata scura */
+.scuro{background:var(--ink);color:var(--carta)}
+.scuro .occhiello{color:var(--vermiglio)}
+.barra{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 28px;padding-top:24px}
+.marchio{display:inline-flex;flex-direction:column;line-height:1;text-decoration:none}
+.marchio .sigla{font-family:var(--display);font-weight:900;font-size:56px;letter-spacing:-.01em;line-height:.8;position:relative;display:inline-block}
+.marchio .sigla::after{content:"";position:absolute;right:-2px;top:46%;width:22px;height:5px;background:var(--ink);transform:rotate(-38deg)}
+.marchio .sub{font-family:var(--mono);font-weight:500;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:#A9A9B6;margin-top:7px}
+.navigazione{display:flex;flex-wrap:wrap;gap:4px 24px;font-family:var(--mono);font-weight:500;font-size:14px;text-transform:uppercase;letter-spacing:.08em}
+.navigazione a{text-decoration:none;padding:10px 0;border-bottom:2px solid transparent}
+.navigazione a:hover,.navigazione a[aria-current]{border-bottom-color:var(--vermiglio)}
+.presentazione{padding:clamp(48px,9vw,110px) 0 clamp(40px,6vw,72px)}
+h1.gen{font-family:var(--display);font-weight:900;font-size:clamp(50px,10vw,112px);line-height:.88;text-transform:uppercase;max-width:13ch}
+h1.gen em{font-style:normal;color:var(--vermiglio)}
+.scuro .lead{opacity:.92}
+.cifre{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2px;margin-top:36px;max-width:820px}
+.cifra{border-top:1px solid var(--bordo-notte);padding:16px 0 0}
+.cifra .num{display:block;font-family:var(--display);font-weight:900;font-size:clamp(54px,9vw,84px);line-height:.9;color:var(--vermiglio);font-variant-numeric:tabular-nums}
+.cifra p{margin:8px 0 0;font-size:15px;color:#C9C9D2;max-width:30ch}
+.num{font-variant-numeric:tabular-nums}
+
+/* ricerca */
+.cerca{position:relative;margin-top:40px;max-width:640px}
+.cerca label{display:block;font-family:var(--mono);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#A9A9B6;margin-bottom:10px}
+.cerca input{width:100%;font:inherit;font-size:19px;padding:14px 16px;min-height:58px;border-radius:0;border:0;background:var(--carta);color:var(--ink);-webkit-appearance:none;appearance:none}
+.cerca input::placeholder{color:var(--muto)}
+.risultati{position:absolute;left:0;right:0;top:100%;margin:0;padding:0;list-style:none;background:var(--carta);color:var(--ink);border-top:1px solid var(--riquadro);z-index:20;max-height:320px;overflow:auto;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+.risultati button{width:100%;text-align:left;font:inherit;padding:14px 16px;min-height:48px;background:none;border:0;border-bottom:1px solid var(--riquadro);display:flex;justify-content:space-between;gap:8px}
+.risultati button:hover,.risultati button:focus{background:var(--crema);outline:none}
+.risultati small{color:var(--muto);font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+
+/* sezioni */
+.sezione{padding:clamp(64px,9vw,120px) 0 0}
+.sezione > .contenitore > .lead{color:#3A3A44}
+
+/* mappa */
+.strumenti{display:flex;flex-wrap:wrap;gap:0;margin:28px 0 14px}
+.pill{font-family:var(--mono);font-weight:500;font-size:14px;letter-spacing:.1em;text-transform:uppercase;padding:0 20px;min-height:50px;border-radius:0;border:1.5px solid var(--ink);background:transparent;color:var(--ink)}
+.pill + .pill{border-left:0}
+.pill[aria-pressed="true"]{background:var(--ink);color:var(--carta)}
+.mappa{position:relative;background:#fff;box-shadow:inset 0 0 0 1px var(--riquadro);overflow:hidden;touch-action:none}
+.mappa svg{display:block;width:100%;height:auto;max-height:82vh}
+.mappa path.c{stroke:#fff;stroke-width:.25px;vector-effect:non-scaling-stroke;cursor:pointer}
+.mappa path.sel{stroke:var(--ink);stroke-width:2.5px}
+.mappa path.reg{fill:none;stroke:var(--ink);stroke-opacity:.55;stroke-width:.7px;vector-effect:non-scaling-stroke;pointer-events:none}
+.zoom{position:absolute;right:0;top:0;display:flex;flex-direction:column}
+.zoom button{width:48px;height:48px;border:0;border-bottom:1px solid var(--bordo-notte);background:var(--ink);color:var(--carta);font-family:var(--mono);font-size:20px;line-height:1}
+.zoom button:hover{background:var(--vermiglio);color:var(--ink)}
+.carico{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--muto);font-family:var(--mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+.legenda{display:flex;flex-wrap:wrap;gap:10px 20px;margin-top:14px;font-family:var(--mono);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink)}
+.legenda span{display:inline-flex;align-items:center;gap:8px}
+.legenda i{width:16px;height:16px;display:inline-block;box-shadow:inset 0 0 0 1px var(--muto-chiaro)}
+.nota{font-size:14px;color:var(--muto);margin:10px 0 0}
+
+/* scheda del comune */
+.scheda{margin-top:28px;background:var(--carta);color:var(--ink);padding:clamp(20px,3vw,32px);display:flex;flex-direction:column;gap:16px;max-width:780px;border-top:6px solid var(--vermiglio)}
+.scheda h3{font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:clamp(40px,7vw,64px);line-height:.9}
+.scheda .dove{font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muto);margin-top:10px}
+.scheda .frase{font-size:19px;line-height:1.45}
+.scheda .frase strong{background:var(--vermiglio);color:var(--ink);padding:0 4px;font-weight:600}
+.scheda table{border-collapse:collapse;width:100%;font-size:16px}
+.scheda td{padding:12px 0;border-top:1px solid var(--ink);vertical-align:top}
+.scheda td.v{text-align:right;font-family:var(--display);font-weight:800;font-size:28px;line-height:1;font-variant-numeric:tabular-nums;white-space:nowrap;padding-left:12px}
+.scheda td small{display:block;color:var(--muto);font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;margin-top:4px;font-weight:400}
+.scheda td.v small{font-family:var(--mono)}
+.scheda .nomi{font-size:15px;color:#3A3A44}
+.scheda .fonte{font-size:13px;color:var(--muto);line-height:1.5}
+.scheda .azioni{display:flex;flex-wrap:wrap;gap:10px}
+.scheda .azioni button,.scheda .azioni a{font-family:var(--mono);font-weight:500;font-size:14px;letter-spacing:.1em;text-transform:uppercase;padding:0 22px;min-height:54px;border:0;background:var(--vermiglio);color:var(--ink);text-decoration:none;display:inline-flex;align-items:center}
+.scheda .azioni a{background:transparent;box-shadow:inset 0 0 0 1.5px var(--ink)}
+.scheda .azioni #scarica{background:var(--vermiglio);box-shadow:none;border:0}
+
+/* scoperte: riquadri pieni come le copertine del Radar */
+.scoperte{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:12px;margin-top:32px}
+.scoperta{padding:24px;display:flex;flex-direction:column;gap:12px}
+@media (min-width:700px){.scoperta{min-height:300px}}
+.scoperta:nth-child(1){background:var(--crema);color:var(--ink)}
+.scoperta:nth-child(2){background:var(--vermiglio);color:var(--ink)}
+.scoperta:nth-child(3){background:var(--notte);color:var(--carta)}
+.scoperta:nth-child(4){background:#fff;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.scoperta .n{font-family:var(--mono);font-weight:500;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase}
+.scoperta .grande{font-family:var(--display);font-weight:900;font-size:clamp(64px,10vw,96px);line-height:.85;text-transform:uppercase}
+.scoperta p{margin:0}
+.scoperta .elenco{font-size:14px;opacity:.82}
+.barre{display:flex;flex-direction:column;gap:8px;margin-top:4px}
+.barra-p{display:grid;grid-template-columns:minmax(0,1fr) 1fr 50px;gap:10px;align-items:center;font-size:14px}
+.barra-p div.b{height:10px;background:var(--riquadro)}
+.barra-p div.b i{display:block;height:100%;background:var(--vermiglio)}
+.barra-p .p{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+/* capitoli */
+.cap{border-top:6px solid var(--ink);padding:28px 0 8px;margin-top:56px;display:flex;flex-direction:column;gap:22px;max-width:820px}
+.cap-n{font-family:var(--mono);font-weight:500;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--vermiglio-testo)}
+.cap h3{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:clamp(38px,6.5vw,64px);line-height:.92}
+.blocco p{margin:8px 0 0;max-width:65ch}
+.etic{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muto);font-weight:500}
+.att{background:var(--crema);padding:18px 20px}
+.att .etic{color:var(--vermiglio-testo)}
+.att p{color:#3A3A44;font-size:15.5px}
+.grafico{margin-top:14px;background:#fff;padding:12px 8px 4px}
+.grafico svg{display:block;width:100%;height:auto}
+.grafico text{fill:var(--muto);font-family:var(--testo-f);font-size:13px}
+.grafico .forte{fill:var(--ink);font-weight:600}
+.grafico .asse line,.grafico .asse path{stroke:var(--iniziali)}
+.grafico .asse text{font-family:var(--mono);font-size:11px}
+.azioni-lista{margin:8px 0 0;padding-left:20px}
+.azioni-lista li{margin:8px 0}
+
+.differenze{margin-top:14px;background:#fff;padding:18px 20px 6px}
+.diff-tit{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muto);margin-bottom:6px}
+.diff{display:flex;flex-direction:column;gap:6px;padding:16px 0;border-top:1px solid var(--riquadro)}
+.diff-f{font-family:var(--mono);font-size:12.5px;letter-spacing:.1em;text-transform:uppercase}
+.diff-n{font-family:var(--display);font-weight:900;font-size:clamp(34px,7vw,46px);line-height:.9;color:var(--vermiglio-testo);text-transform:uppercase}
+.diff-n.muto{color:var(--muto-chiaro)}
+.diff-n.nero{color:var(--ink)}
+.diff-s{font-size:14px;color:var(--muto)}
+/* metodo */
+.metodo{font-size:15.5px;color:#3A3A44}
+.metodo ul{padding-left:18px;margin:24px 0 0;max-width:820px}
+.metodo li{margin:10px 0}
+.metodo li strong{color:var(--ink)}
+
+/* piede */
+footer{margin-top:clamp(96px,12vw,144px);background:var(--ink);color:var(--muto-chiaro)}
+footer .contenitore{padding-top:56px;padding-bottom:72px;font-size:14px;line-height:1.7}
+footer p{margin:16px 0 0;max-width:780px}
+footer .mono{font-family:var(--mono);font-weight:500;letter-spacing:.14em;text-transform:uppercase;font-size:13px;color:var(--carta)}
+@media (max-width:600px){.grafico text{font-size:17px}.grafico .asse text{font-size:15px}}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<section class="scuro" id="inizio">
+  <div class="contenitore">
+    <header class="barra">
+      <a class="marchio" href="#inizio" aria-label="Il territorio legge"><span class="sigla" aria-hidden="true">TL</span><span class="sub" aria-hidden="true">Il territorio legge</span></a>
+      <nav class="navigazione" aria-label="Sezioni"><a href="#mappa">Mappa</a><a href="#scoperte">Scoperte</a><a href="#puntini">Puntini</a><a href="#metodo">Metodo</a></nav>
+    </header>
+    <div class="presentazione">
+      <p class="occhiello">Quanto devi spostarti per incontrare un libro?</p>
+      <h1 class="gen" id="titolo">Il libro è vicino. <em>I lettori no.</em></h1>
+      <div class="cifre">
+        <div class="cifra"><span class="num">{{pct_entro_15_libreria}}%</span><p>degli italiani ha una libreria a meno di un quarto d'ora d'auto</p></div>
+        <div class="cifra"><span class="num">{{italia_lettori}}%</span><p>legge almeno un libro all'anno nel tempo libero</p></div>
+      </div>
+      <p class="lead">Il libro è vicino quasi per tutti. Mancano i lettori: la lettura va di pari passo con la scuola e il reddito molto più che con la distanza. Cerca il tuo comune, poi scorri per capire perché.</p>
+      <div class="cerca">
+        <label for="q">Cerca il tuo comune</label>
+        <input id="q" type="search" autocomplete="off" placeholder="Es. Lecco, Corsico, Morterone" aria-controls="ris" aria-autocomplete="list">
+        <ul class="risultati" id="ris" hidden></ul>
+      </div>
+      <div id="scheda" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<main>
+  <section id="mappa" class="sezione" aria-labelledby="t-mappa"><div class="contenitore">
+    <p class="occhiello">La mappa</p>
+    <h2 class="titolo" id="t-mappa">Minuti in auto fino al <em style="font-style:normal;color:var(--vermiglio-testo)">libro</em> più vicino</h2>
+    <div class="strumenti" role="group" aria-label="Cosa mostrare sulla mappa">
+      <button class="pill" id="m-lib" aria-pressed="true">Libreria</button>
+      <button class="pill" id="m-bib" aria-pressed="false">Biblioteca</button>
+    </div>
+    <div class="mappa" id="box">
+      <div class="carico" id="carico">Carico i comuni…</div>
+      <div class="zoom">
+        <button id="zin" aria-label="Avvicina">+</button>
+        <button id="zout" aria-label="Allontana">−</button>
+        <button id="zreset" aria-label="Torna all'Italia intera" style="font-size:15px">IT</button>
+      </div>
+    </div>
+    <div class="legenda" id="legenda"></div>
+    <p class="nota">Tocca un comune per aprirne la scheda. Allarga con due dita o con +.</p>
+  </div></section>
+
+  <section id="scoperte" class="sezione" aria-labelledby="t-scop"><div class="contenitore">
+    <p class="occhiello">Scoperte</p>
+    <h2 class="titolo" id="t-scop">Quattro cose che i dati dicono</h2>
+    <div class="scoperte" id="lista-scoperte"></div>
+  </div></section>
+
+  <section id="puntini" class="sezione" aria-labelledby="t-pun"><div class="contenitore">
+    <p class="occhiello">Interpretare</p>
+    <h2 class="titolo" id="t-pun">Unire i puntini</h2>
+    <p class="lead">La mappa dice dove sono librerie e biblioteche. Ma cosa vuol dire? Qui mettiamo insieme i numeri e gli studi su chi legge e perché. Sei passi.</p>
+
+    <article class="cap" id="cap1">
+      <div class="cap-n">1 di 6</div>
+      <h3>Dove mancano i libri</h3>
+      <div class="blocco"><div class="etic">Cosa vediamo</div>
+        <p>Quanti italiani vivono in un comune con libreria e biblioteca, con una sola delle due o senza nessuna. In milioni di persone.</p>
+        <div class="grafico" id="g1"></div></div>
+      <div class="blocco"><div class="etic">Dove mancano: nei paesi piccoli</div>
+        <p>Il comune tipico senza biblioteca né libreria ha poche centinaia di abitanti; quello che le ha tutte e due ne ha più di diecimila.</p>
+        <div class="differenze" id="g1b"></div></div>
+      <div class="blocco"><div class="etic">Come leggerlo</div>
+        <p>In {{comuni_senza_nulla}} comuni non c'è né una biblioteca aperta a tutti né una libreria. Ci vivono {{abitanti_senza_nulla_mln}} milioni di persone, quasi tutte in paesi piccoli.</p>
+        <p>Uno studio ISTAT del 2024 (Caramis e Federici) arriva a un risultato simile: {{istat_deserti_quota}} è un «deserto del libro», con {{istat_deserti_abitanti}} di abitanti.</p>
+        <p><strong>Deserto non vuol dire lontano.</strong> Lo studio conta i comuni che non hanno libri al loro interno; noi misuriamo anche quanto è lontano il libro più vicino. Nei comuni senza biblioteca né libreria, {{deserti_bib15}} hanno una biblioteca a meno di un quarto d'ora e {{deserti_lib15}} una libreria. Restano circa {{deserti_lontani_mln}} milioni di persone senza una libreria a meno di un quarto d'ora: per loro la distanza è un problema vero.</p></div>
+      <div class="blocco att"><div class="etic">Attenzione</div>
+        <p>Le librerie vengono dalle mappe aperte, che non sono complete: qualche libreria può mancare. Lo studio ISTAT usa fonti e definizioni diverse dalle nostre, per questo i numeri non coincidono.</p></div>
+    </article>
+
+    <article class="cap" id="cap2">
+      <div class="cap-n">2 di 6</div>
+      <h3>La libreria vicina non basta</h3>
+      <div class="blocco"><div class="etic">Cosa vediamo</div>
+        <p>Ogni punto è una regione. Più è a destra, più gente ha una libreria a meno di 15 minuti d'auto. Più è in alto, più gente legge almeno un libro all'anno nel tempo libero.</p>
+        <div class="grafico" id="g2"></div></div>
+      <div class="blocco"><div class="etic">Come leggerlo</div>
+        <p>Se bastasse avere la libreria vicino, i punti salirebbero da sinistra verso destra. Succede poco, e quel poco sparisce se si confrontano regioni con redditi e laureati simili.</p>
+        <p>In Puglia il {{pug_l15}}% delle persone ha una libreria a meno di un quarto d'ora, ma nel tempo libero legge {{pug_let_parole}}. In Trentino-Alto Adige la libreria così vicina ce l'ha l'{{taa_l15}}%, e legge {{taa_let_parole}}.</p>
+        <p>E chi non legge non dà la colpa alla distanza: lo dice {{motivo_librerie_parole}}. I motivi più detti sono la noia ({{motivo_noia}}%) e il tempo che manca ({{motivo_tempo}}%).</p></div>
+      <div class="blocco att"><div class="etic">Attenzione</div>
+        <p>Sono solo 20 regioni, e ognuna mescola città e paesi. ISTAT non dice quanto si legge comune per comune: per questo qui il confronto è per regione.</p></div>
+    </article>
+
+    <article class="cap" id="cap3">
+      <div class="cap-n">3 di 6</div>
+      <h3>Chi legge</h3>
+      <div class="blocco"><div class="etic">Cosa vediamo</div>
+        <p>Quanti leggono almeno un libro all'anno nel tempo libero, in base alla scuola che hanno finito. Persone dai 25 anni in su, ISTAT 2024.</p>
+        <div class="grafico" id="g3"></div></div>
+      <div class="blocco"><div class="etic">Come leggerlo</div>
+        <p>Con la scuola la differenza è enorme, molto più che con la distanza: legge {{laureati_leggono}}, e {{elementare_leggono}} con la licenza elementare.</p>
+        <p>La differenza si vede già da piccoli: nelle famiglie dove i genitori hanno studiato di più, il {{prelettura_alto}} dei bambini sotto i 6 anni sfoglia, colora o legge libri ogni giorno; nelle altre il {{prelettura_basso}} (ISTAT 2026).</p></div>
+      <div class="blocco"><div class="etic">E tra le regioni?</div>
+        <p>Ogni punto è una regione. Più è a destra, più laureati ci sono tra i 25 e i 64 anni (Eurostat 2024). Più è in alto, più si legge nel tempo libero.</p>
+        <div class="grafico" id="g5"></div>
+        <p>Qui c'è una sorpresa: tra le regioni, la lettura va più d'accordo con il reddito che con il numero di laureati. Le regioni più ricche sono quasi sempre quelle che leggono di più.</p>
+        <p>Un esempio: il Trentino-Alto Adige ha meno laureati della Lombardia e dell'Emilia-Romagna ({{taa_lau}}%), ma è la regione che legge di più. Il Lazio ha più laureati di tutti ({{laz_lau}}%) e legge meno di {{nord_sopra_lazio}} regioni del Nord.</p></div>
+      <div class="blocco att"><div class="etic">Attenzione</div>
+        <p>Scuola, soldi e territorio vanno insieme: al Sud in media ci sono meno laureati e redditi più bassi. Per questo il fatto che al Sud si legga meno non si spiega con le sole librerie.</p></div>
+    </article>
+
+    <article class="cap" id="cap-bambini">
+      <div class="cap-n">4 di 6</div>
+      <h3>I bambini e i libri</h3>
+      <div class="blocco"><div class="etic">Cosa vediamo</div>
+        <p>Se leggere si impara da piccoli, conta quanto sono lontani i libri dai bambini. Qui contiamo i bambini sotto i 15 anni che vivono a più di un quarto d'ora d'auto dalla biblioteca e dalla libreria più vicine.</p>
+        <div class="differenze" id="gb1"></div></div>
+      <div class="blocco"><div class="etic">Come leggerlo</div>
+        <p><strong>Per quasi tutti i bambini la biblioteca è vicina.</strong> È il presidio del libro più diffuso: solo {{bambini_bib15_parole}} vive a più di un quarto d'ora da una biblioteca aperta a tutti. La libreria è più lontana, ma anche lì la grande maggioranza ce l'ha a portata.</p>
+        <p><strong>Ci sono però zone dove non è così.</strong> Le province dove i bambini lontani dalla biblioteca sono di più:</p>
+        <div class="differenze" id="gb2"></div>
+        <p>Torna quello che abbiamo visto nel capitolo prima: la differenza tra i bambini a cui si legge ogni giorno e gli altri si vede tra famiglie ({{prelettura_alto}} contro {{prelettura_basso}} di bambini che ogni giorno hanno in mano un libro), non tra territori.</p></div>
+      <div class="blocco att"><div class="etic">Attenzione</div>
+        <p>I bambini sono calcolati dalla quota di 0-14 anni di ogni comune (ISTAT 2026). I tempi sono in auto: un bambino non guida, quindi conta anche se la famiglia può accompagnarlo. Le biblioteche delle scuole non sono contate. Alcune biblioteche comunali, per esempio a Terracina, nell'anagrafe nazionale risultano temporaneamente chiuse o senza dati verificati, e per questo non le contiamo.</p></div>
+    </article>
+
+    <article class="cap" id="cap4">
+      <div class="cap-n">5 di 6</div>
+      <h3>La biblioteca fa leggere?</h3>
+      <div class="blocco"><div class="etic">Cosa vediamo</div>
+        <p>Ogni punto è una regione. Più è a destra, più lettori hanno preso l'ultimo libro in biblioteca. Più è in alto, più si legge nel tempo libero.</p>
+        <div class="grafico" id="g4"></div></div>
+      <div class="blocco"><div class="etic">Come leggerlo</div>
+        <p>Qui le domande sono due, e le risposte sono diverse.</p>
+        <p><strong>La biblioteca fa leggere di più?</strong> Non possiamo dirlo. A prima vista sì: dove la biblioteca è usata si legge di più. In Trentino-Alto Adige il {{taa_ub}}% dei lettori ha preso l'ultimo libro in biblioteca, in Campania lo {{cam_ub}}%. Ma le regioni dove la biblioteca è più usata sono anche le più ricche. Se confronti regioni con redditi simili, il legame tra biblioteca e lettura quasi sparisce. Il Lazio lo fa vedere bene: è ricco e legge molto, ma solo l'{{laz_ub}}% dei lettori passa dalla biblioteca.</p>
+        <p><strong>La biblioteca serve a chi legge?</strong> Sì, soprattutto nei paesi. Nei comuni tra 2.000 e 10.000 abitanti l'{{ub_2_10mila}}% dei lettori ha preso l'ultimo libro in biblioteca, nelle grandi città il {{ub_centri}}%. Spesso è l'unico posto dove trovare un libro senza comprarlo online.</p>
+        <p><strong>In breve:</strong> questi dati non mostrano che la biblioteca crei lettori. Mostrano che, per chi legge e vive in un paese, è un servizio che conta.</p>
+        <p><strong>Il caso da studiare:</strong> in Trentino-Alto Adige e in Valle d'Aosta {{taa_vda_ub_parole}} ha preso l'ultimo libro in biblioteca, più che in qualsiasi altra regione. Hanno meno laureati della Lombardia, eppure il Trentino-Alto Adige è la regione che legge di più. Non basta per dire che è merito delle biblioteche, ma è l'eccezione che vale la pena capire.</p></div>
+      <div class="blocco att"><div class="etic">Attenzione</div>
+        <p>Pensavamo che «la libreria va dove si legge già, la biblioteca fa nascere lettori». La prima parte regge. La seconda in questi dati non si vede: non vuol dire che sia falsa, ma con 20 regioni non si può dimostrare. Servirebbe sapere quanto si legge comune per comune, e ISTAT non lo pubblica.</p></div>
+    </article>
+
+    <article class="cap" id="cap5">
+      <div class="cap-n">6 di 6</div>
+      <h3>Cosa si può fare</h3>
+      <div class="blocco"><div class="etic">Cosa propongono gli studi</div>
+        <ul class="azioni-lista">
+          <li><strong>Biblioteche come luoghi d'incontro</strong> nei paesi che invecchiano e si svuotano, collegate a quelle delle città vicine (Caramis e Federici, ISTAT, 2024).</li>
+          <li><strong>Leggere ai bambini da piccolissimi</strong>, perché le differenze tra famiglie nascono lì (ISTAT, 2026; Nati per Leggere, dal 1999).</li>
+          <li><strong>Comuni, scuole e librerie che lavorano insieme</strong>, come nei Patti per la lettura del Centro per il libro e la lettura.</li>
+        </ul></div>
+      <div class="blocco att"><div class="etic">Attenzione</div>
+        <p>Sono proposte degli studi citati, non cose misurate da questa mappa.</p></div>
+    </article>
+  </div></section>
+
+  <section id="metodo" class="sezione metodo" aria-labelledby="t-met"><div class="contenitore">
+    <p class="occhiello">Fonti, licenze, date</p>
+    <h2 class="titolo" id="t-met">Metodo e fonti</h2>
+    <ul>
+      <li><strong>Biblioteche aperte a tutti</strong>: ICCU, Anagrafe delle biblioteche italiane, estrazione del {{data_iccu}}, licenza CC0. Contiamo le biblioteche attive e con accesso non riservato di tipo «pubblica lettura», chiunque le gestisca: {{bib_comunali_su10}} sono comunali, le altre di associazioni, fondazioni o enti religiosi. Le biblioteche «di conservazione», «importante non specializzata» e nazionali contano solo se gestite da comuni, province, regioni o Stato (come la Provinciale di Matera). Restano fuori le specializzate, le scolastiche e le universitarie.</li>
+      <li><strong>Librerie sulle mappe aperte</strong>: Overture Maps (release {{release_overture}}) e OpenStreetMap ({{data_osm}}). Le mappe aperte non sono un censimento: una libreria che manca qui può esistere. Correggiamo le classificazioni sbagliate dal nome con regole uguali per tutta Italia: cartolerie, edicole, fumetterie, negozi di giochi, biblioteche, legatorie, editori, agenzie e distributori registrati come «libreria» vanno nelle loro categorie; i negozi Mondadori, Feltrinelli, Giunti e simili registrati come generici tornano tra le librerie; lo stesso negozio segnato due volte si conta una volta. Risultato: {{librerie_totali}} librerie in {{comuni_con_libreria}} comuni. Di queste, circa {{librerie_confermate_circa}} sono confermate (molto affidabili per Overture o presenti in tutte e due le mappe): un numero vicino ai {{ali_punti_vendita}} punti vendita contati dallo studio Tagliacarne per l'Associazione Librai Italiani (2025), che usa il registro delle imprese. Le altre sono in buona parte negozi che vendono libri senza essere librerie in senso stretto.</li>
+      <li><strong>Tempi</strong>: ISTAT, matrici dei tempi di percorrenza tra comuni (confini 2021), CC BY 4.0. Minuti in auto da municipio a municipio, con traffico, in un giorno feriale alle 8:30. Chi vive in una frazione lontana dal municipio ha una distanza vera maggiore; chi non guida anche. {{comuni_senza_tempi}} comuni nati dopo il 2021 o senza collegamento stradale ({{abitanti_senza_tempi}} abitanti) non hanno tempi e restano fuori dai conteggi sulla distanza.</li>
+      <li><strong>Laureati per regione</strong>: Eurostat, dataset edat_lfse_04, persone 25-64 anni con titolo terziario, 2024 (Trentino-Alto Adige: media di Bolzano e Trento pesata per abitanti).</li>
+      <li><strong>Lettura</strong>: ISTAT, indagine «I cittadini e il tempo libero», anno 2024. «Leggere» vuol dire aver letto almeno un libro nell'ultimo anno nel tempo libero, anche se insieme a letture per lavoro o scuola: in Italia è il {{italia_lettori_1d}}% delle persone dai 6 anni in su. Se si contano anche le letture solo per lavoro o scuola e chi ammette qualche libro solo a una domanda successiva, si arriva al {{italia_legge_largo}}%.</li>
+      <li><strong>Abitanti</strong>: ISTAT, popolazione al 1° gennaio 2026. <strong>Redditi</strong>: MEF, reddito complessivo medio dichiarato, anno d'imposta 2024.</li>
+      <li><strong>Come confrontiamo</strong>: i comuni senza libri sono quasi tutti piccoli, quindi li confrontiamo solo con comuni grandi uguali e non mostriamo gruppi con meno di 30 comuni. Tra le regioni guardiamo quanto due classifiche vanno nello stesso ordine: 1 vuol dire identiche, 0 nessun legame (correlazione per ranghi). Reddito e lettura {{leg_reddito_lettori}}; laureati e lettura {{leg_laureati_lettori}}; libreria entro 15 minuti e lettura {{leg_libreria_entro_15_minuti_lettori}}, che scende a {{leg_libreria_entro_15_minuti_lettori_a_parit_di_reddito_e_laureati}} togliendo l'effetto di reddito e laureati; uso della biblioteca e lettura {{leg_ultimo_libro_da_biblioteca_lettori}}, che scende a {{leg_ultimo_libro_da_biblioteca_lettori_a_parit_di_reddito}} togliendo l'effetto del reddito. Con 20 regioni sono indizi, non prove.</li>
+      <li><strong>Libri e reddito</strong>: abbiamo controllato se i comuni senza libri sono più poveri, confrontandoli con comuni grandi uguali (reddito medio dichiarato, MEF 2024). La differenza è piccola: sotto i 3.000 abitanti è quasi nulla, tra 3.000 e 10.000 abitanti è di circa {{red_3_10_diff}} euro l'anno ({{red_3_10_nulla}} euro dove non c'è niente, {{red_3_10_tutto}} dove ci sono libreria e biblioteca). Sopra i 10.000 abitanti i comuni senza libri sono troppo pochi per confrontare.</li>
+      <li>Reddito e presenza di librerie stanno nella stessa scheda, ma nessun numero qui dimostra che uno causi l'altro.</li>
+    </ul>
+    <p>Dati e codice: <a href="https://github.com/mnovali90-byte/territorio-legge">github.com/mnovali90-byte/territorio-legge</a>. Aggiornamento automatico ogni mese.</p>
+    <p>Scarica tutto: <a href="https://raw.githubusercontent.com/mnovali90-byte/territorio-legge/main/data/schede/comuni.csv">tutti i comuni (CSV)</a> · <a href="https://raw.githubusercontent.com/mnovali90-byte/territorio-legge/main/data/librerie/punti_vendita.csv">tutti i punti vendita, con categoria e fonte (CSV)</a>.</p>
+  </div></section>
+
+</main>
+
+<footer>
+  <div class="contenitore">
+    <div class="mono">Il territorio legge</div>
+    <p>Un progetto di Marco Novali.</p>
+    <p>Fonti: ICCU, Anagrafe delle biblioteche (CC0); © Overture Maps Foundation (CDLA-Permissive-2.0, Apache-2.0, CC0); © OpenStreetMap contributors (ODbL 1.0); ISTAT (CC BY 4.0); MEF; Eurostat. Ogni dato riporta fonte e data nella sua scheda. Aggiornato ogni mese in automatico.</p>
+    <p><a href="https://github.com/mnovali90-byte/territorio-legge">Codice e dati su GitHub</a></p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+<script>
+(function(){
+const fmt = n => n == null ? "—" : n.toLocaleString("it-IT",{useGrouping:"always"});
+const COL = ["var(--c0)","var(--c1)","var(--c2)","var(--c3)"];
+const HEX = ["#E9E6DD","#F7B9A6","#FF6B4A","#9E200D"];
+const ND = "#B9B9C6";
+let DL = null;
+try { window.claude && window.claude.use && window.claude.use("downloads").then(d => { DL = d; if(DL && sel) mostra(sel, false); }).catch(() => {}); } catch(e) {}
+let D = {}, nomi = [], metrica = "lib", sel = null, paths = null, zoom, svg, g;
+// indici: 0 nome,1 prov,2 reg,3 ab,4 nBib,5 minBib,6 nLib,7 minLib,8 comLib,9 comBib,10 reddito,11 bibNomi,12 libNomi
+const classe = m => m == null ? -1 : m === 0 ? 0 : m <= 15 ? 1 : m <= 30 ? 2 : 3;
+const minuti = r => metrica === "lib" ? r[7] : r[5];
+
+function legenda(){
+  const L = metrica === "lib" ? "libreria" : "biblioteca";
+  const voci = [["nel comune",0],["1-15 min",1],["16-30 min",2],["oltre 30 min",3]];
+  document.getElementById("legenda").innerHTML =
+    voci.map(([t,i]) => `<span><i style="background:${HEX[i]}"></i>${t}</span>`).join("") +
+    `<span><i style="background:${ND}"></i>dato assente</span>`;
+}
+
+function colora(){
+  if(!paths) return;
+  paths.attr("fill", d => { const r = D[d.properties.PRO_COM_T]; if(!r) return ND; const c = classe(minuti(r)); return c < 0 ? ND : HEX[c]; });
+  legenda();
+}
+
+function frase(r){
+  const n = r[0];
+  const lib = r[6] > 0 ? (r[6] === 1 ? `A ${n} c'è <strong>una libreria</strong>.` : `A ${n} ci sono <strong>${fmt(r[6])} librerie</strong>.`)
+    : r[7] != null ? `A ${n} le mappe aperte non segnano librerie: la più vicina è a <strong>${r[7]} minuti</strong> in auto, a ${r[8]}.`
+    : `A ${n} le mappe aperte non segnano librerie.`;
+  const bib = r[4] > 0 ? (r[4] === 1 ? `C'è una biblioteca aperta a tutti.` : `Ci sono ${r[4]} biblioteche aperte a tutti.`)
+    : r[5] != null ? `Non c'è una biblioteca aperta a tutti: la più vicina è a ${r[5]} minuti, a ${r[9]}.` : `Non c'è una biblioteca aperta a tutti.`;
+  return lib + " " + bib;
+}
+
+function mostra(code, scroll){
+  const r = D[code]; if(!r) return;
+  sel = code;
+  if(paths) paths.classed("sel", d => d.properties.PRO_COM_T === code).filter(".sel").raise();
+  const libRiga = r[6] > 0 ? `${r[6]}<small>nel comune</small>` : r[7] != null ? `${r[7]} min<small>a ${r[8]}</small>` : "—";
+  const bibRiga = r[4] > 0 ? `${r[4]}<small>nel comune</small>` : r[5] != null ? `${r[5]} min<small>a ${r[9]}</small>` : "—";
+  document.getElementById("scheda").innerHTML = `
+  <article class="scheda" aria-label="Scheda di ${r[0]}">
+    <div><h3>${r[0]}</h3><div class="dove">${r[1] ? "Provincia " + r[1] + " · " : ""}${r[2] || ""} · codice ISTAT ${code}</div></div>
+    <p class="frase" style="margin:0">${frase(r)}</p>
+    <table>
+      <tr><td>Librerie sulle mappe aperte<small>Overture, OpenStreetMap · 8/11/2026</small></td><td class="v">${libRiga}</td></tr>
+      <tr><td>Biblioteche aperte a tutti<small>ICCU · 7/11/2026</small></td><td class="v">${bibRiga}</td></tr>
+      <tr><td>Abitanti<small>ISTAT · 1/1/2026</small></td><td class="v">${fmt(r[3])}</td></tr>
+      <tr><td>Reddito medio dichiarato<small>MEF · anno d'imposta 2024</small></td><td class="v">${r[10] ? fmt(r[10]) + " €" : "—"}</td></tr>
+    </table>
+    ${r[12].length ? `<div class="nomi"><strong>Librerie (${r[12].length}):</strong> ${r[12].slice(0,12).join(" · ")}${r[12].length > 12 ? " · e altre " + (r[12].length - 12) : ""}</div>` : ""}
+    ${r[11].length ? `<div class="nomi"><strong>Biblioteche (${r[11].length}):</strong> ${r[11].slice(0,8).join(" · ")}${r[11].length > 8 ? " · e altre " + (r[11].length - 8) : ""}</div>` : ""}
+    <div class="azioni">${DL ? `<button type="button" id="scarica">Scarica i dati (CSV)</button>` : ""}<a href="#mappa" id="vaimappa">Vedi sulla mappa</a></div>
+    ${r[6] === 0 && r[3] >= 5000 ? `<div class="att" style="padding:14px 16px;font-size:15px">In un comune di queste dimensioni è possibile che una libreria manchi dalle mappe. Se la conosci, aggiungila su <a href="https://www.openstreetmap.org">OpenStreetMap</a>: comparirà qui al prossimo aggiornamento.</div>` : ""}
+    <div class="fonte">Tempi: ISTAT, minuti in auto da municipio a municipio. Le mappe aperte non sono un censimento: una libreria che manca qui può esistere.</div>
+  </article>`;
+  if(DL) document.getElementById("scarica").onclick = async () => {
+    const bott = document.getElementById("scarica");
+    const CATENE = /mondadori|feltrinelli|giunti|ubik|libraccio|librerie coop|arion|rizzoli|ibs|la feltrinelli|il libraccio|paoline|san paolo/i;
+    const q = v => `"${String(v ?? "").replace(/"/g,'""')}"`;
+    const righe = [["comune","codice_istat","provincia","regione","abitanti_2026","biblioteche_aperte_a_tutti","minuti_biblioteca_piu_vicina","librerie_mappe_aperte","minuti_libreria_piu_vicina","reddito_medio_dichiarato_2024"],
+      [r[0], code, r[1], r[2], r[3], r[4], r[5], r[6], r[7], r[10]], [],
+      ["tipo","nome","catena_o_indipendente"],
+      ...r[12].map(n => ["libreria", n, CATENE.test(n) ? "catena" : "indipendente o non riconosciuta"]),
+      ...r[11].map(n => ["biblioteca", n, ""]), [],
+      ["fonti: ISTAT (CC BY 4.0), ICCU (CC0), Overture Maps (CDLA-Permissive-2.0), OpenStreetMap (ODbL 1.0), MEF. Il territorio legge."]];
+    const testo = "\ufeff" + righe.map(x => x.map(q).join(";")).join("\n");
+    try {
+      await DL.save({filename: `territorio-legge-${r[0].toLowerCase().replace(/[^a-z0-9]+/g,"-")}.csv`, data: testo});
+      bott.textContent = "Scaricato";
+    } catch(err) {
+      if(err && err.code === "declined") return;
+      bott.textContent = err && err.code === "rate_limited" ? "Riprova tra poco" : "Download non disponibile qui";
+    }
+  };
+  document.getElementById("vaimappa").onclick = () => { setTimeout(() => centra(code), 300); };
+  if(scroll) document.getElementById("scheda").scrollIntoView({behavior:"smooth", block:"start"});
+}
+
+// ricerca
+const q = document.getElementById("q"), ris = document.getElementById("ris");
+const norm = s => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"");
+q.addEventListener("input", () => {
+  const t = norm(q.value.trim());
+  if(t.length < 2){ ris.hidden = true; return; }
+  const inizio = [], dentro = [];
+  for(const [code,n] of nomi){ const k = norm(n); if(k.startsWith(t)) inizio.push(code); else if(k.includes(t)) dentro.push(code); if(inizio.length > 8) break; }
+  const lista = inizio.concat(dentro).slice(0,8);
+  ris.innerHTML = lista.length ? lista.map(c => `<li><button type="button" data-c="${c}">${D[c][0]} <small>${D[c][1]||""} · ${D[c][2]||""}</small></button></li>`).join("")
+    : `<li style="padding:14px 16px;color:var(--muto)">Nessun comune trovato con «${q.value}»</li>`;
+  ris.hidden = false;
+});
+ris.addEventListener("click", e => { const b = e.target.closest("button[data-c]"); if(!b) return; q.value = D[b.dataset.c][0]; ris.hidden = true; mostra(b.dataset.c, true); });
+document.addEventListener("click", e => { if(!e.target.closest(".cerca")) ris.hidden = true; });
+
+// metrica
+function metr(m){
+  metrica = m;
+  document.getElementById("m-lib").setAttribute("aria-pressed", m === "lib");
+  document.getElementById("m-bib").setAttribute("aria-pressed", m === "bib");
+  colora();
+}
+document.getElementById("m-lib").onclick = () => metr("lib");
+document.getElementById("m-bib").onclick = () => metr("bib");
+
+function centra(code){
+  const p = paths && paths.filter(d => d.properties.PRO_COM_T === code);
+  if(!p || p.empty()) return;
+  const [[x0,y0],[x1,y1]] = d3.geoPath(proiezione).bounds(p.datum());
+  const W = 600, H = +svg.attr("height");
+  const k = Math.min(24, 0.4 / Math.max((x1-x0)/W, (y1-y0)/H));
+  svg.transition().duration(600).call(zoom.transform, d3.zoomIdentity.translate(W/2, H/2).scale(k).translate(-(x0+x1)/2, -(y0+y1)/2));
+}
+
+let proiezione;
+function scoperte(){
+  const R = Object.values(D);
+  const solo = R.filter(r => r[4] > 0 && r[6] === 0), nulla = R.filter(r => r[4] === 0 && r[6] === 0);
+  const ab = a => a.reduce((s,r) => s + r[3], 0);
+  const lontani = R.filter(r => r[7] != null && r[7] > 30).reduce((s,r) => s + r[3], 0);
+  const lontaniB = R.filter(r => r[5] != null && r[5] > 30).reduce((s,r) => s + r[3], 0);
+  const prov = {};
+  for(const r of R){ const p = r[1] || "?"; prov[p] = prov[p] || [0,0]; prov[p][1] += r[3]; if(r[7] != null && r[7] > 30) prov[p][0] += r[3]; }
+  const top = Object.entries(prov).map(([p,[a,b]]) => [p, a/b, a]).sort((x,y) => y[1]-x[1]).slice(0,5);
+  const max = top[0][1];
+  document.getElementById("lista-scoperte").innerHTML = `
+  <article class="scoperta"><div class="n">1 · Solo la biblioteca</div>
+    <div class="grande num">${fmt(solo.length)}</div>
+    <p>comuni hanno una biblioteca ma nessuna libreria. Ci vivono <strong>${(ab(solo)/1e6).toLocaleString("it-IT",{maximumFractionDigits:1})} milioni</strong> di persone.</p></article>
+  <article class="scoperta"><div class="n">2 · Niente di niente</div>
+    <div class="grande num">${fmt(nulla.length)}</div>
+    <p>comuni non hanno né biblioteca né libreria. Ci vivono <strong>${(ab(nulla)/1e6).toLocaleString("it-IT",{maximumFractionDigits:1})} milioni</strong> di persone.</p></article>
+  <article class="scoperta"><div class="n">3 · Lontani davvero</div>
+    <div class="grande num">${fmt(lontani)}</div>
+    <p>persone vivono a più di mezz'ora d'auto dalla libreria più vicina: meno di una su cento. Dalla biblioteca più vicina sono ${fmt(lontaniB)}.</p></article>
+  <article class="scoperta"><div class="n">4 · Dove la libreria è più lontana</div>
+    <p>Le province con più gente a oltre mezz'ora d'auto dalla libreria più vicina.</p>
+    <div class="barre">${top.map(([p,s,a]) => `<div class="barra-p"><span>Provincia ${p}</span><div class="b"><i style="width:${(s/max*100).toFixed(1)}%"></i></div><span class="p">${(s*100).toLocaleString("it-IT",{maximumFractionDigits:1})}%</span></div>`).join("")}</div>
+    <p class="elenco">In alcune pesano le isole, dove serve il traghetto.</p></article>`;
+}
+
+Promise.all([fetch("comuni.json").then(r => r.json()), fetch("italia.json").then(r => r.json())]).then(([dati, topo]) => {
+  D = dati;
+  nomi = Object.entries(D).map(([c,r]) => [c, r[0]]).sort((a,b) => a[1].localeCompare(b[1], "it"));
+  const com = topojson.feature(topo, topo.objects.comuni);
+  const reg = topojson.mesh(topo, topo.objects.regioni, (a,b) => a !== b);
+  const W = 600;
+  proiezione = d3.geoMercator().fitWidth(W, com);
+  const path = d3.geoPath(proiezione);
+  const H = Math.ceil(path.bounds(com)[1][1]) + 4;
+  document.getElementById("carico").remove();
+  svg = d3.select("#box").insert("svg", ".zoom").attr("viewBox", `0 0 ${W} ${H}`).attr("width", W).attr("height", H)
+    .attr("role","img").attr("aria-label","Mappa dei comuni italiani colorati per minuti in auto dal libro più vicino");
+  g = svg.append("g");
+  paths = g.selectAll("path.c").data(com.features).join("path").attr("class","c").attr("d", path)
+    .on("click", (e,d) => mostra(d.properties.PRO_COM_T, true));
+  g.append("path").attr("class","reg").attr("d", path(reg));
+  zoom = d3.zoom().scaleExtent([1, 40]).translateExtent([[0,0],[W,H]]).on("zoom", e => g.attr("transform", e.transform));
+  svg.call(zoom);
+  document.getElementById("zin").onclick = () => svg.transition().duration(250).call(zoom.scaleBy, 2);
+  document.getElementById("zout").onclick = () => svg.transition().duration(250).call(zoom.scaleBy, 0.5);
+  document.getElementById("zreset").onclick = () => svg.transition().duration(400).call(zoom.transform, d3.zoomIdentity);
+  colora();
+  scoperte();
+  const iniziale = (location.hash.match(/^#c-(\d{6})$/) || [])[1] || "097042";
+  mostra(iniziale, false);
+}).catch(err => {
+  document.getElementById("carico").textContent = "Non riesco a caricare i dati: ricarica la pagina.";
+  console.error(err);
+});
+})();
+</script>
+
+<script>
+(function(){
+const W = 600;
+const nf = (v,d=1) => v.toLocaleString("it-IT",{maximumFractionDigits:d,useGrouping:"always"});
+function barre(el, dati, unita, evid){
+  const h = 46*dati.length + 10, x0 = 170;
+  const max = d3.max(dati, d => d.v);
+  const svg = d3.select(el).append("svg").attr("viewBox",`0 0 ${W} ${h}`).attr("role","img")
+    .attr("aria-label", dati.map(d => `${d.l}: ${nf(d.v)} ${unita}`).join("; "));
+  const x = d3.scaleLinear().domain([0,max]).range([0, W - x0 - 125]);
+  const g = svg.selectAll("g").data(dati).join("g").attr("transform",(d,i)=>`translate(0,${i*46+8})`);
+  g.append("text").attr("x",0).attr("y",20).text(d => d.l).attr("class", d => d.l === evid ? "forte" : null);
+  g.append("rect").attr("x",x0).attr("y",6).attr("height",20).attr("width", d => Math.max(2,x(d.v)))
+    .attr("fill", d => d.l === evid ? "var(--luce)" : "var(--c2)");
+  g.append("text").attr("x", d => x0 + x(d.v) + 8).attr("y",21).attr("class","forte").text(d => nf(d.v) + " " + unita);
+}
+const NOME_BREVE = {ABR:"Abruzzo",BAS:"Basilicata",CAL:"Calabria",CAM:"Campania",EMR:"Emilia-Romagna",FVG:"Friuli-V. Giulia",LAZ:"Lazio",LIG:"Liguria",LOM:"Lombardia",MAR:"Marche",MOL:"Molise",PIE:"Piemonte",PUG:"Puglia",SAR:"Sardegna",SIC:"Sicilia",TOS:"Toscana",TAA:"Trentino-A. Adige",UMB:"Umbria",VDA:"Valle d'Aosta",VEN:"Veneto"};
+function nuvola(el, dati, kx, ky, lx, ly, evid, dom, off={}){
+  const h = 380, m = {l:46, r:16, t:16, b:46};
+  const svg = d3.select(el).append("svg").attr("viewBox",`0 0 ${W} ${h}`).attr("role","img")
+    .attr("aria-label", `${ly} rispetto a ${lx}, per regione`);
+  const x = d3.scaleLinear().domain(dom.x).range([m.l, W - m.r]);
+  const y = d3.scaleLinear().domain(dom.y).range([h - m.b, m.t]);
+  svg.append("g").attr("class","asse").attr("transform",`translate(0,${h-m.b})`).call(d3.axisBottom(x).ticks(5).tickFormat(v => v + "%"));
+  svg.append("g").attr("class","asse").attr("transform",`translate(${m.l},0)`).call(d3.axisLeft(y).ticks(5).tickFormat(v => v + "%"));
+  svg.append("text").attr("x", W - m.r).attr("y", h - 8).attr("text-anchor","end").text(lx);
+  svg.append("text").attr("x", m.l + 4).attr("y", m.t + 2).text(ly);
+  const p = svg.selectAll("g.p").data(dati).join("g").attr("class","p").attr("transform", d => `translate(${x(d[kx])},${y(d[ky])})`);
+  p.append("circle").attr("r", d => evid.includes(d.s) ? 7 : 5)
+    .attr("fill", d => evid.includes(d.s) ? "var(--luce)" : "var(--c2)").attr("stroke","#fff");
+  p.append("text").attr("x", d => (off[d.s]||[9])[0]).attr("y", d => (off[d.s]||[9,4])[1]).attr("text-anchor", d => (off[d.s]||[0,0,"start"])[2]).text(d => evid.includes(d.s) ? NOME_BREVE[d.s] : d.s).attr("class", d => evid.includes(d.s) ? "forte" : null);
+}
+Promise.all([fetch("regioni.json").then(r=>r.json()), fetch("comuni.json").then(r=>r.json())]).then(([R, D]) => {
+  const prof = {"Libreria e biblioteca":0,"Solo biblioteca":0,"Solo libreria":0,"Nessuna delle due":0};
+  for(const r of Object.values(D)){
+    const k = r[6] > 0 && r[4] > 0 ? "Libreria e biblioteca" : r[4] > 0 ? "Solo biblioteca" : r[6] > 0 ? "Solo libreria" : "Nessuna delle due";
+    prof[k] += r[3];
+  }
+  barre("#g1", Object.entries(prof).map(([l,v]) => ({l, v: Math.round(v/1e5)/10})), "milioni", "Nessuna delle due");
+  nuvola("#g2", R, "l15", "let", "abitanti con una libreria entro 15 minuti", "leggono nel tempo libero", ["PUG","CAM","SIC","TAA"], {x:[65,100], y:[25,55]}, {CAM:[-9,4,"end"], PUG:[9,14,"start"], LOM:[9,-4,"start"], EMR:[-9,8,"end"], LIG:[-9,-4,"end"], VEN:[9,12,"start"], LAZ:[9,4,"start"]});
+  {
+    const gruppi = {"Libreria e biblioteca":[],"Solo biblioteca":[],"Solo libreria":[],"Nessuna delle due":[]};
+    for(const r of Object.values(D)){
+      const k = r[6] > 0 && r[4] > 0 ? "Libreria e biblioteca" : r[4] > 0 ? "Solo biblioteca" : r[6] > 0 ? "Solo libreria" : "Nessuna delle due";
+      gruppi[k].push(r[3] || 0);
+    }
+    const mediana = v => { const o = v.slice().sort((a,b)=>a-b), m = o.length >> 1; return o.length % 2 ? o[m] : Math.round((o[m-1]+o[m])/2); };
+    const et = {"Libreria e biblioteca":"Con libreria e biblioteca","Solo biblioteca":"Solo con la biblioteca","Solo libreria":"Solo con la libreria","Nessuna delle due":"Senza né l'una né l'altra"};
+    const nulla = gruppi["Nessuna delle due"], sotto = nulla.filter(x => x < 3000).length / nulla.length;
+    document.getElementById("g1b").innerHTML = `<div class="diff-tit">Abitanti del comune tipico</div>` +
+      Object.keys(et).map(k => `<div class="diff"><div class="diff-f">${et[k]}</div><div class="diff-n${k === "Nessuna delle due" ? "" : " nero"}">${mediana(gruppi[k]).toLocaleString("it-IT",{useGrouping:"always"})}</div><div class="diff-s">${gruppi[k].length.toLocaleString("it-IT",{useGrouping:"always"})} comuni</div></div>`).join("") +
+      `<p class="diff-s" style="margin:12px 0 8px">Tipico vuol dire che metà dei comuni del gruppo ne ha di più e metà di meno. Tra quelli senza libri, ${Math.round(sotto*10)} su 10 hanno meno di 3.000 abitanti.</p>`;
+  }
+  nuvola("#g5", R, "lau", "let", "laureati tra 25 e 64 anni", "leggono nel tempo libero", ["TAA","LAZ","SIC","CAM"], {x:[16,30], y:[25,55]}, {TAA:[-9,4,"end"], SIC:[-9,4,"end"], PUG:[0,18,"middle"], CAM:[9,-6,"start"], CAL:[9,10,"start"], FVG:[9,-2,"start"], LIG:[-9,0,"end"], LOM:[0,18,"middle"], EMR:[9,2,"start"], VDA:[-9,0,"end"], VEN:[9,6,"start"], PIE:[-9,8,"end"]});
+  barre("#g3", {{g3_dati}}, "%", "Laurea");
+  nuvola("#g4", R, "ub", "let", "lettori che hanno preso l'ultimo libro in biblioteca", "leggono nel tempo libero", ["TAA","VDA","CAM","LAZ"], {x:[0,17], y:[25,55]}, {TAA:[-9,4,"end"], VDA:[-9,4,"end"], CAM:[-4,-12,"start"], PUG:[-4,18,"start"], CAL:[9,6,"start"], SIC:[9,-2,"start"], SAR:[-9,4,"end"], EMR:[-9,4,"end"], LOM:[9,-4,"start"], VEN:[9,12,"start"]});
+}).catch(e => console.error(e));
+})();
+
+fetch("bambini.json").then(r => r.json()).then(B => {
+  const f = n => n.toLocaleString("it-IT",{useGrouping:"always"});
+  const pct = (a,b) => (100*a/b).toLocaleString("it-IT",{maximumFractionDigits:1});
+  document.getElementById("gb1").innerHTML = `<div class="diff-tit">Bambini sotto i 15 anni: ${f(B.totale)}</div>
+    <div class="diff"><div class="diff-f">A più di 15 minuti dalla biblioteca</div><div class="diff-n">${f(B.oltre15_biblioteca)}</div><div class="diff-s">${pct(B.oltre15_biblioteca,B.totale)}% dei bambini, {{bambini_bib15_parole}}</div></div>
+    <div class="diff"><div class="diff-f">A più di 15 minuti dalla libreria</div><div class="diff-n nero">${f(B.oltre15_libreria)}</div><div class="diff-s">${pct(B.oltre15_libreria,B.totale)}% dei bambini. Oltre mezz'ora: ${f(B.oltre30_libreria)}</div></div>`;
+  const max = B.province[0].quota;
+  document.getElementById("gb2").innerHTML = `<div class="diff-tit">Bambini a più di 15 minuti dalla biblioteca, per provincia</div>
+    <div class="barre" style="margin:10px 0 8px">${B.province.map(p => `<div class="barra-p"><span>${p.nome}</span><div class="b"><i style="width:${(p.quota/max*100).toFixed(1)}%"></i></div><span class="p">${p.quota.toLocaleString("it-IT")}%</span></div>`).join("")}</div>
+    <p class="diff-s" style="margin:4px 0 10px">I comuni con più bambini lontani: ${B.comuni.map(c => `${c.comune} (${f(c.bambini)} bambini, ${c.minuti} minuti da ${c.verso})`).join(" · ")}.</p>`;
+});
+</script>
+</body>
+</html>
