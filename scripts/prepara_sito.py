@@ -350,6 +350,11 @@ def con_articolo(testo):
 for k in ("pug_l15", "taa_l15", "ub_2_10mila", "ub_centri", "laz_ub", "taa_ub", "cam_ub"):
     metti(k + "_art", con_articolo(T[k]), FONTE[k])
 
+v = numeri["pct_entro_15_libreria"]
+dec_ = round(v / 10)
+metti("vicini_parole", ("quasi " if v < dec_ * 10 else "più di " if v > dec_ * 10 + 1 else "") + f"{dec_} italiani su 10",
+      "matrici ISTAT + librerie mappe aperte")
+
 # --- date delle fonti (dai registri scritti dagli script di scaricamento)
 from email.utils import parsedate_to_datetime
 from datetime import datetime

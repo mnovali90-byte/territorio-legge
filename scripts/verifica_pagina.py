@@ -62,6 +62,12 @@ for sc in re.findall(r"<script>(.*?)</script>", m, flags=re.S):
         if re.search(r"\b\d{2,}[.,]\d+\s*%|\bv:\s*\d+(\.\d+)?\b", riga) and "{{" not in riga:
             errori.append("numero del racconto scritto a mano nello script: " + riga.strip()[:120])
 
+# 4. negli script: niente quantità dette a parole scritte a mano dentro i testi generati
+for sc in re.findall(r"<script>(.*?)</script>", m, flags=re.S):
+    for riga in sc.splitlines():
+        if re.search(r"\b(su cento|su dieci|su due|su tre|su quattro|meno di una|più di una|la maggioranza|quasi tutt)", riga) and "{{" not in riga:
+            errori.append("quantità a parole scritta a mano nello script: " + riga.strip()[:120])
+
 rapporto = {"errori": errori, "segnaposto": len(set(re.findall(r"\{\{([a-z0-9_]+)\}\}", m)))}
 json.dump(rapporto, open("sito/verifica_pagina.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 for e in errori:

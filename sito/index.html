@@ -178,7 +178,7 @@ footer .mono{font-family:var(--mono);font-weight:500;letter-spacing:.14em;text-t
         <div class="cifra"><span class="num">88%</span><p>degli italiani ha una libreria a meno di un quarto d'ora d'auto</p></div>
         <div class="cifra"><span class="num">40%</span><p>legge almeno un libro all'anno nel tempo libero</p></div>
       </div>
-      <p class="lead">Il libro è vicino quasi per tutti. Mancano i lettori: la lettura va di pari passo con la scuola e il reddito molto più che con la distanza. Cerca il tuo comune, poi scorri per capire perché.</p>
+      <p class="lead">Il libro è vicino per quasi 9 italiani su 10. Mancano i lettori: la lettura va di pari passo con la scuola e il reddito molto più che con la distanza. Cerca il tuo comune, poi scorri per capire perché.</p>
       <div class="cerca">
         <label for="q">Cerca il tuo comune</label>
         <input id="q" type="search" autocomplete="off" placeholder="Es. Lecco, Corsico, Morterone" aria-controls="ris" aria-autocomplete="list">
@@ -483,7 +483,7 @@ function scoperte(){
     <p>comuni non hanno né biblioteca né libreria. Ci vivono <strong>${(ab(nulla)/1e6).toLocaleString("it-IT",{maximumFractionDigits:1})} milioni</strong> di persone.</p></article>
   <article class="scoperta"><div class="n">3 · Lontani davvero</div>
     <div class="grande num">${fmt(lontani)}</div>
-    <p>persone vivono a più di mezz'ora d'auto dalla libreria più vicina: meno di una su cento. Dalla biblioteca più vicina sono ${fmt(lontaniB)}.</p></article>
+    <p>persone vivono a più di mezz'ora d'auto dalla libreria più vicina: ${(100*lontani/ab(R)).toLocaleString("it-IT",{maximumFractionDigits:1})}% degli italiani. Dalla biblioteca più vicina sono ${fmt(lontaniB)}.</p></article>
   <article class="scoperta"><div class="n">4 · Dove la libreria è più lontana</div>
     <p>Le province con più gente a oltre mezz'ora d'auto dalla libreria più vicina.</p>
     <div class="barre">${top.map(([p,s,a]) => `<div class="barra-p"><span>Provincia ${p}</span><div class="b"><i style="width:${(s/max*100).toFixed(1)}%"></i></div><span class="p">${(s*100).toLocaleString("it-IT",{maximumFractionDigits:1})}%</span></div>`).join("")}</div>
