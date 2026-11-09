@@ -149,6 +149,19 @@ for r in solo_osm:
         "regione": r["regione"], "lon": r["lon"], "lat": r["lat"], "licenza": "ODbL-1.0",
     })
 
+# Librerie «certe»: il nome dice che si vendono libri (libreria, libri, book, catene note…) oppure il punto
+# è segnato come libreria su OpenStreetMap, dove la categoria la mette a mano chi conosce il posto.
+# Gli altri punti che Overture classifica come libreria (negozi di regali, cartolerie con un altro nome,
+# attività non riconoscibili) vanno in un gruppo a parte e non contano come libreria: preferiamo
+# perdere qualche libreria vera piuttosto che contare negozi che librerie non sono.
+NOME_CERTO = re.compile(r"librer|librai|libri|libro|book|mondadori|feltrinelli|giunti|ubik|libraccio|arion|"
+                        r"librerie coop|rizzoli|paoline|san paolo|einaudi|bibli|lettur|letter|legg")
+for r in righe:
+    if r["gruppo"] in ("libreria", "libreria dell'usato", "libreria universitaria"):
+        osm = r["fonte"] == "OSM" or r.get("anche_in_osm") == "sì"
+        if not osm and not NOME_CERTO.search((r["nome"] or "").lower()):
+            r["gruppo"] = "possibile libreria (non verificabile dal nome)"
+
 # Doppioni: stesso nome (senza maiuscole e punteggiatura) a meno di RAGGIO_M metri. Si tiene il primo,
 # gli altri restano nel file con stato «doppione» e non vengono contati.
 def chiave(nome):
