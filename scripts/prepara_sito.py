@@ -95,3 +95,43 @@ numeri = {
 }
 json.dump(numeri, open(f"{OUT}/numeri.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 print(json.dumps(numeri, ensure_ascii=False, indent=1))
+
+# ---- bambini 0-14 lontani da biblioteca e libreria
+import io
+grezzo = open("data/grezzi/istat_elenco_comuni/Elenco-comuni-italiani.csv", "rb").read()
+try:
+    testo = grezzo.decode("utf-8")
+except UnicodeDecodeError:
+    testo = grezzo.decode("latin-1")
+el = list(csv.reader(io.StringIO(testo), delimiter=";"))
+h = [x.replace("\n", " ") for x in el[0]]
+i_sig = next(i for i, x in enumerate(h) if x.startswith("Sigla automobilistica"))
+i_nom = next(i for i, x in enumerate(h) if x.startswith("Denominazione dell'Unità territoriale sovracomunale"))
+nome_prov = {r[i_sig]: r[i_nom] for r in el[1:] if len(r) > i_nom}
+
+def bimbi(r):
+    return int(r["abitanti_2026"]) * float(r["pct_0_14"] or 0) / 100
+
+def oltre_min(r, k, s):
+    return r[k] != "" and float(r[k]) > s
+
+tot_b = sum(bimbi(r) for r in righe)
+prov = {}
+for r in righe:
+    p_ = prov.setdefault(r["provincia"], [0, 0])
+    p_[1] += bimbi(r)
+    if oltre_min(r, "minuti_biblioteca", 15):
+        p_[0] += bimbi(r)
+top_prov = sorted(((k, a / t, a) for k, (a, t) in prov.items() if t), key=lambda x: -x[1])[:6]
+lontani_bib = sorted((r for r in righe if oltre_min(r, "minuti_biblioteca", 15)), key=lambda r: -bimbi(r))
+bambini = {
+    "totale": round(tot_b),
+    "oltre15_biblioteca": round(sum(bimbi(r) for r in righe if oltre_min(r, "minuti_biblioteca", 15))),
+    "oltre15_libreria": round(sum(bimbi(r) for r in righe if oltre_min(r, "minuti_libreria", 15))),
+    "oltre30_libreria": round(sum(bimbi(r) for r in righe if oltre_min(r, "minuti_libreria", 30))),
+    "province": [{"sigla": k, "nome": nome_prov.get(k, k), "quota": round(100 * q, 1), "bambini": round(a)} for k, q, a in top_prov],
+    "comuni": [{"comune": r["comune"], "provincia": r["provincia"], "bambini": round(bimbi(r)),
+                "minuti": int(float(r["minuti_biblioteca"])), "verso": r["comune_biblioteca_piu_vicina"]} for r in lontani_bib[:5]],
+}
+json.dump(bambini, open(f"{OUT}/bambini.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+print(json.dumps(bambini, ensure_ascii=False, indent=1))

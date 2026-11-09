@@ -1,0 +1,81 @@
+{
+ "totale": 6852961,
+ "oltre15_biblioteca": 67924,
+ "oltre15_libreria": 522145,
+ "oltre30_libreria": 43077,
+ "province": [
+  {
+   "sigla": "KR",
+   "nome": "Crotone",
+   "quota": 31.3,
+   "bambini": 6692
+  },
+  {
+   "sigla": "TE",
+   "nome": "Teramo",
+   "quota": 14.1,
+   "bambini": 4746
+  },
+  {
+   "sigla": "PZ",
+   "nome": "Potenza",
+   "quota": 13.2,
+   "bambini": 4622
+  },
+  {
+   "sigla": "RI",
+   "nome": "Rieti",
+   "quota": 10.6,
+   "bambini": 1598
+  },
+  {
+   "sigla": "VB",
+   "nome": "Verbano-Cusio-Ossola",
+   "quota": 10.1,
+   "bambini": 1489
+  },
+  {
+   "sigla": "LT",
+   "nome": "Latina",
+   "quota": 9.8,
+   "bambini": 6650
+  }
+ ],
+ "comuni": [
+  {
+   "comune": "Terracina",
+   "provincia": "LT",
+   "bambini": 4956,
+   "minuti": 21,
+   "verso": "Monte San Biagio"
+  },
+  {
+   "comune": "Isola di Capo Rizzuto",
+   "provincia": "KR",
+   "bambini": 3038,
+   "minuti": 21,
+   "verso": "Crotone"
+  },
+  {
+   "comune": "Melfi",
+   "provincia": "PZ",
+   "bambini": 2168,
+   "minuti": 16,
+   "verso": "Rionero in Vulture"
+  },
+  {
+   "comune": "Massa Lubrense",
+   "provincia": "NA",
+   "bambini": 1877,
+   "minuti": 16,
+   "verso": "Sorrento"
+  },
+  {
+   "comune": "Cepagatti",
+   "provincia": "PE",
+   "bambini": 1489,
+   "minuti": 18,
+   "verso": "Moscufo"
+  }
+ ]
+}
