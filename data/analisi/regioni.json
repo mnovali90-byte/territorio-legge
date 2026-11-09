@@ -9,8 +9,8 @@
   "regioni": [
     {
       "regione": "Abruzzo",
-      "pct_abitanti_con_libreria_nel_comune": 65.1,
-      "pct_abitanti_libreria_entro_15_min": 83.1,
+      "pct_abitanti_con_libreria_nel_comune": 57.9,
+      "pct_abitanti_libreria_entro_15_min": 74.1,
       "pct_abitanti_con_biblioteca_nel_comune": 73.3,
       "reddito_medio_dichiarato": 22694,
       "pct_laureati_25_64": 23.8,
@@ -22,8 +22,8 @@
     },
     {
       "regione": "Basilicata",
-      "pct_abitanti_con_libreria_nel_comune": 57.8,
-      "pct_abitanti_libreria_entro_15_min": 67.5,
+      "pct_abitanti_con_libreria_nel_comune": 41.5,
+      "pct_abitanti_libreria_entro_15_min": 51.6,
       "pct_abitanti_con_biblioteca_nel_comune": 83.4,
       "reddito_medio_dichiarato": 20595,
       "pct_laureati_25_64": 20.2,
@@ -35,8 +35,8 @@
     },
     {
       "regione": "Calabria",
-      "pct_abitanti_con_libreria_nel_comune": 55.0,
-      "pct_abitanti_libreria_entro_15_min": 71.2,
+      "pct_abitanti_con_libreria_nel_comune": 48.3,
+      "pct_abitanti_libreria_entro_15_min": 61.6,
       "pct_abitanti_con_biblioteca_nel_comune": 77.6,
       "reddito_medio_dichiarato": 19044,
       "pct_laureati_25_64": 20.1,
@@ -48,8 +48,8 @@
     },
     {
       "regione": "Campania",
-      "pct_abitanti_con_libreria_nel_comune": 72.5,
-      "pct_abitanti_libreria_entro_15_min": 94.6,
+      "pct_abitanti_con_libreria_nel_comune": 64.9,
+      "pct_abitanti_libreria_entro_15_min": 90.1,
       "pct_abitanti_con_biblioteca_nel_comune": 81.8,
       "reddito_medio_dichiarato": 21346,
       "pct_laureati_25_64": 18.7,
@@ -61,8 +61,8 @@
     },
     {
       "regione": "Emilia-Romagna",
-      "pct_abitanti_con_libreria_nel_comune": 74.7,
-      "pct_abitanti_libreria_entro_15_min": 91.5,
+      "pct_abitanti_con_libreria_nel_comune": 69.4,
+      "pct_abitanti_libreria_entro_15_min": 87.4,
       "pct_abitanti_con_biblioteca_nel_comune": 98.3,
       "reddito_medio_dichiarato": 28112,
       "pct_laureati_25_64": 24.9,
@@ -74,8 +74,8 @@
     },
     {
       "regione": "Friuli-Venezia Giulia",
-      "pct_abitanti_con_libreria_nel_comune": 60.8,
-      "pct_abitanti_libreria_entro_15_min": 96.5,
+      "pct_abitanti_con_libreria_nel_comune": 57.5,
+      "pct_abitanti_libreria_entro_15_min": 93.3,
       "pct_abitanti_con_biblioteca_nel_comune": 98.0,
       "reddito_medio_dichiarato": 26810,
       "pct_laureati_25_64": 24.1,
@@ -87,8 +87,8 @@
     },
     {
       "regione": "Lazio",
-      "pct_abitanti_con_libreria_nel_comune": 87.5,
-      "pct_abitanti_libreria_entro_15_min": 95.3,
+      "pct_abitanti_con_libreria_nel_comune": 82.7,
+      "pct_abitanti_libreria_entro_15_min": 90.9,
       "pct_abitanti_con_biblioteca_nel_comune": 93.7,
       "reddito_medio_dichiarato": 27673,
       "pct_laureati_25_64": 28.3,
@@ -100,8 +100,8 @@
     },
     {
       "regione": "Liguria",
-      "pct_abitanti_con_libreria_nel_comune": 80.1,
-      "pct_abitanti_libreria_entro_15_min": 92.2,
+      "pct_abitanti_con_libreria_nel_comune": 78.2,
+      "pct_abitanti_libreria_entro_15_min": 90.0,
       "pct_abitanti_con_biblioteca_nel_comune": 91.8,
       "reddito_medio_dichiarato": 26684,
       "pct_laureati_25_64": 23.8,
@@ -113,8 +113,8 @@
     },
     {
       "regione": "Lombardia",
-      "pct_abitanti_con_libreria_nel_comune": 60.6,
-      "pct_abitanti_libreria_entro_15_min": 96.1,
+      "pct_abitanti_con_libreria_nel_comune": 56.1,
+      "pct_abitanti_libreria_entro_15_min": 93.8,
       "pct_abitanti_con_biblioteca_nel_comune": 97.4,
       "reddito_medio_dichiarato": 30142,
       "pct_laureati_25_64": 23.9,
@@ -126,8 +126,8 @@
     },
     {
       "regione": "Marche",
-      "pct_abitanti_con_libreria_nel_comune": 68.5,
-      "pct_abitanti_libreria_entro_15_min": 88.8,
+      "pct_abitanti_con_libreria_nel_comune": 63.9,
+      "pct_abitanti_libreria_entro_15_min": 83.3,
       "pct_abitanti_con_biblioteca_nel_comune": 92.9,
       "reddito_medio_dichiarato": 24592,
       "pct_laureati_25_64": 24.2,
@@ -139,8 +139,8 @@
     },
     {
       "regione": "Molise",
-      "pct_abitanti_con_libreria_nel_comune": 50.7,
-      "pct_abitanti_libreria_entro_15_min": 69.7,
+      "pct_abitanti_con_libreria_nel_comune": 42.5,
+      "pct_abitanti_libreria_entro_15_min": 55.4,
       "pct_abitanti_con_biblioteca_nel_comune": 68.7,
       "reddito_medio_dichiarato": 20511,
       "pct_laureati_25_64": 23.1,
@@ -152,8 +152,8 @@
     },
     {
       "regione": "Piemonte",
-      "pct_abitanti_con_libreria_nel_comune": 62.0,
-      "pct_abitanti_libreria_entro_15_min": 92.2,
+      "pct_abitanti_con_libreria_nel_comune": 59.7,
+      "pct_abitanti_libreria_entro_15_min": 89.8,
       "pct_abitanti_con_biblioteca_nel_comune": 92.0,
       "reddito_medio_dichiarato": 27345,
       "pct_laureati_25_64": 21.2,
@@ -165,8 +165,8 @@
     },
     {
       "regione": "Puglia",
-      "pct_abitanti_con_libreria_nel_comune": 82.5,
-      "pct_abitanti_libreria_entro_15_min": 96.3,
+      "pct_abitanti_con_libreria_nel_comune": 72.9,
+      "pct_abitanti_libreria_entro_15_min": 94.2,
       "pct_abitanti_con_biblioteca_nel_comune": 92.7,
       "reddito_medio_dichiarato": 20473,
       "pct_laureati_25_64": 18.0,
@@ -178,8 +178,8 @@
     },
     {
       "regione": "Sardegna",
-      "pct_abitanti_con_libreria_nel_comune": 64.3,
-      "pct_abitanti_libreria_entro_15_min": 83.6,
+      "pct_abitanti_con_libreria_nel_comune": 61.3,
+      "pct_abitanti_libreria_entro_15_min": 80.0,
       "pct_abitanti_con_biblioteca_nel_comune": 98.4,
       "reddito_medio_dichiarato": 21961,
       "pct_laureati_25_64": 19.0,
@@ -191,8 +191,8 @@
     },
     {
       "regione": "Sicilia",
-      "pct_abitanti_con_libreria_nel_comune": 75.3,
-      "pct_abitanti_libreria_entro_15_min": 85.6,
+      "pct_abitanti_con_libreria_nel_comune": 68.2,
+      "pct_abitanti_libreria_entro_15_min": 80.1,
       "pct_abitanti_con_biblioteca_nel_comune": 96.2,
       "reddito_medio_dichiarato": 20599,
       "pct_laureati_25_64": 17.8,
@@ -204,8 +204,8 @@
     },
     {
       "regione": "Toscana",
-      "pct_abitanti_con_libreria_nel_comune": 81.7,
-      "pct_abitanti_libreria_entro_15_min": 93.6,
+      "pct_abitanti_con_libreria_nel_comune": 76.4,
+      "pct_abitanti_libreria_entro_15_min": 91.0,
       "pct_abitanti_con_biblioteca_nel_comune": 97.2,
       "reddito_medio_dichiarato": 26381,
       "pct_laureati_25_64": 23.3,
@@ -217,8 +217,8 @@
     },
     {
       "regione": "Trentino-Alto Adige",
-      "pct_abitanti_con_libreria_nel_comune": 50.8,
-      "pct_abitanti_libreria_entro_15_min": 82.2,
+      "pct_abitanti_con_libreria_nel_comune": 46.9,
+      "pct_abitanti_libreria_entro_15_min": 72.1,
       "pct_abitanti_con_biblioteca_nel_comune": 94.3,
       "reddito_medio_dichiarato": 28650,
       "pct_laureati_25_64": 21.4,
@@ -230,8 +230,8 @@
     },
     {
       "regione": "Umbria",
-      "pct_abitanti_con_libreria_nel_comune": 78.4,
-      "pct_abitanti_libreria_entro_15_min": 87.6,
+      "pct_abitanti_con_libreria_nel_comune": 72.9,
+      "pct_abitanti_libreria_entro_15_min": 83.1,
       "pct_abitanti_con_biblioteca_nel_comune": 92.1,
       "reddito_medio_dichiarato": 24767,
       "pct_laureati_25_64": 25.6,
@@ -243,7 +243,7 @@
     },
     {
       "regione": "Valle d'Aosta",
-      "pct_abitanti_con_libreria_nel_comune": 42.9,
+      "pct_abitanti_con_libreria_nel_comune": 41.0,
       "pct_abitanti_libreria_entro_15_min": 79.1,
       "pct_abitanti_con_biblioteca_nel_comune": 83.4,
       "reddito_medio_dichiarato": 27792,
@@ -256,8 +256,8 @@
     },
     {
       "regione": "Veneto",
-      "pct_abitanti_con_libreria_nel_comune": 60.2,
-      "pct_abitanti_libreria_entro_15_min": 95.9,
+      "pct_abitanti_con_libreria_nel_comune": 55.4,
+      "pct_abitanti_libreria_entro_15_min": 93.9,
       "pct_abitanti_con_biblioteca_nel_comune": 98.3,
       "reddito_medio_dichiarato": 27025,
       "pct_laureati_25_64": 21.7,
@@ -279,19 +279,19 @@
     },
     {
       "cosa": "libreria nel comune ~ lettori",
-      "valore": -0.07
+      "valore": 0.03
     },
     {
       "cosa": "libreria entro 15 minuti ~ lettori",
-      "valore": 0.32
+      "valore": 0.29
     },
     {
       "cosa": "libreria entro 15 minuti ~ lettori, a parità di reddito e laureati",
-      "valore": 0.04
+      "valore": -0.01
     },
     {
       "cosa": "libreria nel comune ~ lettori, a parità di reddito e laureati",
-      "valore": -0.1
+      "valore": -0.05
     },
     {
       "cosa": "ultimo libro da biblioteca ~ lettori",

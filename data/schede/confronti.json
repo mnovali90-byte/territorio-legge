@@ -11,19 +11,19 @@
     {
       "fascia": "1.000-2.999",
       "profilo": "Solo biblioteca",
-      "comuni": 1582,
-      "abitanti": 2957990,
-      "reddito_medio": 22875,
-      "pct_0_14": 10.9,
+      "comuni": 1628,
+      "abitanti": 3056697,
+      "reddito_medio": 22828,
+      "pct_0_14": 10.8,
       "pct_65_piu": 27.3,
       "affidabile": true
     },
     {
       "fascia": "3.000-9.999",
       "profilo": "Solo biblioteca",
-      "comuni": 1450,
-      "abitanti": 7725380,
-      "reddito_medio": 24326,
+      "comuni": 1625,
+      "abitanti": 8771162,
+      "reddito_medio": 24243,
       "pct_0_14": 11.8,
       "pct_65_piu": 25.1,
       "affidabile": true
@@ -31,9 +31,9 @@
     {
       "fascia": "meno di 1.000",
       "profilo": "Nessuna delle due",
-      "comuni": 1178,
-      "abitanti": 565084,
-      "reddito_medio": 21721,
+      "comuni": 1183,
+      "abitanti": 568277,
+      "reddito_medio": 21706,
       "pct_0_14": 9.2,
       "pct_65_piu": 30.8,
       "affidabile": true
@@ -41,19 +41,19 @@
     {
       "fascia": "3.000-9.999",
       "profilo": "Libreria e biblioteca",
-      "comuni": 538,
-      "abitanti": 3419859,
-      "reddito_medio": 24467,
-      "pct_0_14": 11.4,
-      "pct_65_piu": 26.0,
+      "comuni": 363,
+      "abitanti": 2374077,
+      "reddito_medio": 24837,
+      "pct_0_14": 11.3,
+      "pct_65_piu": 26.2,
       "affidabile": true
     },
     {
       "fascia": "meno di 1.000",
       "profilo": "Solo biblioteca",
-      "comuni": 813,
-      "abitanti": 490393,
-      "reddito_medio": 21448,
+      "comuni": 824,
+      "abitanti": 498661,
+      "reddito_medio": 21434,
       "pct_0_14": 9.3,
       "pct_65_piu": 30.9,
       "affidabile": true
@@ -61,39 +61,39 @@
     {
       "fascia": "10.000-49.999",
       "profilo": "Libreria e biblioteca",
-      "comuni": 761,
-      "abitanti": 16506759,
-      "reddito_medio": 24729,
-      "pct_0_14": 11.8,
-      "pct_65_piu": 24.9,
+      "comuni": 648,
+      "abitanti": 14732209,
+      "reddito_medio": 24941,
+      "pct_0_14": 11.7,
+      "pct_65_piu": 25.1,
       "affidabile": true
     },
     {
       "fascia": "1.000-2.999",
       "profilo": "Libreria e biblioteca",
-      "comuni": 137,
-      "abitanti": 281150,
-      "reddito_medio": 23048,
-      "pct_0_14": 10.3,
-      "pct_65_piu": 28.3,
+      "comuni": 91,
+      "abitanti": 182443,
+      "reddito_medio": 23919,
+      "pct_0_14": 10.4,
+      "pct_65_piu": 28.1,
       "affidabile": true
     },
     {
       "fascia": "1.000-2.999",
       "profilo": "Nessuna delle due",
-      "comuni": 676,
-      "abitanti": 1136290,
-      "reddito_medio": 21572,
+      "comuni": 694,
+      "abitanti": 1171336,
+      "reddito_medio": 21527,
       "pct_0_14": 10.7,
-      "pct_65_piu": 27.5,
+      "pct_65_piu": 27.6,
       "affidabile": true
     },
     {
       "fascia": "3.000-9.999",
       "profilo": "Nessuna delle due",
-      "comuni": 180,
-      "abitanti": 910967,
-      "reddito_medio": 21040,
+      "comuni": 210,
+      "abitanti": 1085783,
+      "reddito_medio": 20900,
       "pct_0_14": 12.2,
       "pct_65_piu": 24.1,
       "affidabile": true
@@ -101,32 +101,32 @@
     {
       "fascia": "meno di 1.000",
       "profilo": "Libreria e biblioteca",
-      "comuni": 18,
-      "abitanti": 11885,
-      "reddito_medio": 20811,
-      "pct_0_14": 9.1,
-      "pct_65_piu": 31.4,
+      "comuni": 7,
+      "abitanti": 3617,
+      "reddito_medio": 21262,
+      "pct_0_14": 9.7,
+      "pct_65_piu": 29.6,
       "affidabile": false
     },
     {
       "fascia": "meno di 1.000",
       "profilo": "Solo libreria",
-      "comuni": 21,
-      "abitanti": 12568,
-      "reddito_medio": 21590,
-      "pct_0_14": 8.4,
-      "pct_65_piu": 30.5,
+      "comuni": 16,
+      "abitanti": 9375,
+      "reddito_medio": 22433,
+      "pct_0_14": 8.6,
+      "pct_65_piu": 29.9,
       "affidabile": false
     },
     {
       "fascia": "1.000-2.999",
       "profilo": "Solo libreria",
-      "comuni": 38,
-      "abitanti": 71039,
-      "reddito_medio": 20716,
-      "pct_0_14": 10.5,
+      "comuni": 20,
+      "abitanti": 35993,
+      "reddito_medio": 21340,
+      "pct_0_14": 10.2,
       "pct_65_piu": 28.0,
-      "affidabile": true
+      "affidabile": false
     },
     {
       "fascia": "50.000 e più",
@@ -141,9 +141,9 @@
     {
       "fascia": "10.000-49.999",
       "profilo": "Solo biblioteca",
-      "comuni": 253,
-      "abitanti": 3577299,
-      "reddito_medio": 24227,
+      "comuni": 366,
+      "abitanti": 5351849,
+      "reddito_medio": 23811,
       "pct_0_14": 12.4,
       "pct_65_piu": 23.5,
       "affidabile": true
@@ -151,32 +151,32 @@
     {
       "fascia": "3.000-9.999",
       "profilo": "Solo libreria",
-      "comuni": 63,
-      "abitanti": 364051,
-      "reddito_medio": 20712,
-      "pct_0_14": 11.6,
-      "pct_65_piu": 25.2,
+      "comuni": 33,
+      "abitanti": 189235,
+      "reddito_medio": 21216,
+      "pct_0_14": 11.2,
+      "pct_65_piu": 26.0,
       "affidabile": true
     },
     {
       "fascia": "10.000-49.999",
       "profilo": "Nessuna delle due",
-      "comuni": 18,
-      "abitanti": 266666,
-      "reddito_medio": 18539,
+      "comuni": 23,
+      "abitanti": 340486,
+      "reddito_medio": 19079,
       "pct_0_14": 14.9,
-      "pct_65_piu": 17.6,
+      "pct_65_piu": 18.2,
       "affidabile": false
     },
     {
       "fascia": "10.000-49.999",
       "profilo": "Solo libreria",
-      "comuni": 32,
-      "abitanti": 609451,
-      "reddito_medio": 20914,
-      "pct_0_14": 13.2,
-      "pct_65_piu": 22.0,
-      "affidabile": true
+      "comuni": 27,
+      "abitanti": 535631,
+      "reddito_medio": 20899,
+      "pct_0_14": 13.0,
+      "pct_65_piu": 22.3,
+      "affidabile": false
     },
     {
       "fascia": "50.000 e più",
@@ -190,9 +190,9 @@
     }
   ],
   "reddito_standardizzato_per_grandezza": {
-    "Libreria e biblioteca": 25886,
-    "Solo biblioteca": 24027,
-    "Solo libreria": 20825,
-    "Nessuna delle due": 21213
+    "Libreria e biblioteca": 26109,
+    "Solo biblioteca": 23770,
+    "Solo libreria": 21216,
+    "Nessuna delle due": 21104
   }
 }

@@ -1,5 +1,5 @@
 {
- "data": "2026-11-09 18:37 UTC",
+ "data": "2026-11-09 18:51 UTC",
  "esiti": [
   {
    "esito": "OK",
@@ -47,9 +47,9 @@
    "dettaglio": "20 regioni; valori mancanti: []"
   },
   {
-   "esito": "OK",
+   "esito": "AVVISO",
    "controllo": "Cambi oltre il 10% rispetto alla versione precedente",
-   "dettaglio": "nessuno"
+   "dettaglio": "librerie_totali: 7467 → 5522; comuni_con_libreria: 1746 → 1343; lontani_libreria_30: 438718 → 946143"
   },
   {
    "esito": "OK",
